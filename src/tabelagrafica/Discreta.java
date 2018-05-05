@@ -94,26 +94,26 @@ public class Discreta {
     
 
     //Metodos especiais.
-    public void impressao(){
-        double media=0;
-        for (Elemento item : roll) {
-            media = media + item.getValor();
-        }
-        media = media/roll.size();
-        
-        //Impressão do Roll na tela.
-        System.out.println("\nXi  |fi |Fi |   fr   |   Fr   |Xi*fi | (Xi-X)^2");
-        for (int j = 0; j < Xi.size(); j++) {
-        double xifi = Xi.get(j).getValor()*fi[j];
-        double xiX = Math.pow(Xi.get(j).getValor() - media,2)*fi[j];
-        
-            System.out.print(Xi.get(j).getValor()+" | "+fi[j]+" | "+Fi[j]+" | ");
-            System.out.printf("%.2f",fr[j]); System.out.print("% | ");
-            System.out.printf("%.2f",Fr[j]); System.out.print("% | ");
-            System.out.printf("%.2f | ",xifi);
-            System.out.printf("%.2f\n",xiX);
-        }
-        System.out.println(" ");
-    }
+//    public void impressao(){
+//        double media=0;
+//        for (Elemento item : roll) {
+//            media = media + item.getValor();
+//        }
+//        media = media/roll.size();
+//        
+//        //Impressão do Roll na tela.
+//        System.out.println("\nXi  |fi |Fi |   fr   |   Fr   |Xi*fi | (Xi-X)^2");
+//        for (int j = 0; j < Xi.size(); j++) {
+//        double xifi = Xi.get(j).getValor()*fi[j];
+//        double xiX = Math.pow(Xi.get(j).getValor() - media,2)*fi[j];
+//        
+//            System.out.print(Xi.get(j).getValor()+" | "+fi[j]+" | "+Fi[j]+" | ");
+//            System.out.printf("%.2f",fr[j]); System.out.print("% | ");
+//            System.out.printf("%.2f",Fr[j]); System.out.print("% | ");
+//            System.out.printf("%.2f | ",xifi);
+//            System.out.printf("%.2f\n",xiX);
+//        }
+//        System.out.println(" ");
+//    }
     
 }
