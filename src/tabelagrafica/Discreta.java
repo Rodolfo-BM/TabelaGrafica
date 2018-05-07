@@ -40,9 +40,9 @@ public class Discreta {
                 fr[f] = ((float)fi[f]/(float)roll.length)*100f;
                 Fr[f] = fr[f];
                 if(f != 0) Fr[f] = Fr[f]+Fr[f-1];
-//                f++;
-//                fi[f] = 1;
-//                Fi[f] = Fi[f-1] + 1;
+                f++;
+                fi[f] = 1;
+                Fi[f] = Fi[f-1] + 1;
             }
         }
         fr[f] = ((float)fi[f]/(float)roll.length)*100;
