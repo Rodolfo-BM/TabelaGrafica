@@ -1,62 +1,63 @@
 package tabelagrafica;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Discreta {
     //Atributos.
-    private int[] Xi, fi, Fi;
-    private float[] fr, Fr;
+    private int[] fi, Fi;
+    private double[] Xi, fr, Fr;
    
     //Construtores.
-    public Discreta(String[] roll){
+    public Discreta(List roll){
         //Declaração de variaveis.
-        int cont=0;
+        List<String> aux;
+        aux = roll;
         
-        //Criação e preenchimento do ArrayList Xi.
-        for (int i = 1; i < roll.length; i++) {
-            cont++;
-            if(roll[i] == roll[i-1]){
-                cont--;
+        //Criação e preenchimento do Array Xi.
+        for (int i = 0; i < aux.size(); i++) {
+            for (int j = 0; j < aux.size(); j++) {
+                if(aux.get(i).equalsIgnoreCase(aux.get(j))) aux.remove(aux.get(j));
             }
         }
-        Xi = new int[cont];
-        
+        Xi = new double[aux.size()];
+        for (int i = 0; i < aux.size(); i++) {
+            Xi[i] = Double.parseDouble(aux.get(i));
+        }
         Arrays.sort(Xi);
         
         //Criação dos outros valores da tabela baseados no tamanho de Xi.
         fi = new int[Xi.length];
         Fi = new int[Xi.length];
-        fr = new float[Xi.length];
-        Fr = new float[Xi.length];
+        fr = new double[Xi.length];
+        Fr = new double[Xi.length];
     
         //Preenchimento dos outros valores da tabela
-        int f = 0;
-        fi[0] = 1; Fi[0] = 1; Fr[0] =0;
-        for (int i = 1; i < roll.length; i++) {
-            if(roll[i].equals(roll[i-1])){
-                fi[f]++;
-                Fi[f]++;
-            }else{
-                fr[f] = ((float)fi[f]/(float)roll.length)*100f;
-                Fr[f] = fr[f];
-                if(f != 0) Fr[f] = Fr[f]+Fr[f-1];
-                f++;
-                fi[f] = 1;
-                Fi[f] = Fi[f-1] + 1;
+        //fi
+        for (int i = 0; i < Xi.length; i++) {
+            for (int j = 0; j < roll.size(); j++) {
+                if(roll.get(j).equals(Xi[i])){
+                    fi[i]++;
+                } 
             }
         }
-        fr[f] = ((float)fi[f]/(float)roll.length)*100;
-        Fr[f] = fr[f];
-        if(f != 0) Fr[f] = Fr[f]+Fr[f-1];
+        //Fi
+        Fi = fi;
+        for (int i = 1; i < Xi.length; i++) {
+            Fi[i] = Fi[i] + Fi[i-1];
+        }
+        //fr
+        for (int i = 0; i < Xi.length; i++) {
+            fr[i] = fi[i]/roll.size()*100;
+        }
+        //Fr
+        Fr = fr;
+        for (int i = 1; i < Xi.length; i++) {
+            Fr[i] = Fr[i] + Fr[i-1];
+        }
     }
     
     //Metodos acessores.
-    public int[] getXi() {
-        return Xi;
-    }
-    public void setXi(int[] Xi) {
-        this.Xi = Xi;
-    }
     public int[] getfi() {
         return fi;
     }
@@ -69,20 +70,26 @@ public class Discreta {
     public void setFi(int[] Fi) {
         this.Fi = Fi;
     }
-    public float[] getfr() {
+    public double[] getXi() {
+        return Xi;
+    }
+    public void setXi(double[] Xi) {
+        this.Xi = Xi;
+    }
+    public double[] getfr() {
         return fr;
     }
-    public void setfr(float[] fr) {
+    public void setfr(double[] fr) {
         this.fr = fr;
     }
-    public float[] getFr() {
+    public double[] getFr() {
         return Fr;
     }
-    public void setFr(float[] Fr) {    
+    public void setFr(double[] Fr) {
         this.Fr = Fr;
     }
     @Override
     public String toString() {
-        return "Discreta{" + "Xi=" + Xi + ", fi=" + fi + ", Fi=" + Fi + ", fr=" + fr + ", Fr=" + Fr + '}';
+        return "Discreta{" + "fi=" + fi + ", Fi=" + Fi + ", Xi=" + Xi + ", fr=" + fr + ", Fr=" + Fr + '}';
     }
 }
