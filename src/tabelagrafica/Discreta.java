@@ -1,5 +1,6 @@
 package tabelagrafica;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -11,18 +12,28 @@ public class Discreta {
     //Construtores.
     public Discreta(List roll){
         //Declaração de variaveis.
-        List<String> aux;
-        aux = roll;
+        List<String> aux = roll;
+        for (String item : aux) {
+            item = item.trim();
+        }
+        List<String> aux2 = new ArrayList<>();
+//        aux2.add(aux.get(0));
+        boolean achei=false;
         
         //Criação e preenchimento do Array Xi.
-        for (int i = 0; i < aux.size(); i++) {
-            for (int j = 0; j < aux.size(); j++) {
-                if(aux.get(i).equalsIgnoreCase(aux.get(j))) aux.remove(aux.get(j));
+        for (String primeiro : aux) {
+            achei = false;
+            for (String segundo : aux2) {
+                if(primeiro.equalsIgnoreCase(segundo)) achei = true;
             }
+            if(!achei) aux2.add(primeiro);
         }
-        Xi = new double[aux.size()];
-        for (int i = 0; i < aux.size(); i++) {
-            Xi[i] = Double.parseDouble(aux.get(i));
+        
+        Xi = new double[aux2.size()];
+        int z=0;
+        for (String item : aux2) {
+            Xi[z] = Double.parseDouble(item);
+            z++;
         }
         Arrays.sort(Xi);
         
@@ -33,10 +44,17 @@ public class Discreta {
         Fr = new double[Xi.length];
     
         //Preenchimento dos outros valores da tabela
+        for (int i = 0; i < Xi.length; i++) {
+            fi[i] = 0;
+            Fi[i] = 0;
+            fr[i] = 0;
+            Fr[i] = 0;
+        }
         //fi
+        aux = roll;
         for (int i = 0; i < Xi.length; i++) {
             for (int j = 0; j < roll.size(); j++) {
-                if(roll.get(j).equals(Xi[i])){
+                if(Xi[i] == Double.parseDouble(aux.get(j))){
                     fi[i]++;
                 } 
             }

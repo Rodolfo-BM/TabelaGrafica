@@ -8,8 +8,8 @@ public class jFrame1 extends javax.swing.JFrame {
     public jFrame1() {
         initComponents();
     }
-    private static List roll;
-    private static DefaultTableModel modeloTable;
+    private List roll;
+    private DefaultTableModel modeloTable;
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -65,15 +65,20 @@ public class jFrame1 extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Xi", "fi", "Fi", "fr", "Fr"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         jScrollPane3.setViewportView(jTable1);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tabela qualitativa", "Tabela quantitativa discreta", "Tabela quantitativa continua", " " }));
@@ -147,7 +152,7 @@ public class jFrame1 extends javax.swing.JFrame {
 //      Botão "Adicionar".
 
 //      Leitura do Roll (transformação do String do campo-de-testo-1 em um vetor de Strings)
-        roll = Roll.ler(jTextArea1.getText());
+        this.roll = Roll.ler(jTextArea1.getText());
         
 //      Limpando campo-de-texto-1.
         jTextArea1.setText("");
@@ -190,9 +195,9 @@ public class jFrame1 extends javax.swing.JFrame {
             }
 //          Aqui eu adiciono cada linha da lista na jTable
             for (int i = 0; i < discreta.getXi().length; i++) {
-                modeloTable.addRow(new Object[] { discreta.getXi(), 
-                    discreta.getfi(), discreta.getFi(), 
-                    discreta.getfr(), discreta.getFr()});
+                modeloTable.addRow(new Object[] { discreta.getXi()[i], 
+                    discreta.getfi()[i], discreta.getFi()[i], 
+                    discreta.getfr()[i], discreta.getFr()[i]});
             }
         
         }else{
