@@ -6,8 +6,8 @@ import java.util.List;
 
 public class Discreta {
     //Atributos.
-    private int[] fi, Fi;
-    private double[] Xi, fr, Fr;
+    private int[] FI, FZI;
+    private double[] XI, FR, FZR;
    
     //Construtores.
     public Discreta(List roll){
@@ -17,10 +17,9 @@ public class Discreta {
             item = item.trim();
         }
         List<String> aux2 = new ArrayList<>();
-//        aux2.add(aux.get(0));
         boolean achei=false;
         
-        //Criação e preenchimento do Array Xi.
+        //Criação e preenchimento do Array XI.
         for (String primeiro : aux) {
             achei = false;
             for (String segundo : aux2) {
@@ -29,85 +28,90 @@ public class Discreta {
             if(!achei) aux2.add(primeiro);
         }
         
-        Xi = new double[aux2.size()];
+        XI = new double[aux2.size()];
         int z=0;
         for (String item : aux2) {
-            Xi[z] = Double.parseDouble(item);
+            XI[z] = Double.parseDouble(item);
             z++;
         }
-        Arrays.sort(Xi);
+        Arrays.sort(XI);
         
-        //Criação dos outros valores da tabela baseados no tamanho de Xi.
-        fi = new int[Xi.length];
-        Fi = new int[Xi.length];
-        fr = new double[Xi.length];
-        Fr = new double[Xi.length];
+        //Criação dos outros valores da tabela baseados no tamanho de XI.
+        FI = new int[XI.length];
+        FZI = new int[XI.length];
+        FR = new double[XI.length];
+        FZR = new double[XI.length];
     
-        //Preenchimento dos outros valores da tabela
-        for (int i = 0; i < Xi.length; i++) {
-            fi[i] = 0;
-            Fi[i] = 0;
-            fr[i] = 0;
-            Fr[i] = 0;
+        //Preenchimento dos outros valores da tabela, inicialmente com 0.
+        for (int i = 0; i < XI.length; i++) {
+            FI[i] = 0;
+            FZI[i] = 0;
+            FR[i] = 0;
+            FZR[i] = 0;
         }
+        
         //fi
-        aux = roll;
-        for (int i = 0; i < Xi.length; i++) {
-            for (int j = 0; j < roll.size(); j++) {
-                if(Xi[i] == Double.parseDouble(aux.get(j))){
-                    fi[i]++;
+        int cont=0;
+        for (int i = 0; i < XI.length; i++) {
+            for (String string : aux) {
+                if(XI[i] == Double.parseDouble(string)){
+                    cont++;
                 } 
             }
+            FI[i] = cont;
+            cont=0;
         }
         //Fi
-        Fi = fi;
-        for (int i = 1; i < Xi.length; i++) {
-            Fi[i] = Fi[i] + Fi[i-1];
+        FZI[0] = FI[0];
+        for (int i = 1; i < FZI.length; i++) {
+            FZI[i] = FI[i];
+            FZI[i] = FZI[i] + FZI[i-1];
         }
         //fr
-        for (int i = 0; i < Xi.length; i++) {
-            fr[i] = fi[i]/roll.size()*100;
+        for (int i = 0; i < FR.length; i++) {
+            FR[i] = (double)FI[i]/roll.size()*100;
         }
         //Fr
-        Fr = fr;
-        for (int i = 1; i < Xi.length; i++) {
-            Fr[i] = Fr[i] + Fr[i-1];
+        FZR[0] = FR[0];
+        for (int i = 1; i < FZR.length; i++) {
+            FZR[i] = FR[i];
+            FZR[i] = FZR[i] + FZR[i-1];
         }
     }
     
     //Metodos acessores.
-    public int[] getfi() {
-        return fi;
+    public int[] getFI() {
+        return FI;
     }
-    public void setfi(int[] fi) {
-        this.fi = fi;
+    public void setFI(int[] FI) {
+        this.FI = FI;
     }
-    public int[] getFi() {
-        return Fi;
+    public int[] getFZI() {
+        return FZI;
     }
-    public void setFi(int[] Fi) {
-        this.Fi = Fi;
+    public void setFZI(int[] FZI) {
+        this.FZI = FZI;
     }
-    public double[] getXi() {
-        return Xi;
+    public double[] getXI() {
+        return XI;
     }
-    public void setXi(double[] Xi) {
-        this.Xi = Xi;
+    public void setXI(double[] XI) {
+        this.XI = XI;
     }
-    public double[] getfr() {
-        return fr;
+    public double[] getFR() {
+        return FR;
     }
-    public void setfr(double[] fr) {
-        this.fr = fr;
+    public void setFR(double[] FR) {
+        this.FR = FR;
     }
-    public double[] getFr() {
-        return Fr;
+    public double[] getFZR() {
+        return FZR;
     }
-    public void setFr(double[] Fr) {
-        this.Fr = Fr;
+    public void setFZR(double[] FZR) {
+        this.FZR = FZR;
     }
     @Override
     public String toString() {
-        return "Discreta{" + "fi=" + fi + ", Fi=" + Fi + ", Xi=" + Xi + ", fr=" + fr + ", Fr=" + Fr + '}';
+        return "Discreta{" + "fi=" + FI + ", Fi=" + FZI + ", Xi=" + XI + ", fr=" + FR + ", Fr=" + FZR + '}';
     }
 }

@@ -71,12 +71,12 @@ public class jFrame1 extends javax.swing.JFrame {
                 "Xi", "fi", "Fi", "fr", "Fr"
             }
         ) {
-            Class[] types = new Class [] {
-                java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
             };
 
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
         jScrollPane3.setViewportView(jTable1);
@@ -194,10 +194,10 @@ public class jFrame1 extends javax.swing.JFrame {
                 modeloTable.removeRow(0);
             }
 //          Aqui eu adiciono cada linha da lista na jTable
-            for (int i = 0; i < discreta.getXi().length; i++) {
-                modeloTable.addRow(new Object[] { discreta.getXi()[i], 
-                    discreta.getfi()[i], discreta.getFi()[i], 
-                    discreta.getfr()[i], discreta.getFr()[i]});
+            for (int i = 0; i < discreta.getXI().length; i++) {
+                modeloTable.addRow(new Object[] { discreta.getXI()[i], 
+                    discreta.getFI()[i], discreta.getFZI()[i], 
+                    discreta.getFR()[i]+" %", discreta.getFZR()[i]+" %"});
             }
         
         }else{
