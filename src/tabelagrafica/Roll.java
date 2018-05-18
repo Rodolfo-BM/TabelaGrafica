@@ -12,9 +12,7 @@ public class Roll {
         
         //Separação dos dados e transformação em ArrayList<Elemento>;
         dadosDivididos = dados.split(";");
-        for (int i = 0; i < dadosDivididos.length; i++) {
-            lista.add(dadosDivididos[i]);
-        }
+        lista.addAll(Arrays.asList(dadosDivididos));
         return lista;
     }
 }

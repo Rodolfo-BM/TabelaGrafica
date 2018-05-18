@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Discreta {
+public class Qualitativa {
     //Atributos.
     private int N;
-    private double media, moda, mediana, M, MZ;
+    private double moda, M, MZ;
     private int[] FI, FZI;
-    private double[] XI, FR, FZR;
-   
-    //Construtores.
-    public Discreta(){
-    
+    private double[] FR, FZR;
+    private String[] XI;
+
+//  Construtores.
+    public Qualitativa() {
     }
-    public Discreta(List roll) {
+    public Qualitativa(List roll) {
         //Declaração de variaveis.
         List<String> aux = roll;
         for (String item : aux) {
@@ -33,10 +33,10 @@ public class Discreta {
             if(!achei) aux2.add(primeiro);
         }
         
-        XI = new double[aux2.size()];
+        XI = new String[aux2.size()];
         int z=0;
         for (String item : aux2) {
-            XI[z] = Double.parseDouble(item);
+            XI[z] = item;
             z++;
         }
         Arrays.sort(XI);
@@ -58,8 +58,8 @@ public class Discreta {
         //fi
         int cont=0;
         for (int i = 0; i < XI.length; i++) {
-            for (String string : aux) {
-                if(XI[i] == Double.parseDouble(string)){
+            for (String item : aux) {
+                if(XI[i].equalsIgnoreCase(item)){
                     cont++;
                 } 
             }
@@ -86,66 +86,21 @@ public class Discreta {
         
 //      Outros valores.
         N = roll.size();
-        M = XI[0];
-        MZ = XI[XI.length - 1];
         
-        double sum=0;
-        for (String string : aux) {
-            sum += Double.parseDouble(string);
-        }
-        media = sum/aux.size();
-        
-        moda = 0;
-        for (int i = 0; i < XI.length; i++) {
-            if(FI[i] > moda) moda = XI[i];
-        }
-        
-        mediana = XI[XI.length/2];
+    }
 
-    }
-    
-    //Metodos acessores.
-    public int[] getFI() {
-        return FI;
-    }
-    public void setFI(int[] FI) {
-        this.FI = FI;
-    }
-    public int[] getFZI() {
-        return FZI;
-    }
-    public void setFZI(int[] FZI) {
-        this.FZI = FZI;
-    }
-    public double[] getXI() {
-        return XI;
-    }
-    public void setXI(double[] XI) {
-        this.XI = XI;
-    }
-    public double[] getFR() {
-        return FR;
-    }
-    public void setFR(double[] FR) {
-        this.FR = FR;
-    }
-    public double[] getFZR() {
-        return FZR;
-    }
-    public void setFZR(double[] FZR) {
-        this.FZR = FZR;
-    }
-    public int getN(){
+//  Acessores.
+    public int getN() {
         return N;
     }
-    public void setN(int N){
+    public void setN(int N) {
         this.N = N;
     }
-    public double getMedia(){
-        return media;
+    public double getModa() {
+        return moda;
     }
-    public void setMedia(double media){
-        this.media = media;
+    public void setModa(double moda) {
+        this.moda = moda;
     }
     public double getM() {
         return M;
@@ -159,9 +114,40 @@ public class Discreta {
     public void setMZ(double MZ) {
         this.MZ = MZ;
     }
+    public int[] getFI() {
+        return FI;
+    }
+    public void setFI(int[] FI) {
+        this.FI = FI;
+    }
+    public int[] getFZI() {
+        return FZI;
+    }
+    public void setFZI(int[] FZI) {
+        this.FZI = FZI;
+    }
+    public double[] getFR() {
+        return FR;
+    }
+    public void setFR(double[] FR) {
+        this.FR = FR;
+    }
+    public double[] getFZR() {
+        return FZR;
+    }
+    public void setFZR(double[] FZR) {
+        this.FZR = FZR;
+    }
+    public String[] getXI() {
+        return XI;
+    }
+    public void setXI(String[] XI) {
+        this.XI = XI;
+    }
     @Override
     public String toString() {
-        return "Discreta{" + "N=" + N + ", media=" + media + ", moda=" + moda + ", mediana=" + mediana + ", M=" + M + ", MZ=" + MZ + ", FI=" + FI + ", FZI=" + FZI + ", XI=" + XI + ", FR=" + FR + ", FZR=" + FZR + '}';
+        return "Qualitativa{" + "N=" + N + ", moda=" + moda + ", M=" + M + ", MZ=" + MZ + ", FI=" + FI + ", FZI=" + FZI + ", FR=" + FR + ", FZR=" + FZR + ", XI=" + XI + '}';
     }
+    
     
 }

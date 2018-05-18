@@ -68,11 +68,11 @@ public class jFrame1 extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Xi", "fi", "Fi", "fr", "Fr"
+                "Xi", "fi", "Fi", "fr", "Fr", "XIFI", "(Xi-X)²*Fi", "Classe"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -105,9 +105,11 @@ public class jFrame1 extends javax.swing.JFrame {
                         .addComponent(jButton3)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 182, Short.MAX_VALUE))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,7 +171,7 @@ public class jFrame1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-//        Botão "Limpar".
+//      Botão "Limpar".
         
         roll = null;
         jTextArea1.setText("");
@@ -179,31 +181,8 @@ public class jFrame1 extends javax.swing.JFrame {
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
 //      Seleção do tipo de tabela.
         String tipo = jComboBox1.getSelectedItem().toString();
-        
-        if(tipo.equals("Tabela qualitativa")){
-//          Tabela qualitativa foi selecionada.
-     
-        }else if(tipo.equals("Tabela quantitativa discreta")){
-//          Tabela quantitativa discreta foi selecionada.
-            Discreta discreta = new Discreta(roll);
-            
-//          jTable.
-            modeloTable = (DefaultTableModel) jTable1.getModel();
-//          Aqui verifico se a jTable tem algum registro, se tiver eu deleto
-            while (modeloTable.getRowCount() > 0) {
-                modeloTable.removeRow(0);
-            }
-//          Aqui eu adiciono cada linha da lista na jTable
-            for (int i = 0; i < discreta.getXI().length; i++) {
-                modeloTable.addRow(new Object[] { discreta.getXI()[i], 
-                    discreta.getFI()[i], discreta.getFZI()[i], 
-                    discreta.getFR()[i]+" %", discreta.getFZR()[i]+" %"});
-            }
-        
-        }else{
-//          Tabela quantitativa continua foi selecionada.
-        
-        }
+//      Preencher tabela.
+        preencherTabela(tipo);
     }//GEN-LAST:event_jComboBox1ActionPerformed
     
     public static void main(String args[]) {
@@ -251,4 +230,60 @@ public class jFrame1 extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     // End of variables declaration//GEN-END:variables
+    public void preencherTabela(String tipo){
+        if(tipo.equals("Tabela quantitativa continua")){
+//          Tabela quantitativa continua foi selecionada.
+            Continua continua = new Continua(roll);
+            
+//          jTable.
+            modeloTable = (DefaultTableModel) jTable1.getModel();
+//          Aqui verifico se a jTable tem algum registro, se tiver eu deleto
+            while (modeloTable.getRowCount() > 0) {
+                modeloTable.removeRow(0);
+            }
+//          Aqui eu adiciono cada linha da lista na jTable
+            for (int i = 0; i < continua.getXI().length; i++) {
+                modeloTable.addRow(new Object[] { continua.getXI()[i], 
+                    continua.getFI()[i], continua.getFZI()[i], 
+                    continua.getFR()[i]+" %", continua.getFZR()[i]+" %",
+                    continua.getXIFI()[i], continua.getXIXFI()[i], 
+                    continua.getClasse()[i]});
+            }
+     
+        }else if(tipo.equals("Tabela quantitativa discreta")){
+//          Tabela quantitativa discreta foi selecionada.
+            Discreta discreta = new Discreta(roll);
+            
+//          jTable.
+            modeloTable = (DefaultTableModel) jTable1.getModel();
+//          Aqui verifico se a jTable tem algum registro, se tiver eu deleto
+            while (modeloTable.getRowCount() > 0) {
+                modeloTable.removeRow(0);
+            }
+//          Aqui eu adiciono cada linha da lista na jTable
+            for (int i = 0; i < discreta.getXI().length; i++) {
+                modeloTable.addRow(new Object[] { discreta.getXI()[i], 
+                    discreta.getFI()[i], discreta.getFZI()[i], 
+                    discreta.getFR()[i]+" %", discreta.getFZR()[i]+" %"});
+            }
+        
+        }else{
+//          Tabela qualitativa foi selecionada.
+            Qualitativa quali = new Qualitativa(roll);
+            
+//          jTable.
+            modeloTable = (DefaultTableModel) jTable1.getModel();
+//          Aqui verifico se a jTable tem algum registro, se tiver eu deleto
+            while (modeloTable.getRowCount() > 0) {
+                modeloTable.removeRow(0);
+            }
+//          Aqui eu adiciono cada linha da lista na jTable
+            for (int i = 0; i < quali.getXI().length; i++) {
+                modeloTable.addRow(new Object[] { quali.getXI()[i], 
+                    quali.getFI()[i], quali.getFZI()[i], 
+                    quali.getFR()[i]+" %", quali.getFZR()[i]+" %"});
+            }
+
+        }
+    }
 }
