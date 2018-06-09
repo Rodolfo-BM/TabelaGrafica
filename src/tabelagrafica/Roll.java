@@ -1,8 +1,12 @@
 package tabelagrafica;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Roll {
     public static List ler(String dados){
