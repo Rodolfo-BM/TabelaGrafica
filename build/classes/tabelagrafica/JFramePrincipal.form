@@ -130,27 +130,18 @@
             <Component class="javax.swing.JTable" name="tabelaDados">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="20" rowCount="4">
-                    <Column editable="true" title="Title 1" type="java.lang.Object"/>
-                    <Column editable="true" title="Title 2" type="java.lang.Object"/>
-                    <Column editable="true" title="Title 3" type="java.lang.Object"/>
-                    <Column editable="true" title="Title 4" type="java.lang.Object"/>
-                    <Column editable="true" title="T&#xed;tulo 5" type="java.lang.Object"/>
-                    <Column editable="true" title="T&#xed;tulo 6" type="java.lang.Object"/>
-                    <Column editable="true" title="T&#xed;tulo 7" type="java.lang.Object"/>
-                    <Column editable="true" title="T&#xed;tulo 8" type="java.lang.Object"/>
-                    <Column editable="true" title="T&#xed;tulo 9" type="java.lang.Object"/>
-                    <Column editable="true" title="T&#xed;tulo 10" type="java.lang.Object"/>
-                    <Column editable="true" title="T&#xed;tulo 11" type="java.lang.Object"/>
-                    <Column editable="true" title="T&#xed;tulo 12" type="java.lang.Object"/>
-                    <Column editable="true" title="T&#xed;tulo 13" type="java.lang.Object"/>
-                    <Column editable="true" title="T&#xed;tulo 14" type="java.lang.Object"/>
-                    <Column editable="true" title="T&#xed;tulo 15" type="java.lang.Object"/>
-                    <Column editable="true" title="T&#xed;tulo 16" type="java.lang.Object"/>
-                    <Column editable="true" title="T&#xed;tulo 17" type="java.lang.Object"/>
-                    <Column editable="true" title="T&#xed;tulo 18" type="java.lang.Object"/>
-                    <Column editable="true" title="T&#xed;tulo 19" type="java.lang.Object"/>
-                    <Column editable="true" title="T&#xed;tulo 20" type="java.lang.Object"/>
+                  <Table columnCount="11" rowCount="4">
+                    <Column editable="true" title="IP" type="java.lang.Object"/>
+                    <Column editable="true" title="Data" type="java.lang.Object"/>
+                    <Column editable="true" title="Horario" type="java.lang.Object"/>
+                    <Column editable="true" title="localiza&#xe7;&#xe3;o" type="java.lang.Object"/>
+                    <Column editable="true" title="Cabe&#xe7;alho" type="java.lang.Object"/>
+                    <Column editable="true" title="Requisi&#xe7;&#xe3;o" type="java.lang.Object"/>
+                    <Column editable="true" title="Codigo de status" type="java.lang.Object"/>
+                    <Column editable="true" title="Tamanho em Bytes" type="java.lang.Object"/>
+                    <Column editable="true" title="Caminho" type="java.lang.Object"/>
+                    <Column editable="true" title="SO" type="java.lang.Object"/>
+                    <Column editable="true" title="Browser" type="java.lang.Object"/>
                   </Table>
                 </Property>
               </Properties>

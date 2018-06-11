@@ -63,13 +63,13 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
         tabelaDados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4", "Título 5", "Título 6", "Título 7", "Título 8", "Título 9", "Título 10", "Título 11", "Título 12", "Título 13", "Título 14", "Título 15", "Título 16", "Título 17", "Título 18", "Título 19", "Título 20"
+                "IP", "Data", "Horario", "localização", "Cabeçalho", "Requisição", "Codigo de status", "Tamanho em Bytes", "Caminho", "SO", "Browser"
             }
         ));
         jScrollPane1.setViewportView(tabelaDados);
@@ -180,9 +180,9 @@ public class JFramePrincipal extends javax.swing.JFrame {
         int tamanho;
         tamanho = lista.size();
         for (Dados item : lista) {
-            modeloTable.addRow(new Object[]{item.getIp(), item.getData(),
-                item.getLocal(),item.getRequisicao(), item.getCodigoStatus(),
-                item.getTamanhoBytes(), item.getCaminhoURL(),item.getBrowser()});
+            modeloTable.addRow(new Object[]{item.getIp(), item.getData(),item.getHorario() ,
+                item.getLocalizacao(),item.getCabecalho(),item.getRequisicao(), item.getCodigoStatus(),
+                item.getTamanhoBytes(), item.getCaminhoURL(),item.getSo(),item.getBrowser()});
         }
     }
 
