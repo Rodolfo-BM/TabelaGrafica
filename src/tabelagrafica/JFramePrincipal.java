@@ -3,8 +3,10 @@ package tabelagrafica;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -191,7 +193,15 @@ public class JFramePrincipal extends javax.swing.JFrame {
             new String [] {
                 "XI", "fi", "Fi", "fr", "Fr"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(tabelaIP);
 
         javax.swing.GroupLayout painelTabelaIPLayout = new javax.swing.GroupLayout(painelTabelaIP);
@@ -200,14 +210,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
             painelTabelaIPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTabelaIPLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1044, Short.MAX_VALUE)
+                .addComponent(jScrollPane1)
                 .addContainerGap())
         );
         painelTabelaIPLayout.setVerticalGroup(
             painelTabelaIPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTabelaIPLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE)
+                .addComponent(jScrollPane1)
                 .addContainerGap())
         );
 
@@ -217,15 +227,15 @@ public class JFramePrincipal extends javax.swing.JFrame {
             abaIPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(abaIPLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(painelTabelaIP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(painelTabelaIP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(602, Short.MAX_VALUE))
         );
         abaIPLayout.setVerticalGroup(
             abaIPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(abaIPLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelTabelaIP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(384, Short.MAX_VALUE))
+                .addContainerGap(223, Short.MAX_VALUE))
         );
 
         painelComAbas.addTab("IP", abaIP);
@@ -234,15 +244,20 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
         tabelaData.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "XI", "fi", "Fi", "fr", "Fr"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         scrollTabelaData.setViewportView(tabelaData);
 
         javax.swing.GroupLayout painelTabelaDataLayout = new javax.swing.GroupLayout(painelTabelaData);
@@ -251,15 +266,15 @@ public class JFramePrincipal extends javax.swing.JFrame {
             painelTabelaDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTabelaDataLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(scrollTabelaData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(602, Short.MAX_VALUE))
+                .addComponent(scrollTabelaData)
+                .addContainerGap())
         );
         painelTabelaDataLayout.setVerticalGroup(
             painelTabelaDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTabelaDataLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(scrollTabelaData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(scrollTabelaData)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout abaDataLayout = new javax.swing.GroupLayout(abaData);
@@ -268,8 +283,8 @@ public class JFramePrincipal extends javax.swing.JFrame {
             abaDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(abaDataLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(painelTabelaData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(painelTabelaData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(602, Short.MAX_VALUE))
         );
         abaDataLayout.setVerticalGroup(
             abaDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -285,15 +300,20 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
         tabelaHorario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Xi", "fi", "Fi", "fr", "Fr"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane2.setViewportView(tabelaHorario);
 
         javax.swing.GroupLayout painelTabelaHorarioLayout = new javax.swing.GroupLayout(painelTabelaHorario);
@@ -302,15 +322,15 @@ public class JFramePrincipal extends javax.swing.JFrame {
             painelTabelaHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTabelaHorarioLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(351, Short.MAX_VALUE))
+                .addComponent(jScrollPane2)
+                .addContainerGap())
         );
         painelTabelaHorarioLayout.setVerticalGroup(
             painelTabelaHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTabelaHorarioLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addComponent(jScrollPane2)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout abaHorarioLayout = new javax.swing.GroupLayout(abaHorario);
@@ -320,14 +340,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
             .addGroup(abaHorarioLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelTabelaHorario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(261, Short.MAX_VALUE))
+                .addContainerGap(602, Short.MAX_VALUE))
         );
         abaHorarioLayout.setVerticalGroup(
             abaHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(abaHorarioLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelTabelaHorario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(186, Short.MAX_VALUE))
+                .addContainerGap(223, Short.MAX_VALUE))
         );
 
         painelComAbas.addTab("Horario", abaHorario);
@@ -336,15 +356,20 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
         tabelaLocalizacao.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Xi", "fi", "Fi", "fr", "Fr"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane3.setViewportView(tabelaLocalizacao);
 
         javax.swing.GroupLayout painelTabelaLocalizacaoLayout = new javax.swing.GroupLayout(painelTabelaLocalizacao);
@@ -353,15 +378,15 @@ public class JFramePrincipal extends javax.swing.JFrame {
             painelTabelaLocalizacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTabelaLocalizacaoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(330, Short.MAX_VALUE))
+                .addComponent(jScrollPane3)
+                .addContainerGap())
         );
         painelTabelaLocalizacaoLayout.setVerticalGroup(
             painelTabelaLocalizacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTabelaLocalizacaoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addComponent(jScrollPane3)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout abaLocalizacaoLayout = new javax.swing.GroupLayout(abaLocalizacao);
@@ -371,14 +396,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
             .addGroup(abaLocalizacaoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelTabelaLocalizacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(282, Short.MAX_VALUE))
+                .addContainerGap(602, Short.MAX_VALUE))
         );
         abaLocalizacaoLayout.setVerticalGroup(
             abaLocalizacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(abaLocalizacaoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelTabelaLocalizacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(167, Short.MAX_VALUE))
+                .addContainerGap(223, Short.MAX_VALUE))
         );
 
         painelComAbas.addTab("Localização", abaLocalizacao);
@@ -387,15 +412,20 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
         tabelaCabecalho.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Xi", "fi", "Fi", "fr", "Fr"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane4.setViewportView(tabelaCabecalho);
 
         javax.swing.GroupLayout painelCabecalhoLayout = new javax.swing.GroupLayout(painelCabecalho);
@@ -404,15 +434,15 @@ public class JFramePrincipal extends javax.swing.JFrame {
             painelCabecalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelCabecalhoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(493, Short.MAX_VALUE))
+                .addComponent(jScrollPane4)
+                .addContainerGap())
         );
         painelCabecalhoLayout.setVerticalGroup(
             painelCabecalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelCabecalhoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addComponent(jScrollPane4)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout abaCabecalhoLayout = new javax.swing.GroupLayout(abaCabecalho);
@@ -422,14 +452,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
             .addGroup(abaCabecalhoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelCabecalho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(119, Short.MAX_VALUE))
+                .addContainerGap(602, Short.MAX_VALUE))
         );
         abaCabecalhoLayout.setVerticalGroup(
             abaCabecalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(abaCabecalhoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelCabecalho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(187, Short.MAX_VALUE))
+                .addContainerGap(223, Short.MAX_VALUE))
         );
 
         painelComAbas.addTab("Cabeçalho da requisição", abaCabecalho);
@@ -438,15 +468,20 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
         tabelaRequisicao.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Xi", "fi", "Fi", "fr", "Fr"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane5.setViewportView(tabelaRequisicao);
 
         javax.swing.GroupLayout painelTabelaRequisicaoLayout = new javax.swing.GroupLayout(painelTabelaRequisicao);
@@ -455,15 +490,15 @@ public class JFramePrincipal extends javax.swing.JFrame {
             painelTabelaRequisicaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTabelaRequisicaoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(252, Short.MAX_VALUE))
+                .addComponent(jScrollPane5)
+                .addContainerGap())
         );
         painelTabelaRequisicaoLayout.setVerticalGroup(
             painelTabelaRequisicaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTabelaRequisicaoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addComponent(jScrollPane5)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout abaRequisicaoLayout = new javax.swing.GroupLayout(abaRequisicao);
@@ -473,14 +508,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
             .addGroup(abaRequisicaoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelTabelaRequisicao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(360, Short.MAX_VALUE))
+                .addContainerGap(602, Short.MAX_VALUE))
         );
         abaRequisicaoLayout.setVerticalGroup(
             abaRequisicaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(abaRequisicaoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelTabelaRequisicao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(134, Short.MAX_VALUE))
+                .addContainerGap(223, Short.MAX_VALUE))
         );
 
         painelComAbas.addTab("Requisição", abaRequisicao);
@@ -489,15 +524,20 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
         tabelaHTTP.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "XI", "fi", "Fi", "fr", "Fr"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane6.setViewportView(tabelaHTTP);
 
         javax.swing.GroupLayout painelTabelaHTTPLayout = new javax.swing.GroupLayout(painelTabelaHTTP);
@@ -506,15 +546,15 @@ public class JFramePrincipal extends javax.swing.JFrame {
             painelTabelaHTTPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTabelaHTTPLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(392, Short.MAX_VALUE))
+                .addComponent(jScrollPane6)
+                .addContainerGap())
         );
         painelTabelaHTTPLayout.setVerticalGroup(
             painelTabelaHTTPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTabelaHTTPLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addComponent(jScrollPane6)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout abaHTTPLayout = new javax.swing.GroupLayout(abaHTTP);
@@ -524,14 +564,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
             .addGroup(abaHTTPLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelTabelaHTTP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(220, Short.MAX_VALUE))
+                .addContainerGap(602, Short.MAX_VALUE))
         );
         abaHTTPLayout.setVerticalGroup(
             abaHTTPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(abaHTTPLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelTabelaHTTP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(165, Short.MAX_VALUE))
+                .addContainerGap(223, Short.MAX_VALUE))
         );
 
         painelComAbas.addTab("Verção do HTTP", abaHTTP);
@@ -540,15 +580,20 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
         tabelaCodigo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "XI", "fi", "Fi", "fr", "Fr"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane7.setViewportView(tabelaCodigo);
 
         javax.swing.GroupLayout painelTabelaCodigoLayout = new javax.swing.GroupLayout(painelTabelaCodigo);
@@ -557,15 +602,15 @@ public class JFramePrincipal extends javax.swing.JFrame {
             painelTabelaCodigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTabelaCodigoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(423, Short.MAX_VALUE))
+                .addComponent(jScrollPane7)
+                .addContainerGap())
         );
         painelTabelaCodigoLayout.setVerticalGroup(
             painelTabelaCodigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTabelaCodigoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(79, Short.MAX_VALUE))
+                .addComponent(jScrollPane7)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout abaCodigoLayout = new javax.swing.GroupLayout(abaCodigo);
@@ -575,14 +620,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
             .addGroup(abaCodigoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelTabelaCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(189, Short.MAX_VALUE))
+                .addContainerGap(602, Short.MAX_VALUE))
         );
         abaCodigoLayout.setVerticalGroup(
             abaCodigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(abaCodigoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelTabelaCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(155, Short.MAX_VALUE))
+                .addContainerGap(223, Short.MAX_VALUE))
         );
 
         painelComAbas.addTab("Código", abaCodigo);
@@ -591,15 +636,20 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
         tabelaTamanho.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "XI", "fi", "Fi", "fr", "Fr"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane8.setViewportView(tabelaTamanho);
 
         javax.swing.GroupLayout painelTabelaTamanhoLayout = new javax.swing.GroupLayout(painelTabelaTamanho);
@@ -608,15 +658,15 @@ public class JFramePrincipal extends javax.swing.JFrame {
             painelTabelaTamanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTabelaTamanhoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(425, Short.MAX_VALUE))
+                .addComponent(jScrollPane8)
+                .addContainerGap())
         );
         painelTabelaTamanhoLayout.setVerticalGroup(
             painelTabelaTamanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTabelaTamanhoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(133, Short.MAX_VALUE))
+                .addComponent(jScrollPane8)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout abaTamanhoLayout = new javax.swing.GroupLayout(abaTamanho);
@@ -626,14 +676,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
             .addGroup(abaTamanhoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelTabelaTamanho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(187, Short.MAX_VALUE))
+                .addContainerGap(602, Short.MAX_VALUE))
         );
         abaTamanhoLayout.setVerticalGroup(
             abaTamanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(abaTamanhoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelTabelaTamanho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(101, Short.MAX_VALUE))
+                .addContainerGap(223, Short.MAX_VALUE))
         );
 
         painelComAbas.addTab("Tamanho", abaTamanho);
@@ -642,15 +692,20 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
         tabelaCaminho.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "XI", "fi", "Fi", "fr", "Fr"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane9.setViewportView(tabelaCaminho);
 
         javax.swing.GroupLayout painelTabelaCaminhoLayout = new javax.swing.GroupLayout(painelTabelaCaminho);
@@ -659,15 +714,15 @@ public class JFramePrincipal extends javax.swing.JFrame {
             painelTabelaCaminhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTabelaCaminhoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(484, Short.MAX_VALUE))
+                .addComponent(jScrollPane9)
+                .addContainerGap())
         );
         painelTabelaCaminhoLayout.setVerticalGroup(
             painelTabelaCaminhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTabelaCaminhoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addComponent(jScrollPane9)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout abaCaminhoLayout = new javax.swing.GroupLayout(abaCaminho);
@@ -677,14 +732,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
             .addGroup(abaCaminhoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelTabelaCaminho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addContainerGap(602, Short.MAX_VALUE))
         );
         abaCaminhoLayout.setVerticalGroup(
             abaCaminhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(abaCaminhoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelTabelaCaminho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(223, Short.MAX_VALUE))
         );
 
         painelComAbas.addTab("Caminho", abaCaminho);
@@ -693,15 +748,20 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
         tabelaSo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "XI", "fi", "Fi", "fr", "Fr"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane10.setViewportView(tabelaSo);
 
         javax.swing.GroupLayout painelTabelaSoLayout = new javax.swing.GroupLayout(painelTabelaSo);
@@ -710,15 +770,15 @@ public class JFramePrincipal extends javax.swing.JFrame {
             painelTabelaSoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTabelaSoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(454, Short.MAX_VALUE))
+                .addComponent(jScrollPane10)
+                .addContainerGap())
         );
         painelTabelaSoLayout.setVerticalGroup(
             painelTabelaSoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTabelaSoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(133, Short.MAX_VALUE))
+                .addComponent(jScrollPane10)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout abaSoLayout = new javax.swing.GroupLayout(abaSo);
@@ -728,14 +788,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
             .addGroup(abaSoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelTabelaSo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(158, Short.MAX_VALUE))
+                .addContainerGap(602, Short.MAX_VALUE))
         );
         abaSoLayout.setVerticalGroup(
             abaSoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(abaSoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelTabelaSo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(101, Short.MAX_VALUE))
+                .addContainerGap(223, Short.MAX_VALUE))
         );
 
         painelComAbas.addTab("Sistema Operacional", abaSo);
@@ -744,15 +804,20 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
         tabelaBrowser.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "XI", "fi", "Fi", "fr", "Fr"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane11.setViewportView(tabelaBrowser);
 
         javax.swing.GroupLayout painelTabelaBrowserLayout = new javax.swing.GroupLayout(painelTabelaBrowser);
@@ -761,15 +826,15 @@ public class JFramePrincipal extends javax.swing.JFrame {
             painelTabelaBrowserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTabelaBrowserLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(451, Short.MAX_VALUE))
+                .addComponent(jScrollPane11)
+                .addContainerGap())
         );
         painelTabelaBrowserLayout.setVerticalGroup(
             painelTabelaBrowserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTabelaBrowserLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addComponent(jScrollPane11)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout abaBrowserLayout = new javax.swing.GroupLayout(abaBrowser);
@@ -779,14 +844,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
             .addGroup(abaBrowserLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelTabelaBrowser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(161, Short.MAX_VALUE))
+                .addContainerGap(602, Short.MAX_VALUE))
         );
         abaBrowserLayout.setVerticalGroup(
             abaBrowserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(abaBrowserLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelTabelaBrowser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(136, Short.MAX_VALUE))
+                .addContainerGap(223, Short.MAX_VALUE))
         );
 
         painelComAbas.addTab("Browser", abaBrowser);
@@ -795,11 +860,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(painelComAbas, javax.swing.GroupLayout.DEFAULT_SIZE, 1091, Short.MAX_VALUE)
+            .addComponent(painelComAbas)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(painelComAbas, javax.swing.GroupLayout.DEFAULT_SIZE, 713, Short.MAX_VALUE)
+            .addComponent(painelComAbas)
         );
 
         pack();
@@ -825,6 +890,17 @@ public class JFramePrincipal extends javax.swing.JFrame {
         
         listarLog();
         listarIP();
+        listarData();
+        listarHorario();
+        listarLocalizacao();
+        listarCabecalho();
+        listarRequisicao();
+        listarHTTP();
+        listarCodigo();
+        listarTamanho();
+        listarCaminho();
+        listarSO();
+        listarBrowser();
     }//GEN-LAST:event_lerLogActionPerformed
 
     private void painelComAbasFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_painelComAbasFocusGained
@@ -832,7 +908,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_painelComAbasFocusGained
 
     private void abaIPFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_abaIPFocusGained
-        listarIP();
+        
     }//GEN-LAST:event_abaIPFocusGained
 
    public static void main(String args[]) {
@@ -900,15 +976,292 @@ public class JFramePrincipal extends javax.swing.JFrame {
         Qualitativa ip = new Qualitativa(Roll.lerVetor(ips));
 
 //      Adicionar os atributos que eu escolher na jTable
-        DecimalFormat fr = new DecimalFormat("0.0000 %");
+        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
+                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
 
         for (int i = 0; i < ip.getXI().length; i++) {
             modeloTable.addRow(new Object[]{ ip.getXI()[i], ip.getFI()[i],
                 ip.getFZI()[i], ip.getFR()[i], ip.getFZR()[i]
             });
-        }
-
+        }  
+    }
+    public void listarData(){
+        DefaultTableModel modeloTable = (DefaultTableModel) tabelaData.getModel();
         
+//      Verificar se a jTable tem algum registro, se tiver eu deleto
+        while (modeloTable.getRowCount() > 0) {
+            modeloTable.removeRow(0);
+        }
+        
+//      Percorrer a lista e pegar cada IP
+        String[] datas = new String[lista.size()];
+        for (int i = 0; i < lista.size(); i++) {
+            datas[i] = lista.get(i).getData();
+        }
+        Qualitativa data = new Qualitativa(Roll.lerVetor(datas));
+
+//      Adicionar os atributos que eu escolher na jTable
+        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
+                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
+
+        for (int i = 0; i < data.getXI().length; i++) {
+            modeloTable.addRow(new Object[]{ data.getXI()[i], data.getFI()[i],
+                data.getFZI()[i], data.getFR()[i], data.getFZR()[i]
+            });
+        }  
+    }
+    public void listarHorario(){
+        DefaultTableModel modeloTable = (DefaultTableModel) tabelaHorario.getModel();
+        
+//      Verificar se a jTable tem algum registro, se tiver eu deleto
+        while (modeloTable.getRowCount() > 0) {
+            modeloTable.removeRow(0);
+        }
+        
+//      Percorrer a lista e pegar cada IP
+        String[] horarios = new String[lista.size()];
+        for (int i = 0; i < lista.size(); i++) {
+            horarios[i] = lista.get(i).getHorario();
+        }
+        Qualitativa horario = new Qualitativa(Roll.lerVetor(horarios));
+
+//      Adicionar os atributos que eu escolher na jTable
+        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
+                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
+
+        for (int i = 0; i < horario.getXI().length; i++) {
+            modeloTable.addRow(new Object[]{ horario.getXI()[i], horario.getFI()[i],
+                horario.getFZI()[i], horario.getFR()[i], horario.getFZR()[i]
+            });
+        }  
+    }
+    public void listarLocalizacao(){
+        DefaultTableModel modeloTable = (DefaultTableModel) tabelaLocalizacao.getModel();
+        
+//      Verificar se a jTable tem algum registro, se tiver eu deleto
+        while (modeloTable.getRowCount() > 0) {
+            modeloTable.removeRow(0);
+        }
+        
+//      Percorrer a lista e pegar cada IP
+        String[] localizacoes = new String[lista.size()];
+        for (int i = 0; i < lista.size(); i++) {
+            localizacoes[i] = lista.get(i).getLocalizacao();
+        }
+        Qualitativa localizacao = new Qualitativa(Roll.lerVetor(localizacoes));
+
+//      Adicionar os atributos que eu escolher na jTable
+        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
+                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
+
+        for (int i = 0; i < localizacao.getXI().length; i++) {
+            modeloTable.addRow(new Object[]{ localizacao.getXI()[i],
+                localizacao.getFI()[i], localizacao.getFZI()[i], 
+                localizacao.getFR()[i], localizacao.getFZR()[i]
+            });
+        }  
+    }
+    public void listarCabecalho(){
+        DefaultTableModel modeloTable = (DefaultTableModel) tabelaCabecalho.getModel();
+        
+//      Verificar se a jTable tem algum registro, se tiver eu deleto
+        while (modeloTable.getRowCount() > 0) {
+            modeloTable.removeRow(0);
+        }
+        
+//      Percorrer a lista e pegar cada IP
+        String[] Cabecalhos = new String[lista.size()];
+        for (int i = 0; i < lista.size(); i++) {
+            Cabecalhos[i] = lista.get(i).getCabecalho();
+        }
+        Qualitativa cabecalho = new Qualitativa(Roll.lerVetor(Cabecalhos));
+
+//      Adicionar os atributos que eu escolher na jTable
+        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
+                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
+
+        for (int i = 0; i < cabecalho.getXI().length; i++) {
+            modeloTable.addRow(new Object[]{ cabecalho.getXI()[i],
+                cabecalho.getFI()[i], cabecalho.getFZI()[i],
+                cabecalho.getFR()[i], cabecalho.getFZR()[i]
+            });
+        }  
+    }
+    public void listarRequisicao(){
+        DefaultTableModel modeloTable = (DefaultTableModel) tabelaRequisicao.getModel();
+        
+//      Verificar se a jTable tem algum registro, se tiver eu deleto
+        while (modeloTable.getRowCount() > 0) {
+            modeloTable.removeRow(0);
+        }
+        
+//      Percorrer a lista e pegar cada IP
+        String[] requisicoes = new String[lista.size()];
+        for (int i = 0; i < lista.size(); i++) {
+            requisicoes[i] = lista.get(i).getRequisicao();
+        }
+        Qualitativa requisicao = new Qualitativa(Roll.lerVetor(requisicoes));
+
+//      Adicionar os atributos que eu escolher na jTable
+        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
+                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
+
+        for (int i = 0; i < requisicao.getXI().length; i++) {
+            modeloTable.addRow(new Object[]{ requisicao.getXI()[i],
+                requisicao.getFI()[i], requisicao.getFZI()[i],
+                requisicao.getFR()[i], requisicao.getFZR()[i]
+            });
+        }  
+    }
+    public void listarHTTP(){
+        DefaultTableModel modeloTable = (DefaultTableModel) tabelaHTTP.getModel();
+        
+//      Verificar se a jTable tem algum registro, se tiver eu deleto
+        while (modeloTable.getRowCount() > 0) {
+            modeloTable.removeRow(0);
+        }
+        
+//      Percorrer a lista e pegar cada IP
+        String[] https = new String[lista.size()];
+        for (int i = 0; i < lista.size(); i++) {
+            https[i] = lista.get(i).getHttpVersao();
+        }
+        Qualitativa http = new Qualitativa(Roll.lerVetor(https));
+
+//      Adicionar os atributos que eu escolher na jTable
+        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
+                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
+
+        for (int i = 0; i < http.getXI().length; i++) {
+            modeloTable.addRow(new Object[]{ http.getXI()[i], http.getFI()[i],
+                http.getFZI()[i], http.getFR()[i], http.getFZR()[i]
+            });
+        }  
+    }
+    public void listarCodigo(){
+        DefaultTableModel modeloTable = (DefaultTableModel) tabelaCodigo.getModel();
+        
+//      Verificar se a jTable tem algum registro, se tiver eu deleto
+        while (modeloTable.getRowCount() > 0) {
+            modeloTable.removeRow(0);
+        }
+        
+//      Percorrer a lista e pegar cada IP
+        String[] Codigos = new String[lista.size()];
+        for (int i = 0; i < lista.size(); i++) {
+            Codigos[i] = lista.get(i).getCodigoStatus();
+        }
+        Qualitativa codigo = new Qualitativa(Roll.lerVetor(Codigos));
+
+//      Adicionar os atributos que eu escolher na jTable
+        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
+                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
+
+        for (int i = 0; i < codigo.getXI().length; i++) {
+            modeloTable.addRow(new Object[]{ codigo.getXI()[i], codigo.getFI()[i],
+                codigo.getFZI()[i], codigo.getFR()[i], codigo.getFZR()[i]
+            });
+        }  
+    }
+    public void listarTamanho(){
+        DefaultTableModel modeloTable = (DefaultTableModel) tabelaTamanho.getModel();
+        
+//      Verificar se a jTable tem algum registro, se tiver eu deleto
+        while (modeloTable.getRowCount() > 0) {
+            modeloTable.removeRow(0);
+        }
+        
+//      Percorrer a lista e pegar cada IP
+        String[] tamanhos = new String[lista.size()];
+        for (int i = 0; i < lista.size(); i++) {
+            tamanhos[i] = lista.get(i).getTamanhoBytes();
+        }
+        Qualitativa tamanho = new Qualitativa(Roll.lerVetor(tamanhos));
+
+//      Adicionar os atributos que eu escolher na jTable
+        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
+                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
+
+        for (int i = 0; i < tamanho.getXI().length; i++) {
+            modeloTable.addRow(new Object[]{ tamanho.getXI()[i], tamanho.getFI()[i],
+                tamanho.getFZI()[i], tamanho.getFR()[i], tamanho.getFZR()[i]
+            });
+        }  
+    }
+    public void listarCaminho(){
+        DefaultTableModel modeloTable = (DefaultTableModel) tabelaCaminho.getModel();
+        
+//      Verificar se a jTable tem algum registro, se tiver eu deleto
+        while (modeloTable.getRowCount() > 0) {
+            modeloTable.removeRow(0);
+        }
+        
+//      Percorrer a lista e pegar cada IP
+        String[] caminhos = new String[lista.size()];
+        for (int i = 0; i < lista.size(); i++) {
+            caminhos[i] = lista.get(i).getCaminhoURL();
+        }
+        Qualitativa caminho = new Qualitativa(Roll.lerVetor(caminhos));
+
+//      Adicionar os atributos que eu escolher na jTable
+        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
+                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
+
+        for (int i = 0; i < caminho.getXI().length; i++) {
+            modeloTable.addRow(new Object[]{ caminho.getXI()[i], caminho.getFI()[i],
+                caminho.getFZI()[i], caminho.getFR()[i], caminho.getFZR()[i]
+            });
+        }  
+    }
+    public void listarSO(){
+        DefaultTableModel modeloTable = (DefaultTableModel) tabelaSo.getModel();
+        
+//      Verificar se a jTable tem algum registro, se tiver eu deleto
+        while (modeloTable.getRowCount() > 0) {
+            modeloTable.removeRow(0);
+        }
+        
+//      Percorrer a lista e pegar cada IP
+        String[] sos = new String[lista.size()];
+        for (int i = 0; i < lista.size(); i++) {
+            sos[i] = lista.get(i).getSo();
+        }
+        Qualitativa so = new Qualitativa(Roll.lerVetor(sos));
+
+//      Adicionar os atributos que eu escolher na jTable
+        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
+                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
+
+        for (int i = 0; i < so.getXI().length; i++) {
+            modeloTable.addRow(new Object[]{ so.getXI()[i], so.getFI()[i],
+                so.getFZI()[i], so.getFR()[i], so.getFZR()[i]
+            });
+        }  
+    }
+    public void listarBrowser(){
+        DefaultTableModel modeloTable = (DefaultTableModel) tabelaBrowser.getModel();
+        
+//      Verificar se a jTable tem algum registro, se tiver eu deleto
+        while (modeloTable.getRowCount() > 0) {
+            modeloTable.removeRow(0);
+        }
+        
+//      Percorrer a lista e pegar cada IP
+        String[] browsers = new String[lista.size()];
+        for (int i = 0; i < lista.size(); i++) {
+            browsers[i] = lista.get(i).getBrowser();
+        }
+        Qualitativa browser = new Qualitativa(Roll.lerVetor(browsers));
+
+//      Adicionar os atributos que eu escolher na jTable
+        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
+                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
+
+        for (int i = 0; i < browser.getXI().length; i++) {
+            modeloTable.addRow(new Object[]{ browser.getXI()[i], browser.getFI()[i],
+                browser.getFZI()[i], browser.getFR()[i], browser.getFZR()[i]
+            });
+        }  
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
