@@ -11,6 +11,8 @@ public class Discreta {
     private double media, moda, mediana, M, MZ;
     private int[] FI, FZI;
     private double[] XI, FR, FZR;
+    private double[] XIFI;
+    private double[] XIXFI;
    
     //Construtores.
     public Discreta(){
@@ -85,6 +87,16 @@ public class Discreta {
             FZR[i] = FR[i];
             FZR[i] = FZR[i] + FZR[i-1];
         }
+//      Xi*Fi
+        XIFI = new double[XI.length];
+        for (int i = 0; i < XI.length; i++) {
+            XIFI[i] = XI[i]*FI[i];
+        }
+//      (Xi-media)²*Fi
+        XIXFI = new double[XI.length];
+        for (int i = 0; i < XI.length; i++) {
+            XIXFI[i] = Math.pow((XI[i] - media),2) * FI[i];
+        }
         
 //      Outros valores.
         N = roll.size();
@@ -136,6 +148,30 @@ public class Discreta {
     }
     public void setFZR(double[] FZR) {
         this.FZR = FZR;
+    }
+    public double getModa() {
+        return moda;
+    }
+    public void setModa(double moda) {
+        this.moda = moda;
+    }
+    public double getMediana() {
+        return mediana;
+    }
+    public void setMediana(double mediana) {
+        this.mediana = mediana;
+    }
+    public double[] getXIFI() {
+        return XIFI;
+    }
+    public void setXIFI(double[] XIFI) {
+        this.XIFI = XIFI;
+    }
+    public double[] getXIXFI() {
+        return XIXFI;
+    }
+    public void setXIXFI(double[] XIXFI) {
+        this.XIXFI = XIXFI;
     }
     public int getN(){
         return N;
