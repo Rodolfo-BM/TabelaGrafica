@@ -8,6 +8,7 @@ public class Dados {
     private String localizacao;
     private String cabecalho;
     private String requisicao;
+    private String httpVersao;
     private String codigoStatus;
     private String tamanhoBytes;
     private String caminhoURL;
@@ -23,6 +24,7 @@ public class Dados {
         this.localizacao = localizacao;
         this.cabecalho = cabecalho;
         this.requisicao = requisicao;
+        this.httpVersao = httpVersao;
         this.codigoStatus = codigoStatus;
         this.tamanhoBytes = tamanhoBytes;
         this.caminhoURL = caminhoURL;
@@ -39,11 +41,12 @@ public class Dados {
         localizacao = linhaDividida[3];
         cabecalho = linhaDividida[4];
         requisicao = linhaDividida[5];
+        httpVersao = linhaDividida[6];
         codigoStatus = linhaDividida[7];
         tamanhoBytes = linhaDividida[8];
         caminhoURL = linhaDividida[9];
-//        so = linhaDividida[7];
-//        browser = linhaDividida[8];
+        so = pegarSo(linhaDividida);
+        browser = pegarBrowser(linhaDividida);
 //        System.out.println(linhaDividida.length);
     }
 
@@ -83,6 +86,12 @@ public class Dados {
     public void setRequisicao(String requisicao) {
         this.requisicao = requisicao;
     }
+    public String getHttpVersao() {
+        return httpVersao;
+    }
+    public void setHttpVersao(String httpVersao) {
+        this.httpVersao = httpVersao;
+    }
     public String getCodigoStatus() {
         return codigoStatus;
     }
@@ -116,11 +125,51 @@ public class Dados {
     @Override
     public String toString() {
         return "Dados{" + "ip=" + ip + ", data=" + data + 
-                ", localizacao=" + localizacao + ", requisicao=" + requisicao + 
-                ", codigoStatus=" + codigoStatus + ", tamanhoBytes=" + tamanhoBytes + 
-                ", caminhoURL=" + caminhoURL + ", so=" + so + ", browser=" + browser + '}';
+                ", horario=" + horario + ", localizacao=" + localizacao + 
+                ", cabecalho=" + cabecalho + ", requisicao=" + requisicao + 
+                ", httpVersao=" + httpVersao + ", codigoStatus=" + codigoStatus + 
+                ", tamanhoBytes=" + tamanhoBytes + ", caminhoURL=" + caminhoURL + 
+                ", so=" + so + ", browser=" + browser + '}';
     }
-    
-    
+
+    private String pegarSo(String[] linhaDividida) {
+        
+        String dado = linhaDividida[10];
+        
+        if(dado.contains("Windows")){
+            dado = "Windows";
+        }else if(dado.contains("Linux")){
+            dado = "Linux";
+        }else if(dado.contains("Mac OS")){
+            dado = "Mac OS";
+        }else{
+            dado = "Bot";
+        }
+        
+        return dado;
+    }
+
+    private String pegarBrowser(String[] linhaDividida) {
+        
+        String dado = linhaDividida[10];
+        
+        if(dado.contains("Firefox")){
+            dado = "Firefox";
+        }else if(dado.contains("Safari")){
+            dado = "Safari";
+        }else if(dado.contains("Opera")){
+            dado = "Opera";
+        }else if(dado.contains("Netscape")){
+            dado = "Netscape";
+        }else if(dado.contains("Epiphany")){
+            dado = "Epiphany";
+        }else{
+            dado = "Bot";
+        }
+        
+        return dado;
+        
+//        Konqueror
+    }
     
 }

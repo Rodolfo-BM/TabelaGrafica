@@ -2,6 +2,7 @@ package tabelagrafica;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Continua {
@@ -16,7 +17,7 @@ public class Continua {
     }
     public Continua(List roll) {
         //Declaração de variaveis.
-        List<String> aux = new ArrayList<>();
+        List<String> aux;
         aux = roll;
         for (String item : aux) {
             item = item.trim();
@@ -25,7 +26,9 @@ public class Continua {
         for (String item : aux) {
             aux2.add(Double.parseDouble(item));
         }
-        aux2.sort(null);
+        
+        Collections.sort(aux2);
+//        aux2.sort(null);
         
         //Valores que nao fazem parte da tabela
         N = roll.size();

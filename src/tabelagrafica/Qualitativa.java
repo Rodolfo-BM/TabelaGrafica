@@ -39,6 +39,7 @@ public class Qualitativa {
             XI[z] = item;
             z++;
         }
+        
         Arrays.sort(XI);
         
         //Criação dos outros valores da tabela baseados no tamanho de XI.
@@ -148,6 +149,7 @@ public class Qualitativa {
     public String toString() {
         return "Qualitativa{" + "N=" + N + ", moda=" + moda + ", M=" + M + ", MZ=" + MZ + ", FI=" + FI + ", FZI=" + FZI + ", FR=" + FR + ", FZR=" + FZR + ", XI=" + XI + '}';
     }
+    
     
     
 }

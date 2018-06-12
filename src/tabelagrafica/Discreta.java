@@ -2,6 +2,7 @@ package tabelagrafica;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Discreta {
@@ -39,6 +40,7 @@ public class Discreta {
             XI[z] = Double.parseDouble(item);
             z++;
         }
+        
         Arrays.sort(XI);
         
         //Criação dos outros valores da tabela baseados no tamanho de XI.
