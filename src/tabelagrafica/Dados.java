@@ -155,6 +155,8 @@ public class Dados {
         
         if(dado.contains("Firefox")){
             dado = "Firefox";
+        }else if(dado.contains("Chrome")){
+            dado = "Chrome";
         }else if(dado.contains("Safari")){
             dado = "Safari";
         }else if(dado.contains("Opera")){
