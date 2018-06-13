@@ -14,6 +14,9 @@ import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PiePlot;
+import org.jfree.chart.plot.Plot;
 
 public class JFramePrincipal extends javax.swing.JFrame {
     
@@ -1011,6 +1014,8 @@ public class JFramePrincipal extends javax.swing.JFrame {
     private void botaoIP1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoIP1ActionPerformed
         ip = listarIP();
         quantitativaIP(ip);
+        Plot plot = new PiePlot();
+        JFreeChart grafico = new JFreeChart(plot);
     }//GEN-LAST:event_botaoIP1ActionPerformed
 
    public static void main(String args[]) {
