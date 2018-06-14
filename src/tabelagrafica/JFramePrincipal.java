@@ -18,11 +18,12 @@ import javax.swing.table.DefaultTableModel;
 public class JFramePrincipal extends javax.swing.JFrame {
     
     ArrayList<Dados> lista = new ArrayList<>();
-    Qualitativa ip;
+    Qualitativa qualitativaIP;
+    Discreta discretaIP;
 
     public JFramePrincipal() {
         initComponents();
-        
+        esconderComponentes();
     }
 
    @SuppressWarnings("unchecked")
@@ -45,6 +46,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
         painelBotoesIP = new javax.swing.JPanel();
         botaoIP1 = new javax.swing.JButton();
         botaoIP2 = new javax.swing.JButton();
+        botaoIP3 = new javax.swing.JButton();
         abaData = new javax.swing.JPanel();
         scrollTabelaData = new javax.swing.JScrollPane();
         tabelaData = new javax.swing.JTable();
@@ -239,6 +241,13 @@ public class JFramePrincipal extends javax.swing.JFrame {
             }
         });
 
+        botaoIP3.setText("Estatisticas sobre frequencia de IPs");
+        botaoIP3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoIP3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout painelBotoesIPLayout = new javax.swing.GroupLayout(painelBotoesIP);
         painelBotoesIP.setLayout(painelBotoesIPLayout);
         painelBotoesIPLayout.setHorizontalGroup(
@@ -248,6 +257,8 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addComponent(botaoIP1)
                 .addGap(18, 18, 18)
                 .addComponent(botaoIP2)
+                .addGap(18, 18, 18)
+                .addComponent(botaoIP3)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         painelBotoesIPLayout.setVerticalGroup(
@@ -256,7 +267,8 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(painelBotoesIPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoIP1)
-                    .addComponent(botaoIP2))
+                    .addComponent(botaoIP2)
+                    .addComponent(botaoIP3))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1081,11 +1093,26 @@ public class JFramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_abaIPFocusGained
 
     private void botaoIP1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoIP1ActionPerformed
-        ip = listarIP();
+        //Percorrer a lista e pegar cada IP
+        List ips = new ArrayList();
+        for (int i = 0; i < lista.size(); i++) {
+            ips.add(lista.get(i).getIp());
+        }
+        qualitativaIP = new Qualitativa(ips);
+        
+        listarQualitativaIP(qualitativaIP);
+        botaoIP2.setVisible(true);
     }//GEN-LAST:event_botaoIP1ActionPerformed
 
     private void botaoIP2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoIP2ActionPerformed
-        quantitativaIP(ip);
+        List ipsFis = new ArrayList<>();
+        for (int i = 0; i < qualitativaIP.getFI().length; i++) {
+            ipsFis.add(""+qualitativaIP.getFI()[i]);
+        }
+        discretaIP = new Discreta(ipsFis);
+        
+        listarDiscretaIP(discretaIP);
+        botaoIP3.setVisible(true);
     }//GEN-LAST:event_botaoIP2ActionPerformed
 
     private void botaoData1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoData1ActionPerformed
@@ -1094,6 +1121,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
     private void botaoHorario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoHorario1ActionPerformed
         listarHorario();
+        botaoHorario2.setVisible(true);
     }//GEN-LAST:event_botaoHorario1ActionPerformed
 
     private void botaoHorario2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoHorario2ActionPerformed
@@ -1135,6 +1163,24 @@ public class JFramePrincipal extends javax.swing.JFrame {
     private void botaoBrowser1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoBrowser1ActionPerformed
         listarBrowser();
     }//GEN-LAST:event_botaoBrowser1ActionPerformed
+
+    private void botaoIP3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoIP3ActionPerformed
+        JFrameEstatisticas estatisticasIP;
+        estatisticasIP = new JFrameEstatisticas(this, true);
+        estatisticasIP.getCampoN().setText(discretaIP.getN()+"");
+        estatisticasIP.getCampoM().setText(discretaIP.getM()+"");
+        estatisticasIP.getCampoMZ().setText(discretaIP.getMZ()+"");
+        estatisticasIP.getCampoMedia().setText(discretaIP.getMedia()+"");
+        estatisticasIP.getCampoMediana().setText(discretaIP.getMediana()+"");
+        estatisticasIP.getCampoModa().setText(discretaIP.getModa()+"");
+        estatisticasIP.getCampoH().setVisible(false);
+        estatisticasIP.getCampoHZ().setVisible(false);
+        estatisticasIP.getRotuloH().setVisible(false);
+        estatisticasIP.getRotuloHZ().setVisible(false);
+        estatisticasIP.setLocationRelativeTo(null);
+        estatisticasIP.setVisible(true);
+
+    }//GEN-LAST:event_botaoIP3ActionPerformed
 
    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -1185,20 +1231,13 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 item.getBrowser()});
         }
     }
-    public Qualitativa listarIP(){
+    public void listarQualitativaIP(Qualitativa ip){
         DefaultTableModel modeloTable = (DefaultTableModel) tabelaIP.getModel();
         
 //      Verificar se a jTable tem algum registro, se tiver eu deleto
         while (modeloTable.getRowCount() > 0) {
             modeloTable.removeRow(0);
         }
-        
-//      Percorrer a lista e pegar cada IP
-        String[] ips = new String[lista.size()];
-        for (int i = 0; i < lista.size(); i++) {
-            ips[i] = lista.get(i).getIp();
-        }
-        Qualitativa ip = new Qualitativa(Roll.lerVetor(ips));
 
 //      Adicionar os atributos que eu escolher na jTable
         DecimalFormat fr = new DecimalFormat ("#,##0.0000",
@@ -1208,31 +1247,24 @@ public class JFramePrincipal extends javax.swing.JFrame {
             modeloTable.addRow(new Object[]{ ip.getXI()[i], ip.getFI()[i],
                 ip.getFZI()[i], ip.getFR()[i], ip.getFZR()[i]
             });
-        }  
-        return ip;
+        }
     }
-    public void quantitativaIP(Qualitativa ip){
+    public void listarDiscretaIP(Discreta ip){
         DefaultTableModel modeloTable = (DefaultTableModel) tabelaIP2.getModel();
         
 //      Verificar se a jTable tem algum registro, se tiver eu deleto
         while (modeloTable.getRowCount() > 0) {
             modeloTable.removeRow(0);
         }
-        
-        List<String> qualquercoisa = new ArrayList<>();
-        for (int i = 0; i < ip.getFI().length; i++) {
-            qualquercoisa.add(""+ip.getFI()[i]);
-        }
-        Discreta ipDiscreto = new Discreta(qualquercoisa);
 
 //      Adicionar os atributos que eu escolher na jTable
         DecimalFormat fr = new DecimalFormat ("#,##0.0000",
                             new DecimalFormatSymbols (new Locale ("pt", "BR")));
 
-        for (int i = 0; i < ipDiscreto.getXI().length; i++) {
-            modeloTable.addRow(new Object[]{ ipDiscreto.getXI()[i], ipDiscreto.getFI()[i],
-                ipDiscreto.getFZI()[i], ipDiscreto.getFR()[i], ipDiscreto.getFZR()[i],
-                ipDiscreto.getXIFI(), ipDiscreto.getXIXFI()
+        for (int i = 0; i < discretaIP.getXI().length; i++) {
+            modeloTable.addRow(new Object[]{ discretaIP.getXI()[i], discretaIP.getFI()[i],
+                discretaIP.getFZI()[i], discretaIP.getFR()[i], discretaIP.getFZR()[i],
+                discretaIP.getXIFI()[i], discretaIP.getXIXFI()[i]
             });
         } 
     }
@@ -1546,6 +1578,15 @@ public class JFramePrincipal extends javax.swing.JFrame {
         abaTamanho.setVisible(true);
     }
     
+    public void esconderComponentes(){
+        botaoIP2.setVisible(false);
+        botaoIP3.setVisible(false);
+        botaoHorario2.setVisible(false);
+    }
+    public void mostrarComponentes(){
+        
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel abaArquivo;
     private javax.swing.JPanel abaBrowser;
@@ -1570,6 +1611,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
     private javax.swing.JButton botaoHorario2;
     private javax.swing.JButton botaoIP1;
     private javax.swing.JButton botaoIP2;
+    private javax.swing.JButton botaoIP3;
     private javax.swing.JButton botaoLocalizacao;
     private javax.swing.JButton botaoRequisicao1;
     private javax.swing.JButton botaoSO1;
