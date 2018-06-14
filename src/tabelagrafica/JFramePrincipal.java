@@ -14,9 +14,6 @@ import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import org.jfree.chart.JFreeChart;
-import org.jfree.chart.plot.PiePlot;
-import org.jfree.chart.plot.Plot;
 
 public class JFramePrincipal extends javax.swing.JFrame {
     
@@ -58,11 +55,12 @@ public class JFramePrincipal extends javax.swing.JFrame {
         tabelaHorario = new javax.swing.JTable();
         painelBotoesHorario = new javax.swing.JPanel();
         botaoHorario1 = new javax.swing.JButton();
+        botaoHorario2 = new javax.swing.JButton();
         abaLocalizacao = new javax.swing.JPanel();
         scrollTabelaLocalizacao = new javax.swing.JScrollPane();
         tabelaLocalizacao = new javax.swing.JTable();
         painelBotoesLocalizacao = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        botaoLocalizacao = new javax.swing.JButton();
         abaCabecalho = new javax.swing.JPanel();
         scrollTabelaCabecalho = new javax.swing.JScrollPane();
         tabelaCabecalho = new javax.swing.JTable();
@@ -235,6 +233,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
         });
 
         botaoIP2.setText("Avaliar Frequencia de IPs");
+        botaoIP2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoIP2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelBotoesIPLayout = new javax.swing.GroupLayout(painelBotoesIP);
         painelBotoesIP.setLayout(painelBotoesIPLayout);
@@ -306,6 +309,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
         painelBotoesData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         botaoData1.setText("Carregar dados de Data");
+        botaoData1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoData1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelBotoesDataLayout = new javax.swing.GroupLayout(painelBotoesData);
         painelBotoesData.setLayout(painelBotoesDataLayout);
@@ -368,6 +376,18 @@ public class JFramePrincipal extends javax.swing.JFrame {
         painelBotoesHorario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         botaoHorario1.setText("Carregar dados de Horario");
+        botaoHorario1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoHorario1ActionPerformed(evt);
+            }
+        });
+
+        botaoHorario2.setText("Quantitade de acessos por hora");
+        botaoHorario2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoHorario2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelBotoesHorarioLayout = new javax.swing.GroupLayout(painelBotoesHorario);
         painelBotoesHorario.setLayout(painelBotoesHorarioLayout);
@@ -376,13 +396,17 @@ public class JFramePrincipal extends javax.swing.JFrame {
             .addGroup(painelBotoesHorarioLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(botaoHorario1)
+                .addGap(18, 18, 18)
+                .addComponent(botaoHorario2)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         painelBotoesHorarioLayout.setVerticalGroup(
             painelBotoesHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelBotoesHorarioLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(botaoHorario1)
+                .addGroup(painelBotoesHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botaoHorario1)
+                    .addComponent(botaoHorario2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -429,7 +453,12 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
         painelBotoesLocalizacao.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton1.setText("Carregar dados de localizacao");
+        botaoLocalizacao.setText("Carregar dados de localizacao");
+        botaoLocalizacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoLocalizacaoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelBotoesLocalizacaoLayout = new javax.swing.GroupLayout(painelBotoesLocalizacao);
         painelBotoesLocalizacao.setLayout(painelBotoesLocalizacaoLayout);
@@ -437,14 +466,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
             painelBotoesLocalizacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelBotoesLocalizacaoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(botaoLocalizacao)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         painelBotoesLocalizacaoLayout.setVerticalGroup(
             painelBotoesLocalizacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelBotoesLocalizacaoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(botaoLocalizacao)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -492,6 +521,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
         painelBotoesCabecalho.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         botaoCabecalho1.setText("Carregar dados de requisicoes");
+        botaoCabecalho1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoCabecalho1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelBotoesCabecalhoLayout = new javax.swing.GroupLayout(painelBotoesCabecalho);
         painelBotoesCabecalho.setLayout(painelBotoesCabecalhoLayout);
@@ -554,6 +588,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
         painelBotoesRequisicao.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         botaoRequisicao1.setText("Carregar dados de requisicoes");
+        botaoRequisicao1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoRequisicao1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelBotoesRequisicaoLayout = new javax.swing.GroupLayout(painelBotoesRequisicao);
         painelBotoesRequisicao.setLayout(painelBotoesRequisicaoLayout);
@@ -616,6 +655,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
         painelBotoesHTTP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         botaoHTTP1.setText("Carregar dados de HTTP");
+        botaoHTTP1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoHTTP1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelBotoesHTTPLayout = new javax.swing.GroupLayout(painelBotoesHTTP);
         painelBotoesHTTP.setLayout(painelBotoesHTTPLayout);
@@ -678,6 +722,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
         painelBotoesCodigo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         botaoCodigo1.setText("Carregar dados de codigo de resposta");
+        botaoCodigo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoCodigo1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelBotoesCodigoLayout = new javax.swing.GroupLayout(painelBotoesCodigo);
         painelBotoesCodigo.setLayout(painelBotoesCodigoLayout);
@@ -740,6 +789,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
         painelBotoesTamanho.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         botaoTamano1.setText("Carregar dados de tamanho de requisicoes");
+        botaoTamano1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoTamano1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelBotoesTamanhoLayout = new javax.swing.GroupLayout(painelBotoesTamanho);
         painelBotoesTamanho.setLayout(painelBotoesTamanhoLayout);
@@ -802,6 +856,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
         painelBotoesCaminho.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         botaoCaminho1.setText("Carregar dados do caminho");
+        botaoCaminho1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoCaminho1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelBotoesCaminhoLayout = new javax.swing.GroupLayout(painelBotoesCaminho);
         painelBotoesCaminho.setLayout(painelBotoesCaminhoLayout);
@@ -864,6 +923,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
         painelBotoesSO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         botaoSO1.setText("Carregar dados de Sistemas Operacionais");
+        botaoSO1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoSO1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelBotoesSOLayout = new javax.swing.GroupLayout(painelBotoesSO);
         painelBotoesSO.setLayout(painelBotoesSOLayout);
@@ -926,6 +990,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
         painelBotoesBrowser.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         botaoBrowser1.setText("Carregar dados de browswers");
+        botaoBrowser1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoBrowser1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelBotoesBrowserLayout = new javax.swing.GroupLayout(painelBotoesBrowser);
         painelBotoesBrowser.setLayout(painelBotoesBrowserLayout);
@@ -1013,10 +1082,59 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
     private void botaoIP1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoIP1ActionPerformed
         ip = listarIP();
-        quantitativaIP(ip);
-        Plot plot = new PiePlot();
-        JFreeChart grafico = new JFreeChart(plot);
     }//GEN-LAST:event_botaoIP1ActionPerformed
+
+    private void botaoIP2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoIP2ActionPerformed
+        quantitativaIP(ip);
+    }//GEN-LAST:event_botaoIP2ActionPerformed
+
+    private void botaoData1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoData1ActionPerformed
+        listarData();
+    }//GEN-LAST:event_botaoData1ActionPerformed
+
+    private void botaoHorario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoHorario1ActionPerformed
+        listarHorario();
+    }//GEN-LAST:event_botaoHorario1ActionPerformed
+
+    private void botaoHorario2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoHorario2ActionPerformed
+        
+    }//GEN-LAST:event_botaoHorario2ActionPerformed
+
+    private void botaoLocalizacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoLocalizacaoActionPerformed
+        listarLocalizacao();
+    }//GEN-LAST:event_botaoLocalizacaoActionPerformed
+
+    private void botaoCabecalho1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCabecalho1ActionPerformed
+        listarCabecalho();
+    }//GEN-LAST:event_botaoCabecalho1ActionPerformed
+
+    private void botaoRequisicao1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoRequisicao1ActionPerformed
+        listarRequisicao();
+    }//GEN-LAST:event_botaoRequisicao1ActionPerformed
+
+    private void botaoHTTP1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoHTTP1ActionPerformed
+        listarHTTP();
+    }//GEN-LAST:event_botaoHTTP1ActionPerformed
+
+    private void botaoCodigo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCodigo1ActionPerformed
+        listarCodigo();
+    }//GEN-LAST:event_botaoCodigo1ActionPerformed
+
+    private void botaoTamano1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoTamano1ActionPerformed
+        listarTamanho();
+    }//GEN-LAST:event_botaoTamano1ActionPerformed
+
+    private void botaoCaminho1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCaminho1ActionPerformed
+        listarCaminho();
+    }//GEN-LAST:event_botaoCaminho1ActionPerformed
+
+    private void botaoSO1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSO1ActionPerformed
+        listarSO();
+    }//GEN-LAST:event_botaoSO1ActionPerformed
+
+    private void botaoBrowser1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoBrowser1ActionPerformed
+        listarBrowser();
+    }//GEN-LAST:event_botaoBrowser1ActionPerformed
 
    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -1449,13 +1567,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
     private javax.swing.JButton botaoData1;
     private javax.swing.JButton botaoHTTP1;
     private javax.swing.JButton botaoHorario1;
+    private javax.swing.JButton botaoHorario2;
     private javax.swing.JButton botaoIP1;
     private javax.swing.JButton botaoIP2;
+    private javax.swing.JButton botaoLocalizacao;
     private javax.swing.JButton botaoRequisicao1;
     private javax.swing.JButton botaoSO1;
     private javax.swing.JButton botaoTamano1;
     private javax.swing.JTextField campoTextoCaminhoLog;
-    private javax.swing.JButton jButton1;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JButton lerLog;
     private javax.swing.JPanel painelBotoesArquivo;
