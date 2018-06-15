@@ -2,12 +2,13 @@ package tabelagrafica;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Qualitativa {
     //Atributos.
     private int N;
-    private double moda, M, MZ;
+    private String moda;
     private int[] FI, FZI;
     private double[] FR, FZR;
     private String[] XI;
@@ -18,9 +19,10 @@ public class Qualitativa {
     public Qualitativa(List roll) {
         //Declaração de variaveis.
         List<String> aux = roll;
-        for (String item : aux) {
-            item = item.trim();
-        }
+        Collections.sort(aux);
+//        for (String item : aux) {
+//            item = item.trim();
+//        }
         List<String> aux2 = new ArrayList<>();
         boolean achei;
         
@@ -88,6 +90,15 @@ public class Qualitativa {
 //      Outros valores.
         N = roll.size();
         
+        int j = 0;
+        moda = XI[0];
+        for (int i = 1; i < XI.length; i++) {
+            if(FI[i] > FI[j]){ 
+                moda = XI[i];
+                j = i;
+            }
+        }
+        
     }
 
 //  Acessores.
@@ -97,23 +108,11 @@ public class Qualitativa {
     public void setN(int N) {
         this.N = N;
     }
-    public double getModa() {
+    public String getModa() {
         return moda;
     }
-    public void setModa(double moda) {
+    public void setModa(String moda) {
         this.moda = moda;
-    }
-    public double getM() {
-        return M;
-    }
-    public void setM(double M) {
-        this.M = M;
-    }
-    public double getMZ() {
-        return MZ;
-    }
-    public void setMZ(double MZ) {
-        this.MZ = MZ;
     }
     public int[] getFI() {
         return FI;
@@ -147,7 +146,7 @@ public class Qualitativa {
     }
     @Override
     public String toString() {
-        return "Qualitativa{" + "N=" + N + ", moda=" + moda + ", M=" + M + ", MZ=" + MZ + ", FI=" + FI + ", FZI=" + FZI + ", FR=" + FR + ", FZR=" + FZR + ", XI=" + XI + '}';
+        return "Qualitativa{" + "N=" + N + ", moda=" + moda + ", FI=" + FI + ", FZI=" + FZI + ", FR=" + FR + ", FZR=" + FZR + ", XI=" + XI + '}';
     }
     
     

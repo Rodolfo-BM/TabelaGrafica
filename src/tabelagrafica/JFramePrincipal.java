@@ -6,6 +6,7 @@ import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
@@ -46,70 +47,92 @@ public class JFramePrincipal extends javax.swing.JFrame {
         lerLog = new javax.swing.JButton();
         campoTextoCaminhoLog = new javax.swing.JTextField();
         abaIP = new javax.swing.JPanel();
-        scrollTabelaIP = new javax.swing.JScrollPane();
-        tabelaIP = new javax.swing.JTable();
         scrollTabelaIP2 = new javax.swing.JScrollPane();
         tabelaIP2 = new javax.swing.JTable();
         painelBotoesIP = new javax.swing.JPanel();
         botaoIP1 = new javax.swing.JButton();
         botaoIP2 = new javax.swing.JButton();
+        botaoIP4 = new javax.swing.JButton();
         botaoIP3 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        rotuloNIP = new javax.swing.JLabel();
+        campoNIP = new javax.swing.JTextField();
+        rotuloModaIP = new javax.swing.JLabel();
+        campoModaIP = new javax.swing.JTextField();
+        scrollTabelaIP = new javax.swing.JScrollPane();
+        tabelaIP = new javax.swing.JTable();
         abaData = new javax.swing.JPanel();
         scrollTabelaData = new javax.swing.JScrollPane();
         tabelaData = new javax.swing.JTable();
         painelBotoesData = new javax.swing.JPanel();
         botaoData1 = new javax.swing.JButton();
+        botaoData2 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        rotuloNData = new javax.swing.JLabel();
+        campoNData = new javax.swing.JTextField();
+        rotuloModaData = new javax.swing.JLabel();
+        campoModaData = new javax.swing.JTextField();
         abaHorario = new javax.swing.JPanel();
         scrollTabelaHorario = new javax.swing.JScrollPane();
         tabelaHorario = new javax.swing.JTable();
         painelBotoesHorario = new javax.swing.JPanel();
         botaoHorario1 = new javax.swing.JButton();
         botaoHorario2 = new javax.swing.JButton();
+        botaoHorario3 = new javax.swing.JButton();
         abaLocalizacao = new javax.swing.JPanel();
         scrollTabelaLocalizacao = new javax.swing.JScrollPane();
         tabelaLocalizacao = new javax.swing.JTable();
         painelBotoesLocalizacao = new javax.swing.JPanel();
         botaoLocalizacao = new javax.swing.JButton();
+        botaoLocalizacao2 = new javax.swing.JButton();
         abaCabecalho = new javax.swing.JPanel();
         scrollTabelaCabecalho = new javax.swing.JScrollPane();
         tabelaCabecalho = new javax.swing.JTable();
         painelBotoesCabecalho = new javax.swing.JPanel();
         botaoCabecalho1 = new javax.swing.JButton();
+        botaoCabecalho2 = new javax.swing.JButton();
         abaRequisicao = new javax.swing.JPanel();
         scrollTabelaRequisicao = new javax.swing.JScrollPane();
         tabelaRequisicao = new javax.swing.JTable();
         painelBotoesRequisicao = new javax.swing.JPanel();
         botaoRequisicao1 = new javax.swing.JButton();
+        botaoRequisicao2 = new javax.swing.JButton();
         abaHTTP = new javax.swing.JPanel();
         scrollTabelaHTTP = new javax.swing.JScrollPane();
         tabelaHTTP = new javax.swing.JTable();
         painelBotoesHTTP = new javax.swing.JPanel();
         botaoHTTP1 = new javax.swing.JButton();
+        botaoHTTP2 = new javax.swing.JButton();
         abaCodigo = new javax.swing.JPanel();
         scrollTabelaCodigo = new javax.swing.JScrollPane();
         tabelaCodigo = new javax.swing.JTable();
         painelBotoesCodigo = new javax.swing.JPanel();
         botaoCodigo1 = new javax.swing.JButton();
+        botaoCodigo2 = new javax.swing.JButton();
         abaTamanho = new javax.swing.JPanel();
         scrollTabelaTamanho = new javax.swing.JScrollPane();
         tabelaTamanho = new javax.swing.JTable();
         painelBotoesTamanho = new javax.swing.JPanel();
         botaoTamano1 = new javax.swing.JButton();
+        botaoTamanho2 = new javax.swing.JButton();
         abaCaminho = new javax.swing.JPanel();
         scrollTabelaCaminho = new javax.swing.JScrollPane();
         tabelaCaminho = new javax.swing.JTable();
         painelBotoesCaminho = new javax.swing.JPanel();
         botaoCaminho1 = new javax.swing.JButton();
+        botaoCaminho2 = new javax.swing.JButton();
         abaSo = new javax.swing.JPanel();
         scrollTabelaSO = new javax.swing.JScrollPane();
         tabelaSO = new javax.swing.JTable();
         painelBotoesSO = new javax.swing.JPanel();
         botaoSO1 = new javax.swing.JButton();
+        botaoSO2 = new javax.swing.JButton();
         abaBrowser = new javax.swing.JPanel();
         scrollTabelaBrowser = new javax.swing.JScrollPane();
         tabelaBrowser = new javax.swing.JTable();
         painelBotoesBrowser = new javax.swing.JPanel();
         botaoBrowser1 = new javax.swing.JButton();
+        botaoBrowser2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -175,7 +198,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(abaArquivoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(painelBotoesArquivo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(scrollTabelaLog, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1031, Short.MAX_VALUE))
+                    .addComponent(scrollTabelaLog, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 781, Short.MAX_VALUE))
                 .addContainerGap())
         );
         abaArquivoLayout.setVerticalGroup(
@@ -184,7 +207,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesArquivo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaLog, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
+                .addComponent(scrollTabelaLog, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -196,30 +219,12 @@ public class JFramePrincipal extends javax.swing.JFrame {
             }
         });
 
-        tabelaIP.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "XI", "fi", "Fi", "fr", "Fr"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        scrollTabelaIP.setViewportView(tabelaIP);
-
         tabelaIP2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "XI", "fi", "Fi", "fr", "Fr", "Xi * fi", "(media * fi)"
+                "XI", "fi", "Fi", "fr", "Fr", "Xi * fi", "(Xi - Med)²*fi"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -248,7 +253,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
             }
         });
 
-        botaoIP3.setText("Estatisticas sobre frequencia de IPs");
+        botaoIP4.setText("Estatisticas sobre frequencia de IPs");
+        botaoIP4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoIP4ActionPerformed(evt);
+            }
+        });
+
+        botaoIP3.setText("Estatisticas sobre dados de IP");
         botaoIP3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoIP3ActionPerformed(evt);
@@ -263,10 +275,12 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(botaoIP1)
                 .addGap(18, 18, 18)
+                .addComponent(botaoIP3)
+                .addGap(31, 31, 31)
                 .addComponent(botaoIP2)
                 .addGap(18, 18, 18)
-                .addComponent(botaoIP3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(botaoIP4)
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         painelBotoesIPLayout.setVerticalGroup(
             painelBotoesIPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -275,9 +289,61 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addGroup(painelBotoesIPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoIP1)
                     .addComponent(botaoIP2)
+                    .addComponent(botaoIP4)
                     .addComponent(botaoIP3))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        rotuloNIP.setText("Numero de elementos:");
+
+        rotuloModaIP.setText("Moda:");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(rotuloNIP)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(campoNIP, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(rotuloModaIP)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(campoModaIP, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rotuloNIP)
+                    .addComponent(campoNIP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rotuloModaIP)
+                    .addComponent(campoModaIP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        tabelaIP.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "XI", "fi", "Fi", "fr", "Fr"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        scrollTabelaIP.setViewportView(tabelaIP);
 
         javax.swing.GroupLayout abaIPLayout = new javax.swing.GroupLayout(abaIP);
         abaIP.setLayout(abaIPLayout);
@@ -288,9 +354,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addGroup(abaIPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(painelBotoesIP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(abaIPLayout.createSequentialGroup()
-                        .addComponent(scrollTabelaIP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(abaIPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(scrollTabelaIP, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
-                        .addComponent(scrollTabelaIP2, javax.swing.GroupLayout.DEFAULT_SIZE, 561, Short.MAX_VALUE)))
+                        .addComponent(scrollTabelaIP2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         abaIPLayout.setVerticalGroup(
@@ -300,8 +368,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addComponent(painelBotoesIP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(abaIPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scrollTabelaIP, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
-                    .addComponent(scrollTabelaIP2))
+                    .addGroup(abaIPLayout.createSequentialGroup()
+                        .addComponent(scrollTabelaIP, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(scrollTabelaIP2, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -334,6 +405,8 @@ public class JFramePrincipal extends javax.swing.JFrame {
             }
         });
 
+        botaoData2.setText("Estatisticas sobre dados de Data");
+
         javax.swing.GroupLayout painelBotoesDataLayout = new javax.swing.GroupLayout(painelBotoesData);
         painelBotoesData.setLayout(painelBotoesDataLayout);
         painelBotoesDataLayout.setHorizontalGroup(
@@ -341,13 +414,50 @@ public class JFramePrincipal extends javax.swing.JFrame {
             .addGroup(painelBotoesDataLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(botaoData1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botaoData2)
+                .addContainerGap())
         );
         painelBotoesDataLayout.setVerticalGroup(
             painelBotoesDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelBotoesDataLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(botaoData1)
+                .addGroup(painelBotoesDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botaoData1)
+                    .addComponent(botaoData2))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        rotuloNData.setText("Numero de elementos:");
+
+        rotuloModaData.setText("Moda:");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(rotuloNData)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(campoNData, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(rotuloModaData)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(campoModaData)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rotuloNData)
+                    .addComponent(campoNData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rotuloModaData)
+                    .addComponent(campoModaData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -358,8 +468,9 @@ public class JFramePrincipal extends javax.swing.JFrame {
             .addGroup(abaDataLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(abaDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scrollTabelaData, javax.swing.GroupLayout.DEFAULT_SIZE, 1031, Short.MAX_VALUE)
-                    .addComponent(painelBotoesData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(painelBotoesData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(scrollTabelaData, javax.swing.GroupLayout.DEFAULT_SIZE, 781, Short.MAX_VALUE))
                 .addContainerGap())
         );
         abaDataLayout.setVerticalGroup(
@@ -368,7 +479,9 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaData, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
+                .addComponent(scrollTabelaData, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -408,6 +521,8 @@ public class JFramePrincipal extends javax.swing.JFrame {
             }
         });
 
+        botaoHorario3.setText("Estatisticas sobre dados de Horario");
+
         javax.swing.GroupLayout painelBotoesHorarioLayout = new javax.swing.GroupLayout(painelBotoesHorario);
         painelBotoesHorario.setLayout(painelBotoesHorarioLayout);
         painelBotoesHorarioLayout.setHorizontalGroup(
@@ -417,7 +532,9 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addComponent(botaoHorario1)
                 .addGap(18, 18, 18)
                 .addComponent(botaoHorario2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botaoHorario3)
+                .addContainerGap())
         );
         painelBotoesHorarioLayout.setVerticalGroup(
             painelBotoesHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -425,7 +542,8 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(painelBotoesHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoHorario1)
-                    .addComponent(botaoHorario2))
+                    .addComponent(botaoHorario2)
+                    .addComponent(botaoHorario3))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -436,7 +554,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
             .addGroup(abaHorarioLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(abaHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scrollTabelaHorario, javax.swing.GroupLayout.DEFAULT_SIZE, 1031, Short.MAX_VALUE)
+                    .addComponent(scrollTabelaHorario, javax.swing.GroupLayout.DEFAULT_SIZE, 781, Short.MAX_VALUE)
                     .addComponent(painelBotoesHorario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -446,7 +564,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesHorario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaHorario, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
+                .addComponent(scrollTabelaHorario, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -479,6 +597,8 @@ public class JFramePrincipal extends javax.swing.JFrame {
             }
         });
 
+        botaoLocalizacao2.setText("Estatistica sobre dados de localizacao");
+
         javax.swing.GroupLayout painelBotoesLocalizacaoLayout = new javax.swing.GroupLayout(painelBotoesLocalizacao);
         painelBotoesLocalizacao.setLayout(painelBotoesLocalizacaoLayout);
         painelBotoesLocalizacaoLayout.setHorizontalGroup(
@@ -486,13 +606,17 @@ public class JFramePrincipal extends javax.swing.JFrame {
             .addGroup(painelBotoesLocalizacaoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(botaoLocalizacao)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botaoLocalizacao2)
+                .addContainerGap())
         );
         painelBotoesLocalizacaoLayout.setVerticalGroup(
             painelBotoesLocalizacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelBotoesLocalizacaoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(botaoLocalizacao)
+                .addGroup(painelBotoesLocalizacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botaoLocalizacao)
+                    .addComponent(botaoLocalizacao2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -504,7 +628,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(abaLocalizacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(painelBotoesLocalizacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(scrollTabelaLocalizacao, javax.swing.GroupLayout.DEFAULT_SIZE, 1031, Short.MAX_VALUE))
+                    .addComponent(scrollTabelaLocalizacao, javax.swing.GroupLayout.DEFAULT_SIZE, 781, Short.MAX_VALUE))
                 .addContainerGap())
         );
         abaLocalizacaoLayout.setVerticalGroup(
@@ -513,7 +637,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesLocalizacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaLocalizacao, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
+                .addComponent(scrollTabelaLocalizacao, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -539,12 +663,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
         painelBotoesCabecalho.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        botaoCabecalho1.setText("Carregar dados de requisicoes");
+        botaoCabecalho1.setText("Carregar dados de cabeçalhos de requisições");
         botaoCabecalho1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoCabecalho1ActionPerformed(evt);
             }
         });
+
+        botaoCabecalho2.setText("Estatisticas sobre dados de Cabeçalho de requisições");
 
         javax.swing.GroupLayout painelBotoesCabecalhoLayout = new javax.swing.GroupLayout(painelBotoesCabecalho);
         painelBotoesCabecalho.setLayout(painelBotoesCabecalhoLayout);
@@ -553,13 +679,17 @@ public class JFramePrincipal extends javax.swing.JFrame {
             .addGroup(painelBotoesCabecalhoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(botaoCabecalho1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botaoCabecalho2)
+                .addContainerGap())
         );
         painelBotoesCabecalhoLayout.setVerticalGroup(
             painelBotoesCabecalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelBotoesCabecalhoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(botaoCabecalho1)
+                .addGroup(painelBotoesCabecalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botaoCabecalho1)
+                    .addComponent(botaoCabecalho2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -571,7 +701,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(abaCabecalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(painelBotoesCabecalho, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(scrollTabelaCabecalho, javax.swing.GroupLayout.DEFAULT_SIZE, 1031, Short.MAX_VALUE))
+                    .addComponent(scrollTabelaCabecalho, javax.swing.GroupLayout.DEFAULT_SIZE, 781, Short.MAX_VALUE))
                 .addContainerGap())
         );
         abaCabecalhoLayout.setVerticalGroup(
@@ -580,7 +710,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesCabecalho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaCabecalho, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
+                .addComponent(scrollTabelaCabecalho, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -613,6 +743,8 @@ public class JFramePrincipal extends javax.swing.JFrame {
             }
         });
 
+        botaoRequisicao2.setText("Estatisticas sobre dados de Requisições");
+
         javax.swing.GroupLayout painelBotoesRequisicaoLayout = new javax.swing.GroupLayout(painelBotoesRequisicao);
         painelBotoesRequisicao.setLayout(painelBotoesRequisicaoLayout);
         painelBotoesRequisicaoLayout.setHorizontalGroup(
@@ -620,13 +752,17 @@ public class JFramePrincipal extends javax.swing.JFrame {
             .addGroup(painelBotoesRequisicaoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(botaoRequisicao1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botaoRequisicao2)
+                .addContainerGap())
         );
         painelBotoesRequisicaoLayout.setVerticalGroup(
             painelBotoesRequisicaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelBotoesRequisicaoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(botaoRequisicao1)
+                .addGroup(painelBotoesRequisicaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botaoRequisicao1)
+                    .addComponent(botaoRequisicao2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -638,7 +774,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(abaRequisicaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(painelBotoesRequisicao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(scrollTabelaRequisicao, javax.swing.GroupLayout.DEFAULT_SIZE, 1031, Short.MAX_VALUE))
+                    .addComponent(scrollTabelaRequisicao, javax.swing.GroupLayout.DEFAULT_SIZE, 781, Short.MAX_VALUE))
                 .addContainerGap())
         );
         abaRequisicaoLayout.setVerticalGroup(
@@ -647,7 +783,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesRequisicao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaRequisicao, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
+                .addComponent(scrollTabelaRequisicao, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -680,6 +816,8 @@ public class JFramePrincipal extends javax.swing.JFrame {
             }
         });
 
+        botaoHTTP2.setText("Estatistica sobre dados de HTTP");
+
         javax.swing.GroupLayout painelBotoesHTTPLayout = new javax.swing.GroupLayout(painelBotoesHTTP);
         painelBotoesHTTP.setLayout(painelBotoesHTTPLayout);
         painelBotoesHTTPLayout.setHorizontalGroup(
@@ -687,13 +825,17 @@ public class JFramePrincipal extends javax.swing.JFrame {
             .addGroup(painelBotoesHTTPLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(botaoHTTP1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botaoHTTP2)
+                .addContainerGap())
         );
         painelBotoesHTTPLayout.setVerticalGroup(
             painelBotoesHTTPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelBotoesHTTPLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(botaoHTTP1)
+                .addGroup(painelBotoesHTTPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botaoHTTP1)
+                    .addComponent(botaoHTTP2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -705,7 +847,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(abaHTTPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(painelBotoesHTTP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(scrollTabelaHTTP, javax.swing.GroupLayout.DEFAULT_SIZE, 1031, Short.MAX_VALUE))
+                    .addComponent(scrollTabelaHTTP, javax.swing.GroupLayout.DEFAULT_SIZE, 781, Short.MAX_VALUE))
                 .addContainerGap())
         );
         abaHTTPLayout.setVerticalGroup(
@@ -714,7 +856,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesHTTP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaHTTP, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
+                .addComponent(scrollTabelaHTTP, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -747,6 +889,8 @@ public class JFramePrincipal extends javax.swing.JFrame {
             }
         });
 
+        botaoCodigo2.setText("Estatistica sobre dados de código de resposta");
+
         javax.swing.GroupLayout painelBotoesCodigoLayout = new javax.swing.GroupLayout(painelBotoesCodigo);
         painelBotoesCodigo.setLayout(painelBotoesCodigoLayout);
         painelBotoesCodigoLayout.setHorizontalGroup(
@@ -754,13 +898,17 @@ public class JFramePrincipal extends javax.swing.JFrame {
             .addGroup(painelBotoesCodigoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(botaoCodigo1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botaoCodigo2)
+                .addContainerGap())
         );
         painelBotoesCodigoLayout.setVerticalGroup(
             painelBotoesCodigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelBotoesCodigoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(botaoCodigo1)
+                .addGroup(painelBotoesCodigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botaoCodigo1)
+                    .addComponent(botaoCodigo2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -772,7 +920,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(abaCodigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(painelBotoesCodigo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(scrollTabelaCodigo, javax.swing.GroupLayout.DEFAULT_SIZE, 1031, Short.MAX_VALUE))
+                    .addComponent(scrollTabelaCodigo, javax.swing.GroupLayout.DEFAULT_SIZE, 781, Short.MAX_VALUE))
                 .addContainerGap())
         );
         abaCodigoLayout.setVerticalGroup(
@@ -781,7 +929,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaCodigo, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
+                .addComponent(scrollTabelaCodigo, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -807,12 +955,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
         painelBotoesTamanho.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        botaoTamano1.setText("Carregar dados de tamanho de requisicoes");
+        botaoTamano1.setText("Carregar dados de tamanho de requisições");
         botaoTamano1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoTamano1ActionPerformed(evt);
             }
         });
+
+        botaoTamanho2.setText("Estatistica sobre dados de tamanho de requisições");
 
         javax.swing.GroupLayout painelBotoesTamanhoLayout = new javax.swing.GroupLayout(painelBotoesTamanho);
         painelBotoesTamanho.setLayout(painelBotoesTamanhoLayout);
@@ -821,13 +971,17 @@ public class JFramePrincipal extends javax.swing.JFrame {
             .addGroup(painelBotoesTamanhoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(botaoTamano1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botaoTamanho2)
+                .addContainerGap())
         );
         painelBotoesTamanhoLayout.setVerticalGroup(
             painelBotoesTamanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelBotoesTamanhoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(botaoTamano1)
+                .addGroup(painelBotoesTamanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botaoTamano1)
+                    .addComponent(botaoTamanho2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -839,7 +993,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(abaTamanhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(painelBotoesTamanho, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(scrollTabelaTamanho, javax.swing.GroupLayout.DEFAULT_SIZE, 1031, Short.MAX_VALUE))
+                    .addComponent(scrollTabelaTamanho, javax.swing.GroupLayout.DEFAULT_SIZE, 781, Short.MAX_VALUE))
                 .addContainerGap())
         );
         abaTamanhoLayout.setVerticalGroup(
@@ -848,7 +1002,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesTamanho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaTamanho, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
+                .addComponent(scrollTabelaTamanho, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -881,6 +1035,8 @@ public class JFramePrincipal extends javax.swing.JFrame {
             }
         });
 
+        botaoCaminho2.setText("Estatisticas sobre dados de Caminho");
+
         javax.swing.GroupLayout painelBotoesCaminhoLayout = new javax.swing.GroupLayout(painelBotoesCaminho);
         painelBotoesCaminho.setLayout(painelBotoesCaminhoLayout);
         painelBotoesCaminhoLayout.setHorizontalGroup(
@@ -888,13 +1044,17 @@ public class JFramePrincipal extends javax.swing.JFrame {
             .addGroup(painelBotoesCaminhoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(botaoCaminho1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botaoCaminho2)
+                .addContainerGap())
         );
         painelBotoesCaminhoLayout.setVerticalGroup(
             painelBotoesCaminhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelBotoesCaminhoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(botaoCaminho1)
+                .addGroup(painelBotoesCaminhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botaoCaminho1)
+                    .addComponent(botaoCaminho2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -906,7 +1066,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(abaCaminhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(painelBotoesCaminho, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(scrollTabelaCaminho, javax.swing.GroupLayout.DEFAULT_SIZE, 1031, Short.MAX_VALUE))
+                    .addComponent(scrollTabelaCaminho, javax.swing.GroupLayout.DEFAULT_SIZE, 781, Short.MAX_VALUE))
                 .addContainerGap())
         );
         abaCaminhoLayout.setVerticalGroup(
@@ -915,7 +1075,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesCaminho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaCaminho, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
+                .addComponent(scrollTabelaCaminho, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -948,6 +1108,8 @@ public class JFramePrincipal extends javax.swing.JFrame {
             }
         });
 
+        botaoSO2.setText("Estatisticas sobre dados de Sistemas Operacionais");
+
         javax.swing.GroupLayout painelBotoesSOLayout = new javax.swing.GroupLayout(painelBotoesSO);
         painelBotoesSO.setLayout(painelBotoesSOLayout);
         painelBotoesSOLayout.setHorizontalGroup(
@@ -955,13 +1117,17 @@ public class JFramePrincipal extends javax.swing.JFrame {
             .addGroup(painelBotoesSOLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(botaoSO1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botaoSO2)
+                .addContainerGap())
         );
         painelBotoesSOLayout.setVerticalGroup(
             painelBotoesSOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelBotoesSOLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(botaoSO1)
+                .addGroup(painelBotoesSOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botaoSO1)
+                    .addComponent(botaoSO2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -973,7 +1139,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(abaSoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(painelBotoesSO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(scrollTabelaSO, javax.swing.GroupLayout.DEFAULT_SIZE, 1031, Short.MAX_VALUE))
+                    .addComponent(scrollTabelaSO, javax.swing.GroupLayout.DEFAULT_SIZE, 781, Short.MAX_VALUE))
                 .addContainerGap())
         );
         abaSoLayout.setVerticalGroup(
@@ -982,7 +1148,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesSO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaSO, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
+                .addComponent(scrollTabelaSO, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1008,12 +1174,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
         painelBotoesBrowser.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        botaoBrowser1.setText("Carregar dados de browswers");
+        botaoBrowser1.setText("Carregar dados de Browsers");
         botaoBrowser1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoBrowser1ActionPerformed(evt);
             }
         });
+
+        botaoBrowser2.setText("Estatisticas sobre dados de Browsers");
 
         javax.swing.GroupLayout painelBotoesBrowserLayout = new javax.swing.GroupLayout(painelBotoesBrowser);
         painelBotoesBrowser.setLayout(painelBotoesBrowserLayout);
@@ -1022,13 +1190,17 @@ public class JFramePrincipal extends javax.swing.JFrame {
             .addGroup(painelBotoesBrowserLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(botaoBrowser1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botaoBrowser2)
+                .addContainerGap())
         );
         painelBotoesBrowserLayout.setVerticalGroup(
             painelBotoesBrowserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelBotoesBrowserLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(botaoBrowser1)
+                .addGroup(painelBotoesBrowserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botaoBrowser1)
+                    .addComponent(botaoBrowser2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1040,7 +1212,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(abaBrowserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(painelBotoesBrowser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(scrollTabelaBrowser, javax.swing.GroupLayout.DEFAULT_SIZE, 1031, Short.MAX_VALUE))
+                    .addComponent(scrollTabelaBrowser, javax.swing.GroupLayout.DEFAULT_SIZE, 781, Short.MAX_VALUE))
                 .addContainerGap())
         );
         abaBrowserLayout.setVerticalGroup(
@@ -1049,7 +1221,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesBrowser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaBrowser, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
+                .addComponent(scrollTabelaBrowser, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1063,7 +1235,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(painelComAbas)
+            .addComponent(painelComAbas, javax.swing.GroupLayout.DEFAULT_SIZE, 469, Short.MAX_VALUE)
         );
 
         pack();
@@ -1106,9 +1278,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
             ips.add(lista.get(i).getIp());
         }
         qualitativaIP = new Qualitativa(ips);
+//        Collections.sort(qualitativaIP, XI[i]);
         
         listarQualitativaIP(qualitativaIP);
+        campoModaIP.setText(qualitativaIP.getModa());
+        campoNIP.setText(qualitativaIP.getN()+"");
+        
         botaoIP2.setVisible(true);
+        botaoIP3.setVisible(true);
     }//GEN-LAST:event_botaoIP1ActionPerformed
 
     private void botaoIP2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoIP2ActionPerformed
@@ -1119,11 +1296,12 @@ public class JFramePrincipal extends javax.swing.JFrame {
         discretaIP = new Discreta(ipsFis);
         
         listarDiscretaIP(discretaIP);
-        botaoIP3.setVisible(true);
+        botaoIP4.setVisible(true);
     }//GEN-LAST:event_botaoIP2ActionPerformed
 
     private void botaoData1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoData1ActionPerformed
         listarData();
+        botaoData2.setVisible(true);
     }//GEN-LAST:event_botaoData1ActionPerformed
 
     private void botaoHorario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoHorario1ActionPerformed
@@ -1137,69 +1315,55 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
     private void botaoLocalizacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoLocalizacaoActionPerformed
         listarLocalizacao();
+        botaoLocalizacao2.setVisible(true);
     }//GEN-LAST:event_botaoLocalizacaoActionPerformed
 
     private void botaoCabecalho1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCabecalho1ActionPerformed
         listarCabecalho();
+        botaoCabecalho2.setVisible(true);
     }//GEN-LAST:event_botaoCabecalho1ActionPerformed
 
     private void botaoRequisicao1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoRequisicao1ActionPerformed
         listarRequisicao();
+        botaoRequisicao2.setVisible(true);
     }//GEN-LAST:event_botaoRequisicao1ActionPerformed
 
     private void botaoHTTP1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoHTTP1ActionPerformed
         listarHTTP();
+        botaoHTTP2.setVisible(true);
     }//GEN-LAST:event_botaoHTTP1ActionPerformed
 
     private void botaoCodigo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCodigo1ActionPerformed
         listarCodigo();
+        botaoCodigo2.setVisible(true);
     }//GEN-LAST:event_botaoCodigo1ActionPerformed
 
     private void botaoTamano1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoTamano1ActionPerformed
         listarTamanho();
+        botaoTamanho2.setVisible(true);
     }//GEN-LAST:event_botaoTamano1ActionPerformed
 
     private void botaoCaminho1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCaminho1ActionPerformed
         listarCaminho();
+        botaoCaminho2.setVisible(true);
     }//GEN-LAST:event_botaoCaminho1ActionPerformed
 
     private void botaoSO1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSO1ActionPerformed
         listarSO();
+        botaoSO2.setVisible(true);
     }//GEN-LAST:event_botaoSO1ActionPerformed
 
     private void botaoBrowser1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoBrowser1ActionPerformed
         listarBrowser();
+        botaoBrowser2.setVisible(true);
     }//GEN-LAST:event_botaoBrowser1ActionPerformed
 
+    private void botaoIP4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoIP4ActionPerformed
+        janelaEstatisticaDiscreta(discretaIP);
+    }//GEN-LAST:event_botaoIP4ActionPerformed
+
     private void botaoIP3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoIP3ActionPerformed
-        JFrameEstatisticas estatisticasIP;
-        estatisticasIP = new JFrameEstatisticas(this, true);
-        estatisticasIP.getCampoN().setText(discretaIP.getN()+"");
-        estatisticasIP.getCampoM().setText(discretaIP.getM()+"");
-        estatisticasIP.getCampoMZ().setText(discretaIP.getMZ()+"");
-        estatisticasIP.getCampoMedia().setText(discretaIP.getMedia()+"");
-        estatisticasIP.getCampoMediana().setText(discretaIP.getMediana()+"");
-        estatisticasIP.getCampoModa().setText(discretaIP.getModa()+"");
-        estatisticasIP.getCampoH().setVisible(false);
-        estatisticasIP.getCampoHZ().setVisible(false);
-        estatisticasIP.getRotuloH().setVisible(false);
-        estatisticasIP.getRotuloHZ().setVisible(false);
-        
-        DefaultPieDataset dadosPizza = new DefaultPieDataset();
-        for (int i = 0; i < discretaIP.getXI().length; i++) {
-            dadosPizza.setValue(discretaIP.getXI()[i]+"", discretaIP.getFR()[i]);   
-        }
-        JFreeChart graficoPizza = ChartFactory.createPieChart(
-                "Titulo do grafico", dadosPizza, 
-                true, true, false);
-        
-        ChartPanel painel = new ChartPanel(graficoPizza);
-        
-        estatisticasIP.getPainelGrafico().removeAll();
-        estatisticasIP.getPainelGrafico().add(painel);
-        estatisticasIP.getPainelGrafico().validate();
-        
-        estatisticasIP.setVisible(true);
+        janelaEstatisticaQualitativa(qualitativaIP);
     }//GEN-LAST:event_botaoIP3ActionPerformed
 
    public static void main(String args[]) {
@@ -1318,7 +1482,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
         for (int i = 0; i < lista.size(); i++) {
             horarios[i] = lista.get(i).getHorario();
         }
-        Qualitativa horario = new Qualitativa(Roll.lerVetor(horarios));
+        Continua horario = new Continua(Roll.lerVetor(horarios));
 
 //      Adicionar os atributos que eu escolher na jTable
         for (int i = 0; i < horario.getXI().length; i++) {
@@ -1537,6 +1701,107 @@ public class JFramePrincipal extends javax.swing.JFrame {
         }  
     }
     
+    public void janelaEstatisticaQualitativa(Qualitativa objeto){
+        JFrameEstatisticas janelaQualitativa;
+        janelaQualitativa = new JFrameEstatisticas(this, true);
+        
+        //alterar cada item que for necessario no frame
+        janelaQualitativa.getCampoN().setText(objeto.getN()+"");
+        janelaQualitativa.getCampoM().setVisible(false);
+        janelaQualitativa.getCampoMZ().setVisible(false);
+        janelaQualitativa.getCampoMedia().setVisible(false);
+        janelaQualitativa.getCampoMediana().setVisible(false);
+        janelaQualitativa.getCampoModa().setText(objeto.getModa()+"");
+        janelaQualitativa.getCampoH().setVisible(false);
+        janelaQualitativa.getCampoHZ().setVisible(false);
+        janelaQualitativa.getRotuloH().setVisible(false);
+        janelaQualitativa.getRotuloHZ().setVisible(false);
+        
+        //criar grafico
+        DefaultPieDataset dadosPizza = new DefaultPieDataset();
+        for (int i = 0; i < objeto.getXI().length; i++) {
+            dadosPizza.setValue(objeto.getXI()[i]+"", objeto.getFR()[i]);   
+        }
+        JFreeChart graficoPizza = ChartFactory.createPieChart(
+                "Titulo do grafico", dadosPizza, 
+                true, true, false);
+        
+        ChartPanel painel = new ChartPanel(graficoPizza);
+        
+        janelaQualitativa.getPainelGrafico().removeAll();
+        janelaQualitativa.getPainelGrafico().add(painel);
+        janelaQualitativa.getPainelGrafico().validate();
+        
+        janelaQualitativa.setVisible(true);
+    }
+    public void janelaEstatisticaDiscreta(Discreta objeto){
+        JFrameEstatisticas janelaQualitativa;
+        janelaQualitativa = new JFrameEstatisticas(this, true);
+        
+        //alterar cada item que for necessario no frame
+        janelaQualitativa.getCampoN().setText(objeto.getN()+"");
+        janelaQualitativa.getCampoM().setText(objeto.getM()+"");
+        janelaQualitativa.getCampoMZ().setText(objeto.getMZ()+"");
+        janelaQualitativa.getCampoMedia().setText(objeto.getMedia()+"");
+        janelaQualitativa.getCampoMediana().setText(objeto.getMediana()+"");
+        janelaQualitativa.getCampoModa().setText(objeto.getModa()+"");
+        janelaQualitativa.getCampoH().setVisible(false);
+        janelaQualitativa.getCampoHZ().setVisible(false);
+        janelaQualitativa.getRotuloH().setVisible(false);
+        janelaQualitativa.getRotuloHZ().setVisible(false);
+        
+        //criar grafico
+        DefaultPieDataset dadosPizza = new DefaultPieDataset();
+        for (int i = 0; i < objeto.getXI().length; i++) {
+            dadosPizza.setValue(objeto.getXI()[i]+"", objeto.getFR()[i]);   
+        }
+        JFreeChart graficoPizza = ChartFactory.createPieChart(
+                "Titulo do grafico", dadosPizza, 
+                true, true, false);
+        
+        ChartPanel painel = new ChartPanel(graficoPizza);
+        
+        janelaQualitativa.getPainelGrafico().removeAll();
+        janelaQualitativa.getPainelGrafico().add(painel);
+        janelaQualitativa.getPainelGrafico().validate();
+        
+        janelaQualitativa.setVisible(true);
+    }
+    public void janelaEstatisticaContinua(Continua objeto){
+        JFrameEstatisticas janelaQualitativa;
+        janelaQualitativa = new JFrameEstatisticas(this, true);
+        
+        //alterar cada item que for necessario no frame
+        janelaQualitativa.getCampoN().setText(objeto.getN()+"");
+        janelaQualitativa.getCampoM().setText(objeto.getM()+"");
+        janelaQualitativa.getCampoMZ().setText(objeto.getMZ()+"");
+        janelaQualitativa.getCampoMedia().setText(objeto.getMedia()+"");
+        janelaQualitativa.getCampoMediana().setText(objeto.getMediana()+"");
+        janelaQualitativa.getCampoModa().setText(objeto.getModa()+"");
+        janelaQualitativa.getCampoH().setVisible(false);
+        janelaQualitativa.getCampoHZ().setVisible(false);
+        janelaQualitativa.getRotuloH().setVisible(false);
+        janelaQualitativa.getRotuloHZ().setVisible(false);
+        
+        //criar grafico
+        DefaultPieDataset dadosPizza = new DefaultPieDataset();
+        for (int i = 0; i < objeto.getXI().length; i++) {
+            dadosPizza.setValue(objeto.getXI()[i]+"", objeto.getFR()[i]);   
+        }
+        JFreeChart graficoPizza = ChartFactory.createPieChart(
+                "Titulo do grafico", dadosPizza, 
+                true, true, false);
+        
+        ChartPanel painel = new ChartPanel(graficoPizza);
+        
+        janelaQualitativa.getPainelGrafico().removeAll();
+        janelaQualitativa.getPainelGrafico().add(painel);
+        janelaQualitativa.getPainelGrafico().validate();
+        
+        janelaQualitativa.setVisible(true);
+        
+    }
+    
     public void esconderAbas(){
         abaArquivo.setVisible(false);
         abaBrowser.setVisible(false);
@@ -1571,10 +1836,32 @@ public class JFramePrincipal extends javax.swing.JFrame {
     public void esconderComponentes(){
         botaoIP2.setVisible(false);
         botaoIP3.setVisible(false);
+        botaoIP4.setVisible(false);
+        botaoBrowser2.setVisible(false);
+        botaoCabecalho2.setVisible(false);
+        botaoCaminho2.setVisible(false);
+        botaoCodigo2.setVisible(false);
+        botaoData2.setVisible(false);
+        botaoHTTP2.setVisible(false);
         botaoHorario2.setVisible(false);
+        botaoHorario3.setVisible(false);
+        botaoLocalizacao2.setVisible(false);
+        botaoRequisicao2.setVisible(false);
+        botaoSO2.setVisible(false);
+        botaoTamanho2.setVisible(false);
     }
     public void mostrarComponentes(){
-        
+        botaoIP2.setVisible(true);
+        botaoIP3.setVisible(true);
+        botaoIP4.setVisible(true);
+        botaoBrowser2.setVisible(true);
+        botaoCabecalho2.setVisible(true);
+        botaoCaminho2.setVisible(true);
+        botaoCodigo2.setVisible(true);
+        botaoData2.setVisible(true);
+        botaoHTTP2.setVisible(true);
+        botaoHorario2.setVisible(true);
+        botaoHorario3.setVisible(true);
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1592,22 +1879,40 @@ public class JFramePrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel abaSo;
     private javax.swing.JPanel abaTamanho;
     private javax.swing.JButton botaoBrowser1;
+    private javax.swing.JButton botaoBrowser2;
     private javax.swing.JButton botaoCabecalho1;
+    private javax.swing.JButton botaoCabecalho2;
     private javax.swing.JButton botaoCaminho1;
+    private javax.swing.JButton botaoCaminho2;
     private javax.swing.JButton botaoCodigo1;
+    private javax.swing.JButton botaoCodigo2;
     private javax.swing.JButton botaoData1;
+    private javax.swing.JButton botaoData2;
     private javax.swing.JButton botaoHTTP1;
+    private javax.swing.JButton botaoHTTP2;
     private javax.swing.JButton botaoHorario1;
     private javax.swing.JButton botaoHorario2;
+    private javax.swing.JButton botaoHorario3;
     private javax.swing.JButton botaoIP1;
     private javax.swing.JButton botaoIP2;
     private javax.swing.JButton botaoIP3;
+    private javax.swing.JButton botaoIP4;
     private javax.swing.JButton botaoLocalizacao;
+    private javax.swing.JButton botaoLocalizacao2;
     private javax.swing.JButton botaoRequisicao1;
+    private javax.swing.JButton botaoRequisicao2;
     private javax.swing.JButton botaoSO1;
+    private javax.swing.JButton botaoSO2;
+    private javax.swing.JButton botaoTamanho2;
     private javax.swing.JButton botaoTamano1;
+    private javax.swing.JTextField campoModaData;
+    private javax.swing.JTextField campoModaIP;
+    private javax.swing.JTextField campoNData;
+    private javax.swing.JTextField campoNIP;
     private javax.swing.JTextField campoTextoCaminhoLog;
     private javax.swing.JFileChooser jFileChooser1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JButton lerLog;
     private javax.swing.JPanel painelBotoesArquivo;
     private javax.swing.JPanel painelBotoesBrowser;
@@ -1623,6 +1928,10 @@ public class JFramePrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel painelBotoesSO;
     private javax.swing.JPanel painelBotoesTamanho;
     private javax.swing.JTabbedPane painelComAbas;
+    private javax.swing.JLabel rotuloModaData;
+    private javax.swing.JLabel rotuloModaIP;
+    private javax.swing.JLabel rotuloNData;
+    private javax.swing.JLabel rotuloNIP;
     private javax.swing.JScrollPane scrollTabelaBrowser;
     private javax.swing.JScrollPane scrollTabelaCabecalho;
     private javax.swing.JScrollPane scrollTabelaCaminho;

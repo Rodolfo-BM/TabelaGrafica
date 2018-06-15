@@ -21,9 +21,10 @@ public class Discreta {
     public Discreta(List roll) {
         //Declaração de variaveis.
         List<String> aux = roll;
-        for (String item : aux) {
-            item = item.trim();
-        }
+        Collections.sort(aux);
+//        for (String item : aux) {
+//            item = item.trim();
+//        }
         List<String> aux2 = new ArrayList<>();
         boolean achei;
         

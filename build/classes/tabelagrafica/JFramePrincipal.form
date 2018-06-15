@@ -32,7 +32,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="painelComAbas" alignment="0" max="32767" attributes="0"/>
+          <Component id="painelComAbas" alignment="0" pref="469" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -60,7 +60,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="painelBotoesArquivo" max="32767" attributes="0"/>
-                          <Component id="scrollTabelaLog" alignment="1" pref="1031" max="32767" attributes="0"/>
+                          <Component id="scrollTabelaLog" alignment="1" pref="781" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -72,7 +72,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesArquivo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaLog" pref="518" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaLog" pref="354" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -177,9 +177,12 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="painelBotoesIP" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="scrollTabelaIP" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="scrollTabelaIP" pref="0" max="32767" attributes="0"/>
+                                  <Component id="jPanel1" max="32767" attributes="0"/>
+                              </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="scrollTabelaIP2" pref="561" max="32767" attributes="0"/>
+                              <Component id="scrollTabelaIP2" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -193,8 +196,12 @@
                       <Component id="painelBotoesIP" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="scrollTabelaIP" pref="518" max="32767" attributes="0"/>
-                          <Component id="scrollTabelaIP2" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="scrollTabelaIP" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="scrollTabelaIP2" pref="354" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -202,28 +209,6 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Container class="javax.swing.JScrollPane" name="scrollTabelaIP">
-              <AuxValues>
-                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-              </AuxValues>
-
-              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-              <SubComponents>
-                <Component class="javax.swing.JTable" name="tabelaIP">
-                  <Properties>
-                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="5" rowCount="0">
-                        <Column editable="false" title="XI" type="java.lang.Object"/>
-                        <Column editable="false" title="fi" type="java.lang.Object"/>
-                        <Column editable="false" title="Fi" type="java.lang.Object"/>
-                        <Column editable="false" title="fr" type="java.lang.Object"/>
-                        <Column editable="false" title="Fr" type="java.lang.Object"/>
-                      </Table>
-                    </Property>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
             <Container class="javax.swing.JScrollPane" name="scrollTabelaIP2">
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -241,7 +226,7 @@
                         <Column editable="false" title="fr" type="java.lang.Object"/>
                         <Column editable="false" title="Fr" type="java.lang.Object"/>
                         <Column editable="true" title="Xi * fi" type="java.lang.Object"/>
-                        <Column editable="true" title="(media * fi)" type="java.lang.Object"/>
+                        <Column editable="true" title="(Xi - Med)&#xb2;*fi" type="java.lang.Object"/>
                       </Table>
                     </Property>
                   </Properties>
@@ -264,10 +249,12 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="botaoIP1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="botaoIP3" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                           <Component id="botaoIP2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="botaoIP3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="botaoIP4" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="32" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -278,6 +265,7 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="botaoIP1" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="botaoIP2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="botaoIP4" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="botaoIP3" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
@@ -302,13 +290,100 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoIP2ActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="botaoIP3">
+                <Component class="javax.swing.JButton" name="botaoIP4">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Estatisticas sobre frequencia de IPs"/>
                   </Properties>
                   <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoIP4ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="botaoIP3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Estatisticas sobre dados de IP"/>
+                  </Properties>
+                  <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoIP3ActionPerformed"/>
                   </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel1">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="rotuloNIP" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoNIP" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="rotuloModaIP" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoModaIP" pref="115" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloNIP" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoNIP" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloModaIP" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoModaIP" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="rotuloNIP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Numero de elementos:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoNIP">
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloModaIP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Moda:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoModaIP">
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JScrollPane" name="scrollTabelaIP">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTable" name="tabelaIP">
+                  <Properties>
+                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                      <Table columnCount="5" rowCount="0">
+                        <Column editable="false" title="XI" type="java.lang.Object"/>
+                        <Column editable="false" title="fi" type="java.lang.Object"/>
+                        <Column editable="false" title="Fi" type="java.lang.Object"/>
+                        <Column editable="false" title="fr" type="java.lang.Object"/>
+                        <Column editable="false" title="Fr" type="java.lang.Object"/>
+                      </Table>
+                    </Property>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -329,8 +404,9 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="scrollTabelaData" pref="1031" max="32767" attributes="0"/>
                           <Component id="painelBotoesData" max="32767" attributes="0"/>
+                          <Component id="jPanel2" max="32767" attributes="0"/>
+                          <Component id="scrollTabelaData" alignment="0" pref="781" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -342,7 +418,9 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesData" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaData" pref="518" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaData" pref="292" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -387,6 +465,8 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="botaoData1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
+                          <Component id="botaoData2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -394,7 +474,10 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="botaoData1" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="botaoData1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="botaoData2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -408,6 +491,68 @@
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoData1ActionPerformed"/>
                   </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="botaoData2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Estatisticas sobre dados de Data"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel2">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="rotuloNData" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoNData" min="-2" pref="252" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="rotuloModaData" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoModaData" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloNData" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoNData" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloModaData" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoModaData" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="rotuloNData">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Numero de elementos:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoNData">
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloModaData">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Moda:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoModaData">
                 </Component>
               </SubComponents>
             </Container>
@@ -428,7 +573,7 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="scrollTabelaHorario" pref="1031" max="32767" attributes="0"/>
+                          <Component id="scrollTabelaHorario" pref="781" max="32767" attributes="0"/>
                           <Component id="painelBotoesHorario" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -441,7 +586,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesHorario" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaHorario" pref="518" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaHorario" pref="354" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -488,6 +633,8 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="botaoHorario2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
+                          <Component id="botaoHorario3" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -498,6 +645,7 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="botaoHorario1" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="botaoHorario2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="botaoHorario3" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -521,6 +669,11 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoHorario2ActionPerformed"/>
                   </Events>
                 </Component>
+                <Component class="javax.swing.JButton" name="botaoHorario3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Estatisticas sobre dados de Horario"/>
+                  </Properties>
+                </Component>
               </SubComponents>
             </Container>
           </SubComponents>
@@ -541,7 +694,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="painelBotoesLocalizacao" max="32767" attributes="0"/>
-                          <Component id="scrollTabelaLocalizacao" alignment="0" pref="1031" max="32767" attributes="0"/>
+                          <Component id="scrollTabelaLocalizacao" alignment="0" pref="781" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -553,7 +706,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesLocalizacao" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaLocalizacao" pref="518" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaLocalizacao" pref="354" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -598,6 +751,8 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="botaoLocalizacao" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
+                          <Component id="botaoLocalizacao2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -605,7 +760,10 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="botaoLocalizacao" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="botaoLocalizacao" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="botaoLocalizacao2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -619,6 +777,11 @@
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoLocalizacaoActionPerformed"/>
                   </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="botaoLocalizacao2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Estatistica sobre dados de localizacao"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -640,7 +803,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="painelBotoesCabecalho" alignment="0" max="32767" attributes="0"/>
-                          <Component id="scrollTabelaCabecalho" alignment="0" pref="1031" max="32767" attributes="0"/>
+                          <Component id="scrollTabelaCabecalho" alignment="0" pref="781" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -652,7 +815,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesCabecalho" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaCabecalho" pref="518" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaCabecalho" pref="354" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -697,6 +860,8 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="botaoCabecalho1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
+                          <Component id="botaoCabecalho2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -704,7 +869,10 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="botaoCabecalho1" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="botaoCabecalho1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="botaoCabecalho2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -713,11 +881,16 @@
               <SubComponents>
                 <Component class="javax.swing.JButton" name="botaoCabecalho1">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Carregar dados de requisicoes"/>
+                    <Property name="text" type="java.lang.String" value="Carregar dados de cabe&#xe7;alhos de requisi&#xe7;&#xf5;es"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoCabecalho1ActionPerformed"/>
                   </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="botaoCabecalho2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Estatisticas sobre dados de Cabe&#xe7;alho de requisi&#xe7;&#xf5;es"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -739,7 +912,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="painelBotoesRequisicao" max="32767" attributes="0"/>
-                          <Component id="scrollTabelaRequisicao" alignment="0" pref="1031" max="32767" attributes="0"/>
+                          <Component id="scrollTabelaRequisicao" alignment="0" pref="781" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -751,7 +924,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesRequisicao" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaRequisicao" pref="518" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaRequisicao" pref="354" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -796,6 +969,8 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="botaoRequisicao1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
+                          <Component id="botaoRequisicao2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -803,7 +978,10 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="botaoRequisicao1" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="botaoRequisicao1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="botaoRequisicao2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -817,6 +995,11 @@
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoRequisicao1ActionPerformed"/>
                   </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="botaoRequisicao2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Estatisticas sobre dados de Requisi&#xe7;&#xf5;es"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -838,7 +1021,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="painelBotoesHTTP" alignment="0" max="32767" attributes="0"/>
-                          <Component id="scrollTabelaHTTP" alignment="0" pref="1031" max="32767" attributes="0"/>
+                          <Component id="scrollTabelaHTTP" alignment="0" pref="781" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -850,7 +1033,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesHTTP" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaHTTP" pref="518" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaHTTP" pref="354" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -922,6 +1105,8 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="botaoHTTP1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
+                          <Component id="botaoHTTP2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -929,7 +1114,10 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="botaoHTTP1" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="botaoHTTP1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="botaoHTTP2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -943,6 +1131,11 @@
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoHTTP1ActionPerformed"/>
                   </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="botaoHTTP2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Estatistica sobre dados de HTTP"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -964,7 +1157,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="painelBotoesCodigo" alignment="0" max="32767" attributes="0"/>
-                          <Component id="scrollTabelaCodigo" alignment="0" pref="1031" max="32767" attributes="0"/>
+                          <Component id="scrollTabelaCodigo" alignment="0" pref="781" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -976,7 +1169,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesCodigo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaCodigo" pref="518" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaCodigo" pref="354" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1021,6 +1214,8 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="botaoCodigo1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
+                          <Component id="botaoCodigo2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1028,7 +1223,10 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="botaoCodigo1" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="botaoCodigo1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="botaoCodigo2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -1042,6 +1240,11 @@
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoCodigo1ActionPerformed"/>
                   </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="botaoCodigo2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Estatistica sobre dados de c&#xf3;digo de resposta"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -1063,7 +1266,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="painelBotoesTamanho" alignment="0" max="32767" attributes="0"/>
-                          <Component id="scrollTabelaTamanho" alignment="0" pref="1031" max="32767" attributes="0"/>
+                          <Component id="scrollTabelaTamanho" alignment="0" pref="781" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -1075,7 +1278,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesTamanho" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaTamanho" pref="518" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaTamanho" pref="354" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1120,6 +1323,8 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="botaoTamano1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
+                          <Component id="botaoTamanho2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1127,7 +1332,10 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="botaoTamano1" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="botaoTamano1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="botaoTamanho2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -1136,11 +1344,16 @@
               <SubComponents>
                 <Component class="javax.swing.JButton" name="botaoTamano1">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Carregar dados de tamanho de requisicoes"/>
+                    <Property name="text" type="java.lang.String" value="Carregar dados de tamanho de requisi&#xe7;&#xf5;es"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoTamano1ActionPerformed"/>
                   </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="botaoTamanho2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Estatistica sobre dados de tamanho de requisi&#xe7;&#xf5;es"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -1162,7 +1375,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="painelBotoesCaminho" alignment="0" max="32767" attributes="0"/>
-                          <Component id="scrollTabelaCaminho" alignment="0" pref="1031" max="32767" attributes="0"/>
+                          <Component id="scrollTabelaCaminho" alignment="0" pref="781" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -1174,7 +1387,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesCaminho" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaCaminho" pref="518" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaCaminho" pref="354" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1246,6 +1459,8 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="botaoCaminho1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
+                          <Component id="botaoCaminho2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1253,7 +1468,10 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="botaoCaminho1" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="botaoCaminho1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="botaoCaminho2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -1267,6 +1485,11 @@
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoCaminho1ActionPerformed"/>
                   </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="botaoCaminho2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Estatisticas sobre dados de Caminho"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -1288,7 +1511,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="painelBotoesSO" alignment="0" max="32767" attributes="0"/>
-                          <Component id="scrollTabelaSO" alignment="0" pref="1031" max="32767" attributes="0"/>
+                          <Component id="scrollTabelaSO" alignment="0" pref="781" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -1300,7 +1523,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesSO" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaSO" pref="518" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaSO" pref="354" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1377,6 +1600,8 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="botaoSO1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
+                          <Component id="botaoSO2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1384,7 +1609,10 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="botaoSO1" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="botaoSO1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="botaoSO2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -1398,6 +1626,11 @@
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoSO1ActionPerformed"/>
                   </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="botaoSO2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Estatisticas sobre dados de Sistemas Operacionais"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -1419,7 +1652,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="painelBotoesBrowser" alignment="0" max="32767" attributes="0"/>
-                          <Component id="scrollTabelaBrowser" alignment="0" pref="1031" max="32767" attributes="0"/>
+                          <Component id="scrollTabelaBrowser" alignment="0" pref="781" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -1431,7 +1664,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesBrowser" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaBrowser" pref="518" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaBrowser" pref="354" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1476,6 +1709,8 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="botaoBrowser1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
+                          <Component id="botaoBrowser2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1483,7 +1718,10 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="botaoBrowser1" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="botaoBrowser1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="botaoBrowser2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -1492,11 +1730,16 @@
               <SubComponents>
                 <Component class="javax.swing.JButton" name="botaoBrowser1">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Carregar dados de browswers"/>
+                    <Property name="text" type="java.lang.String" value="Carregar dados de Browsers"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoBrowser1ActionPerformed"/>
                   </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="botaoBrowser2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Estatisticas sobre dados de Browsers"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>

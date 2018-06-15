@@ -19,16 +19,16 @@ public class Continua {
         //Declaração de variaveis.
         List<String> aux;
         aux = roll;
-        for (String item : aux) {
-            item = item.trim();
-        }
+        Collections.sort(aux);
+//        for (String item : aux) {
+//            item = item.trim();
+//        }
         List<Double> aux2 = new ArrayList<>();
         for (String item : aux) {
             aux2.add(Double.parseDouble(item));
         }
         
         Collections.sort(aux2);
-//        aux2.sort(null);
         
         //Valores que nao fazem parte da tabela
         N = roll.size();
@@ -45,6 +45,106 @@ public class Continua {
         for (int i = 1; i < classe.length; i++) {
             classe[i] = classe[i-1] + H;
         }
+        
+//      O Xi nesse caso é a media de cada classe (valor maximo)+(valor minimo)/2
+        XI = new double[classe.length];
+        for (int i = 0; i < XI.length; i++) {
+            XI[i] = ((classe[i])+(classe[i] - H))/2;
+        }
+        
+        
+        //Criação dos outros valores da tabela baseados no tamanho de XI.
+        FI = new int[XI.length];
+        FZI = new int[XI.length];
+        FR = new double[XI.length];
+        FZR = new double[XI.length];
+    
+        //Preenchimento dos outros valores da tabela, inicialmente com 0.
+        for (int i = 0; i < XI.length; i++) {
+            FI[i] = 0;
+            FZI[i] = 0;
+            FR[i] = 0;
+            FZR[i] = 0;
+        }
+        
+        //fi
+        int cont=0;
+        for (int i = 0; i < XI.length; i++) {
+            for (Double item : aux2) {
+                if(item >= classe[i]-H && item < classe[i] ){
+                    cont++;
+                } 
+            }
+            FI[i] = cont;
+            cont=0;
+        }
+        //Fi
+        FZI[0] = FI[0];
+//      FZI = FI;
+        for (int i = 1; i < FZI.length; i++) {
+            FZI[i] = FI[i];
+            FZI[i] = FZI[i] + FZI[i-1];
+        }
+        //fr
+        for (int i = 0; i < FR.length; i++) {
+            FR[i] = (double)FI[i]/roll.size()*100;
+        }
+        //Fr
+        FZR[0] = FR[0];
+        for (int i = 1; i < FZR.length; i++) {
+            FZR[i] = FR[i];
+            FZR[i] = FZR[i] + FZR[i-1];
+        }
+//      Xi*Fi
+        XIFI = new double[XI.length];
+        for (int i = 0; i < XI.length; i++) {
+            XIFI[i] = XI[i]*FI[i];
+        }
+//      (Xi-media)²*Fi
+        XIXFI = new double[XI.length];
+        for (int i = 0; i < XI.length; i++) {
+            XIXFI[i] = Math.pow((XI[i] - media),2) * FI[i];
+        }
+        
+//      Outros valores.
+        double sum=0;
+        for (String string : aux) {
+            sum += Double.parseDouble(string);
+        }
+        media = sum/aux.size();
+        
+        moda = 0;
+        for (int i = 0; i < XI.length; i++) {
+            if(FI[i] > moda) moda = XI[i];
+        }
+        
+        mediana = XI[XI.length/2];
+        
+    }
+    public Continua(List roll, double[] classe){
+        //Declaração de variaveis.
+        List<String> aux;
+        aux = roll;
+        for (String item : aux) {
+            item = item.trim();
+        }
+        List<Double> aux2 = new ArrayList<>();
+        for (String item : aux) {
+            aux2.add(Double.parseDouble(item));
+        }
+        
+        Collections.sort(aux2);
+        
+        //Valores que nao fazem parte da tabela
+        N = roll.size();
+        M = aux2.get(0);
+        MZ = aux2.get(aux2.size()-1);
+        HZ = MZ - M;
+        K = 1 + 3.33 * Math.log10(N);
+        H = HZ/K;
+        
+//      Determinação do valor maximo de cada classe.
+        this.classe = classe;
         
 //      O Xi nesse caso é a media de cada classe (valor maximo)+(valor minimo)/2
         XI = new double[classe.length];
