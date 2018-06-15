@@ -72,7 +72,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesArquivo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaLog" pref="455" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaLog" pref="518" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -193,7 +193,7 @@
                       <Component id="painelBotoesIP" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="scrollTabelaIP" pref="455" max="32767" attributes="0"/>
+                          <Component id="scrollTabelaIP" pref="518" max="32767" attributes="0"/>
                           <Component id="scrollTabelaIP2" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -342,7 +342,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesData" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaData" pref="455" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaData" pref="518" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -441,7 +441,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesHorario" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaHorario" pref="455" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaHorario" pref="518" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -553,7 +553,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesLocalizacao" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaLocalizacao" pref="455" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaLocalizacao" pref="518" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -652,7 +652,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesCabecalho" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaCabecalho" pref="455" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaCabecalho" pref="518" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -751,7 +751,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesRequisicao" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaRequisicao" pref="455" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaRequisicao" pref="518" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -850,7 +850,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesHTTP" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaHTTP" pref="455" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaHTTP" pref="518" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -976,7 +976,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesCodigo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaCodigo" pref="455" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaCodigo" pref="518" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1075,7 +1075,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesTamanho" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaTamanho" pref="455" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaTamanho" pref="518" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1174,7 +1174,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesCaminho" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaCaminho" pref="455" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaCaminho" pref="518" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1300,7 +1300,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesSO" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaSO" pref="455" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaSO" pref="518" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1431,7 +1431,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesBrowser" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaBrowser" pref="455" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaBrowser" pref="518" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>

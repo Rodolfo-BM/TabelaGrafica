@@ -13,13 +13,20 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.data.general.DefaultPieDataset;
 
 public class JFramePrincipal extends javax.swing.JFrame {
     
     ArrayList<Dados> lista = new ArrayList<>();
     Qualitativa qualitativaIP;
     Discreta discretaIP;
+    
+    DecimalFormat quatro = new DecimalFormat ("0.####", new DecimalFormatSymbols (new Locale ("pt", "BR")));
 
     public JFramePrincipal() {
         initComponents();
@@ -177,7 +184,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesArquivo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaLog, javax.swing.GroupLayout.DEFAULT_SIZE, 455, Short.MAX_VALUE)
+                .addComponent(scrollTabelaLog, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -293,7 +300,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addComponent(painelBotoesIP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(abaIPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scrollTabelaIP, javax.swing.GroupLayout.DEFAULT_SIZE, 455, Short.MAX_VALUE)
+                    .addComponent(scrollTabelaIP, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
                     .addComponent(scrollTabelaIP2))
                 .addContainerGap())
         );
@@ -361,7 +368,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaData, javax.swing.GroupLayout.DEFAULT_SIZE, 455, Short.MAX_VALUE)
+                .addComponent(scrollTabelaData, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -439,7 +446,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesHorario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaHorario, javax.swing.GroupLayout.DEFAULT_SIZE, 455, Short.MAX_VALUE)
+                .addComponent(scrollTabelaHorario, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -506,7 +513,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesLocalizacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaLocalizacao, javax.swing.GroupLayout.DEFAULT_SIZE, 455, Short.MAX_VALUE)
+                .addComponent(scrollTabelaLocalizacao, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -573,7 +580,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesCabecalho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaCabecalho, javax.swing.GroupLayout.DEFAULT_SIZE, 455, Short.MAX_VALUE)
+                .addComponent(scrollTabelaCabecalho, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -640,7 +647,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesRequisicao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaRequisicao, javax.swing.GroupLayout.DEFAULT_SIZE, 455, Short.MAX_VALUE)
+                .addComponent(scrollTabelaRequisicao, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -707,7 +714,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesHTTP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaHTTP, javax.swing.GroupLayout.DEFAULT_SIZE, 455, Short.MAX_VALUE)
+                .addComponent(scrollTabelaHTTP, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -774,7 +781,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaCodigo, javax.swing.GroupLayout.DEFAULT_SIZE, 455, Short.MAX_VALUE)
+                .addComponent(scrollTabelaCodigo, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -841,7 +848,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesTamanho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaTamanho, javax.swing.GroupLayout.DEFAULT_SIZE, 455, Short.MAX_VALUE)
+                .addComponent(scrollTabelaTamanho, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -908,7 +915,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesCaminho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaCaminho, javax.swing.GroupLayout.DEFAULT_SIZE, 455, Short.MAX_VALUE)
+                .addComponent(scrollTabelaCaminho, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -975,7 +982,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesSO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaSO, javax.swing.GroupLayout.DEFAULT_SIZE, 455, Short.MAX_VALUE)
+                .addComponent(scrollTabelaSO, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1042,7 +1049,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesBrowser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaBrowser, javax.swing.GroupLayout.DEFAULT_SIZE, 455, Short.MAX_VALUE)
+                .addComponent(scrollTabelaBrowser, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1177,9 +1184,22 @@ public class JFramePrincipal extends javax.swing.JFrame {
         estatisticasIP.getCampoHZ().setVisible(false);
         estatisticasIP.getRotuloH().setVisible(false);
         estatisticasIP.getRotuloHZ().setVisible(false);
-        estatisticasIP.setLocationRelativeTo(null);
+        
+        DefaultPieDataset dadosPizza = new DefaultPieDataset();
+        for (int i = 0; i < discretaIP.getXI().length; i++) {
+            dadosPizza.setValue(discretaIP.getXI()[i]+"", discretaIP.getFR()[i]);   
+        }
+        JFreeChart graficoPizza = ChartFactory.createPieChart(
+                "Titulo do grafico", dadosPizza, 
+                true, true, false);
+        
+        ChartPanel painel = new ChartPanel(graficoPizza);
+        
+        estatisticasIP.getPainelGrafico().removeAll();
+        estatisticasIP.getPainelGrafico().add(painel);
+        estatisticasIP.getPainelGrafico().validate();
+        
         estatisticasIP.setVisible(true);
-
     }//GEN-LAST:event_botaoIP3ActionPerformed
 
    public static void main(String args[]) {
@@ -1240,12 +1260,9 @@ public class JFramePrincipal extends javax.swing.JFrame {
         }
 
 //      Adicionar os atributos que eu escolher na jTable
-        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
-                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
-
         for (int i = 0; i < ip.getXI().length; i++) {
-            modeloTable.addRow(new Object[]{ ip.getXI()[i], ip.getFI()[i],
-                ip.getFZI()[i], ip.getFR()[i], ip.getFZR()[i]
+            modeloTable.addRow(new Object[]{ ip.getXI()[i], ip.getFI()[i], ip.getFZI()[i], 
+                quatro.format(ip.getFR()[i])+" %", quatro.format(ip.getFZR()[i])+" %"
             });
         }
     }
@@ -1258,13 +1275,10 @@ public class JFramePrincipal extends javax.swing.JFrame {
         }
 
 //      Adicionar os atributos que eu escolher na jTable
-        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
-                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
-
-        for (int i = 0; i < discretaIP.getXI().length; i++) {
-            modeloTable.addRow(new Object[]{ discretaIP.getXI()[i], discretaIP.getFI()[i],
-                discretaIP.getFZI()[i], discretaIP.getFR()[i], discretaIP.getFZR()[i],
-                discretaIP.getXIFI()[i], discretaIP.getXIXFI()[i]
+        for (int i = 0; i < discretaIP.getXI().length; i++) {modeloTable.addRow(new Object[]{
+            discretaIP.getXI()[i], discretaIP.getFI()[i],discretaIP.getFZI()[i], 
+            quatro.format(discretaIP.getFR()[i])+" %", quatro.format(discretaIP.getFZR()[i])+" %", 
+            quatro.format(discretaIP.getXIFI()[i]), quatro.format(discretaIP.getXIXFI()[i])
             });
         } 
     }
@@ -1284,12 +1298,10 @@ public class JFramePrincipal extends javax.swing.JFrame {
         Qualitativa data = new Qualitativa(Roll.lerVetor(datas));
 
 //      Adicionar os atributos que eu escolher na jTable
-        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
-                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
-
         for (int i = 0; i < data.getXI().length; i++) {
             modeloTable.addRow(new Object[]{ data.getXI()[i], data.getFI()[i],
-                data.getFZI()[i], data.getFR()[i], data.getFZR()[i]
+                data.getFZI()[i], quatro.format(data.getFR()[i])+" %", 
+                quatro.format(data.getFZR()[i])+" %"
             });
         }  
     }
@@ -1309,12 +1321,10 @@ public class JFramePrincipal extends javax.swing.JFrame {
         Qualitativa horario = new Qualitativa(Roll.lerVetor(horarios));
 
 //      Adicionar os atributos que eu escolher na jTable
-        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
-                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
-
         for (int i = 0; i < horario.getXI().length; i++) {
             modeloTable.addRow(new Object[]{ horario.getXI()[i], horario.getFI()[i],
-                horario.getFZI()[i], horario.getFR()[i], horario.getFZR()[i]
+                horario.getFZI()[i], quatro.format(horario.getFR()[i])+" %", 
+                quatro.format(horario.getFZR()[i])+" %"
             });
         }  
     }
@@ -1334,13 +1344,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
         Qualitativa localizacao = new Qualitativa(Roll.lerVetor(localizacoes));
 
 //      Adicionar os atributos que eu escolher na jTable
-        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
-                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
-
         for (int i = 0; i < localizacao.getXI().length; i++) {
             modeloTable.addRow(new Object[]{ localizacao.getXI()[i],
                 localizacao.getFI()[i], localizacao.getFZI()[i], 
-                localizacao.getFR()[i], localizacao.getFZR()[i]
+                quatro.format(localizacao.getFR()[i])+" %", 
+                quatro.format(localizacao.getFZR()[i])+" %"
             });
         }  
     }
@@ -1360,13 +1368,10 @@ public class JFramePrincipal extends javax.swing.JFrame {
         Qualitativa cabecalho = new Qualitativa(Roll.lerVetor(Cabecalhos));
 
 //      Adicionar os atributos que eu escolher na jTable
-        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
-                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
-
         for (int i = 0; i < cabecalho.getXI().length; i++) {
-            modeloTable.addRow(new Object[]{ cabecalho.getXI()[i],
-                cabecalho.getFI()[i], cabecalho.getFZI()[i],
-                cabecalho.getFR()[i], cabecalho.getFZR()[i]
+            modeloTable.addRow(new Object[]{ cabecalho.getXI()[i], cabecalho.getFI()[i], 
+                cabecalho.getFZI()[i], quatro.format(cabecalho.getFR()[i])+" %",
+                quatro.format(cabecalho.getFZR()[i])+" %"
             });
         }  
     }
@@ -1386,13 +1391,10 @@ public class JFramePrincipal extends javax.swing.JFrame {
         Qualitativa requisicao = new Qualitativa(Roll.lerVetor(requisicoes));
 
 //      Adicionar os atributos que eu escolher na jTable
-        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
-                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
-
         for (int i = 0; i < requisicao.getXI().length; i++) {
-            modeloTable.addRow(new Object[]{ requisicao.getXI()[i],
-                requisicao.getFI()[i], requisicao.getFZI()[i],
-                requisicao.getFR()[i], requisicao.getFZR()[i]
+            modeloTable.addRow(new Object[]{ requisicao.getXI()[i], requisicao.getFI()[i],
+                requisicao.getFZI()[i], quatro.format(requisicao.getFR()[i])+" %", 
+                quatro.format(requisicao.getFZR()[i])+" %"
             });
         }  
     }
@@ -1412,12 +1414,10 @@ public class JFramePrincipal extends javax.swing.JFrame {
         Qualitativa http = new Qualitativa(Roll.lerVetor(https));
 
 //      Adicionar os atributos que eu escolher na jTable
-        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
-                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
-
         for (int i = 0; i < http.getXI().length; i++) {
             modeloTable.addRow(new Object[]{ http.getXI()[i], http.getFI()[i],
-                http.getFZI()[i], http.getFR()[i], http.getFZR()[i]
+                http.getFZI()[i], quatro.format(http.getFR()[i])+" %", 
+                quatro.format(http.getFZR()[i])+" %"
             });
         }  
     }
@@ -1437,12 +1437,10 @@ public class JFramePrincipal extends javax.swing.JFrame {
         Qualitativa codigo = new Qualitativa(Roll.lerVetor(Codigos));
 
 //      Adicionar os atributos que eu escolher na jTable
-        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
-                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
-
         for (int i = 0; i < codigo.getXI().length; i++) {
             modeloTable.addRow(new Object[]{ codigo.getXI()[i], codigo.getFI()[i],
-                codigo.getFZI()[i], codigo.getFR()[i], codigo.getFZR()[i]
+                codigo.getFZI()[i], quatro.format(codigo.getFR()[i])+" %", 
+                quatro.format(codigo.getFZR()[i])+" %"
             });
         }  
     }
@@ -1462,12 +1460,10 @@ public class JFramePrincipal extends javax.swing.JFrame {
         Qualitativa tamanho = new Qualitativa(Roll.lerVetor(tamanhos));
 
 //      Adicionar os atributos que eu escolher na jTable
-        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
-                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
-
         for (int i = 0; i < tamanho.getXI().length; i++) {
             modeloTable.addRow(new Object[]{ tamanho.getXI()[i], tamanho.getFI()[i],
-                tamanho.getFZI()[i], tamanho.getFR()[i], tamanho.getFZR()[i]
+                tamanho.getFZI()[i], quatro.format(tamanho.getFR()[i])+" %", 
+                quatro.format(tamanho.getFZR()[i])+" %"
             });
         }  
     }
@@ -1487,12 +1483,10 @@ public class JFramePrincipal extends javax.swing.JFrame {
         Qualitativa caminho = new Qualitativa(Roll.lerVetor(caminhos));
 
 //      Adicionar os atributos que eu escolher na jTable
-        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
-                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
-
         for (int i = 0; i < caminho.getXI().length; i++) {
             modeloTable.addRow(new Object[]{ caminho.getXI()[i], caminho.getFI()[i],
-                caminho.getFZI()[i], caminho.getFR()[i], caminho.getFZR()[i]
+                caminho.getFZI()[i], quatro.format(caminho.getFR()[i])+" %", 
+                quatro.format(caminho.getFZR()[i])+" %"
             });
         }  
     }
@@ -1512,12 +1506,10 @@ public class JFramePrincipal extends javax.swing.JFrame {
         Qualitativa so = new Qualitativa(Roll.lerVetor(sos));
 
 //      Adicionar os atributos que eu escolher na jTable
-        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
-                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
-
         for (int i = 0; i < so.getXI().length; i++) {
             modeloTable.addRow(new Object[]{ so.getXI()[i], so.getFI()[i],
-                so.getFZI()[i], so.getFR()[i], so.getFZR()[i]
+                so.getFZI()[i], quatro.format(so.getFR()[i])+" %", 
+                quatro.format(so.getFZR()[i])+" %"
             });
         }  
     }
@@ -1537,12 +1529,10 @@ public class JFramePrincipal extends javax.swing.JFrame {
         Qualitativa browser = new Qualitativa(Roll.lerVetor(browsers));
 
 //      Adicionar os atributos que eu escolher na jTable
-        DecimalFormat fr = new DecimalFormat ("#,##0.0000",
-                            new DecimalFormatSymbols (new Locale ("pt", "BR")));
-
         for (int i = 0; i < browser.getXI().length; i++) {
             modeloTable.addRow(new Object[]{ browser.getXI()[i], browser.getFI()[i],
-                browser.getFZI()[i], browser.getFR()[i], browser.getFZR()[i]
+                browser.getFZI()[i], quatro.format(browser.getFR()[i])+" %", 
+                quatro.format(browser.getFZR()[i])+" %"
             });
         }  
     }
