@@ -54,7 +54,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
         botaoIP2 = new javax.swing.JButton();
         botaoIP4 = new javax.swing.JButton();
         botaoIP3 = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        painelDadosIP = new javax.swing.JPanel();
         rotuloNIP = new javax.swing.JLabel();
         campoNIP = new javax.swing.JTextField();
         rotuloModaIP = new javax.swing.JLabel();
@@ -67,7 +67,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
         painelBotoesData = new javax.swing.JPanel();
         botaoData1 = new javax.swing.JButton();
         botaoData2 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
+        painelDadosData = new javax.swing.JPanel();
         rotuloNData = new javax.swing.JLabel();
         campoNData = new javax.swing.JTextField();
         rotuloModaData = new javax.swing.JLabel();
@@ -79,6 +79,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
         botaoHorario1 = new javax.swing.JButton();
         botaoHorario2 = new javax.swing.JButton();
         botaoHorario3 = new javax.swing.JButton();
+        painelDadosHorario = new javax.swing.JPanel();
+        rotuloNHorario = new javax.swing.JLabel();
+        campoNHorario = new javax.swing.JTextField();
+        rotuloModaHorario = new javax.swing.JLabel();
+        campoModaHorario = new javax.swing.JTextField();
         abaLocalizacao = new javax.swing.JPanel();
         scrollTabelaLocalizacao = new javax.swing.JScrollPane();
         tabelaLocalizacao = new javax.swing.JTable();
@@ -294,17 +299,17 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        painelDadosIP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         rotuloNIP.setText("Numero de elementos:");
 
         rotuloModaIP.setText("Moda:");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout painelDadosIPLayout = new javax.swing.GroupLayout(painelDadosIP);
+        painelDadosIP.setLayout(painelDadosIPLayout);
+        painelDadosIPLayout.setHorizontalGroup(
+            painelDadosIPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelDadosIPLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(rotuloNIP)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -315,11 +320,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addComponent(campoModaIP, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        painelDadosIPLayout.setVerticalGroup(
+            painelDadosIPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelDadosIPLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(painelDadosIPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rotuloNIP)
                     .addComponent(campoNIP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(rotuloModaIP)
@@ -356,7 +361,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                     .addGroup(abaIPLayout.createSequentialGroup()
                         .addGroup(abaIPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(scrollTabelaIP, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(painelDadosIP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addComponent(scrollTabelaIP2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -371,7 +376,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                     .addGroup(abaIPLayout.createSequentialGroup()
                         .addComponent(scrollTabelaIP, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(painelDadosIP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(scrollTabelaIP2, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -428,17 +433,17 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        painelDadosData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         rotuloNData.setText("Numero de elementos:");
 
         rotuloModaData.setText("Moda:");
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout painelDadosDataLayout = new javax.swing.GroupLayout(painelDadosData);
+        painelDadosData.setLayout(painelDadosDataLayout);
+        painelDadosDataLayout.setHorizontalGroup(
+            painelDadosDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelDadosDataLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(rotuloNData)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -449,11 +454,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addComponent(campoModaData)
                 .addContainerGap())
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        painelDadosDataLayout.setVerticalGroup(
+            painelDadosDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelDadosDataLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(painelDadosDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rotuloNData)
                     .addComponent(campoNData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(rotuloModaData)
@@ -469,7 +474,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(abaDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(painelBotoesData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(painelDadosData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(scrollTabelaData, javax.swing.GroupLayout.DEFAULT_SIZE, 781, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -481,7 +486,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(scrollTabelaData, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(painelDadosData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -547,6 +552,39 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        painelDadosHorario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        rotuloNHorario.setText("Numero de elementos:");
+
+        rotuloModaHorario.setText("Moda:");
+
+        javax.swing.GroupLayout painelDadosHorarioLayout = new javax.swing.GroupLayout(painelDadosHorario);
+        painelDadosHorario.setLayout(painelDadosHorarioLayout);
+        painelDadosHorarioLayout.setHorizontalGroup(
+            painelDadosHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelDadosHorarioLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(rotuloNHorario)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(campoNHorario, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(rotuloModaHorario)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(campoModaHorario)
+                .addContainerGap())
+        );
+        painelDadosHorarioLayout.setVerticalGroup(
+            painelDadosHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelDadosHorarioLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(painelDadosHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rotuloNHorario)
+                    .addComponent(campoNHorario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rotuloModaHorario)
+                    .addComponent(campoModaHorario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout abaHorarioLayout = new javax.swing.GroupLayout(abaHorario);
         abaHorario.setLayout(abaHorarioLayout);
         abaHorarioLayout.setHorizontalGroup(
@@ -555,7 +593,8 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(abaHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(scrollTabelaHorario, javax.swing.GroupLayout.DEFAULT_SIZE, 781, Short.MAX_VALUE)
-                    .addComponent(painelBotoesHorario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(painelBotoesHorario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(painelDadosHorario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         abaHorarioLayout.setVerticalGroup(
@@ -564,7 +603,9 @@ public class JFramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelBotoesHorario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(scrollTabelaHorario, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
+                .addComponent(scrollTabelaHorario, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(painelDadosHorario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -1906,13 +1947,13 @@ public class JFramePrincipal extends javax.swing.JFrame {
     private javax.swing.JButton botaoTamanho2;
     private javax.swing.JButton botaoTamano1;
     private javax.swing.JTextField campoModaData;
+    private javax.swing.JTextField campoModaHorario;
     private javax.swing.JTextField campoModaIP;
     private javax.swing.JTextField campoNData;
+    private javax.swing.JTextField campoNHorario;
     private javax.swing.JTextField campoNIP;
     private javax.swing.JTextField campoTextoCaminhoLog;
     private javax.swing.JFileChooser jFileChooser1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JButton lerLog;
     private javax.swing.JPanel painelBotoesArquivo;
     private javax.swing.JPanel painelBotoesBrowser;
@@ -1928,9 +1969,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel painelBotoesSO;
     private javax.swing.JPanel painelBotoesTamanho;
     private javax.swing.JTabbedPane painelComAbas;
+    private javax.swing.JPanel painelDadosData;
+    private javax.swing.JPanel painelDadosHorario;
+    private javax.swing.JPanel painelDadosIP;
     private javax.swing.JLabel rotuloModaData;
+    private javax.swing.JLabel rotuloModaHorario;
     private javax.swing.JLabel rotuloModaIP;
     private javax.swing.JLabel rotuloNData;
+    private javax.swing.JLabel rotuloNHorario;
     private javax.swing.JLabel rotuloNIP;
     private javax.swing.JScrollPane scrollTabelaBrowser;
     private javax.swing.JScrollPane scrollTabelaCabecalho;

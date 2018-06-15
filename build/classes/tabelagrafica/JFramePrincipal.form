@@ -179,7 +179,7 @@
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="scrollTabelaIP" pref="0" max="32767" attributes="0"/>
-                                  <Component id="jPanel1" max="32767" attributes="0"/>
+                                  <Component id="painelDadosIP" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="scrollTabelaIP2" pref="0" max="32767" attributes="0"/>
@@ -199,7 +199,7 @@
                           <Group type="102" attributes="0">
                               <Component id="scrollTabelaIP" pref="0" max="32767" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                              <Component id="painelDadosIP" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="scrollTabelaIP2" pref="354" max="32767" attributes="0"/>
                       </Group>
@@ -308,7 +308,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="jPanel1">
+            <Container class="javax.swing.JPanel" name="painelDadosIP">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -405,7 +405,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="painelBotoesData" max="32767" attributes="0"/>
-                          <Component id="jPanel2" max="32767" attributes="0"/>
+                          <Component id="painelDadosData" max="32767" attributes="0"/>
                           <Component id="scrollTabelaData" alignment="0" pref="781" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -420,7 +420,7 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="scrollTabelaData" pref="292" max="32767" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                      <Component id="painelDadosData" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -499,7 +499,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="jPanel2">
+            <Container class="javax.swing.JPanel" name="painelDadosData">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -575,6 +575,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="scrollTabelaHorario" pref="781" max="32767" attributes="0"/>
                           <Component id="painelBotoesHorario" max="32767" attributes="0"/>
+                          <Component id="painelDadosHorario" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -586,7 +587,9 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesHorario" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaHorario" pref="354" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaHorario" pref="292" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="painelDadosHorario" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -673,6 +676,63 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Estatisticas sobre dados de Horario"/>
                   </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="painelDadosHorario">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="rotuloNHorario" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoNHorario" min="-2" pref="198" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="rotuloModaHorario" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoModaHorario" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloNHorario" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoNHorario" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloModaHorario" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoModaHorario" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="rotuloNHorario">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Numero de elementos:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoNHorario">
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloModaHorario">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Moda:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoModaHorario">
                 </Component>
               </SubComponents>
             </Container>
