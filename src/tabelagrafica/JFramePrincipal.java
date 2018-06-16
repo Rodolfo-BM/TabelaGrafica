@@ -26,6 +26,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
     ArrayList<Dados> lista = new ArrayList<>();
     public static Qualitativa qualitativaIP;
     public static Qualitativa qualitativaData;
+    public static Qualitativa qualitativaHorario;
     public static Qualitativa qualitativaLocalizacao;
     public static Qualitativa qualitativaCabecalho;
     public static Qualitativa qualitativaRequisicao;
@@ -36,7 +37,6 @@ public class JFramePrincipal extends javax.swing.JFrame {
     public static Qualitativa qualitativaSO;
     public static Qualitativa qualitativaBrowser;
     public static Discreta discretaIP;
-    public static Continua continuaHorario;
     
     DecimalFormat quatro = new DecimalFormat ("0.####", new DecimalFormatSymbols (new Locale ("pt", "BR")));
 
@@ -1766,7 +1766,12 @@ public class JFramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_botaoData1ActionPerformed
 
     private void botaoHorario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoHorario1ActionPerformed
-        continuaHorario = listarHorario();
+        qualitativaHorario = listarHorario();
+        
+        
+        campoModaHorario.setText(qualitativaHorario.getModa());
+        campoNHorario.setText(qualitativaHorario.getXI().length+"");
+        
 //        botaoHorario2.setVisible(true);
     }//GEN-LAST:event_botaoHorario1ActionPerformed
 
@@ -1967,7 +1972,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
         }  
         return data;
     }
-    public Continua listarHorario(){
+    public Qualitativa listarHorario(){
         DefaultTableModel modeloTable = (DefaultTableModel) tabelaHorario.getModel();
         
 //      Verificar se a jTable tem algum registro, se tiver eu deleto
@@ -1980,7 +1985,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
         for (int i = 0; i < lista.size(); i++) {
             horarios[i] = lista.get(i).getHorario();
         }
-        Continua horario = new Continua(Roll.lerVetor(horarios));
+        Qualitativa horario = new Qualitativa(Roll.lerVetor(horarios));
 
 //      Adicionar os atributos que eu escolher na jTable
         for (int i = 0; i < horario.getXI().length; i++) {
@@ -2211,103 +2216,103 @@ public class JFramePrincipal extends javax.swing.JFrame {
     }
     
     public void janelaEstatisticaQualitativa(Qualitativa objeto){
-        JFrameEstatisticas janelaQualitativa;
-        janelaQualitativa = new JFrameEstatisticas(this, true);
+        JFrameEstatisticas janela;
+        janela = new JFrameEstatisticas(this, true);
         
         //alterar cada item que for necessario no frame
-        janelaQualitativa.getCampoN().setText(objeto.getN()+"");
-        janelaQualitativa.getCampoM().setVisible(false);
-        janelaQualitativa.getCampoMZ().setVisible(false);
-        janelaQualitativa.getCampoMedia().setVisible(false);
-        janelaQualitativa.getCampoMediana().setVisible(false);
-        janelaQualitativa.getCampoModa().setText(objeto.getModa()+"");
-        janelaQualitativa.getCampoH().setVisible(false);
-        janelaQualitativa.getCampoHZ().setVisible(false);
-        janelaQualitativa.getRotuloH().setVisible(false);
-        janelaQualitativa.getRotuloHZ().setVisible(false);
+        janela.getCampoN().setText(objeto.getN()+"");
+        janela.getCampoM().setVisible(false);
+        janela.getCampoMZ().setVisible(false);
+        janela.getCampoMedia().setVisible(false);
+        janela.getCampoMediana().setVisible(false);
+        janela.getCampoModa().setText(objeto.getModa()+"");
+        janela.getCampoH().setVisible(false);
+        janela.getCampoHZ().setVisible(false);
+        janela.getRotuloH().setVisible(false);
+        janela.getRotuloHZ().setVisible(false);
         
-        //criar grafico
-        DefaultPieDataset dadosPizza = new DefaultPieDataset();
-        for (int i = 0; i < objeto.getXI().length; i++) {
-            dadosPizza.setValue(objeto.getXI()[i]+"", objeto.getFR()[i]);   
-        }
-        JFreeChart graficoPizza = ChartFactory.createPieChart(
-                "Titulo do grafico", dadosPizza, 
-                true, true, false);
+//        //criar grafico
+//        DefaultPieDataset dadosPizza = new DefaultPieDataset();
+//        for (int i = 0; i < objeto.getXI().length; i++) {
+//            dadosPizza.setValue(objeto.getXI()[i]+"", objeto.getFR()[i]);   
+//        }
+//        JFreeChart graficoPizza = ChartFactory.createPieChart(
+//                "Titulo do grafico", dadosPizza, 
+//                true, true, false);
+//        
+//        ChartPanel painel = new ChartPanel(graficoPizza);
+//        
+//        janelaQualitativa.getPainelGrafico().removeAll();
+//        janelaQualitativa.getPainelGrafico().add(painel);
+//        janelaQualitativa.getPainelGrafico().validate();
         
-        ChartPanel painel = new ChartPanel(graficoPizza);
-        
-        janelaQualitativa.getPainelGrafico().removeAll();
-        janelaQualitativa.getPainelGrafico().add(painel);
-        janelaQualitativa.getPainelGrafico().validate();
-        
-        janelaQualitativa.setVisible(true);
+        janela.setVisible(true);
     }
     public void janelaEstatisticaDiscreta(Discreta objeto){
-        JFrameEstatisticas janelaQualitativa;
-        janelaQualitativa = new JFrameEstatisticas(this, true);
+        JFrameEstatisticas janela;
+        janela = new JFrameEstatisticas(this, true);
         
         //alterar cada item que for necessario no frame
-        janelaQualitativa.getCampoN().setText(objeto.getN()+"");
-        janelaQualitativa.getCampoM().setText(objeto.getM()+"");
-        janelaQualitativa.getCampoMZ().setText(objeto.getMZ()+"");
-        janelaQualitativa.getCampoMedia().setText(objeto.getMedia()+"");
-        janelaQualitativa.getCampoMediana().setText(objeto.getMediana()+"");
-        janelaQualitativa.getCampoModa().setText(objeto.getModa()+"");
-        janelaQualitativa.getCampoH().setVisible(false);
-        janelaQualitativa.getCampoHZ().setVisible(false);
-        janelaQualitativa.getRotuloH().setVisible(false);
-        janelaQualitativa.getRotuloHZ().setVisible(false);
+        janela.getCampoN().setText(objeto.getN()+"");
+        janela.getCampoM().setText(objeto.getM()+"");
+        janela.getCampoMZ().setText(objeto.getMZ()+"");
+        janela.getCampoMedia().setText(quatro.format(objeto.getMedia())+"");
+        janela.getCampoMediana().setText(objeto.getMediana()+"");
+        janela.getCampoModa().setText(objeto.getModa()+"");
+        janela.getCampoH().setVisible(false);
+        janela.getCampoHZ().setVisible(false);
+        janela.getRotuloH().setVisible(false);
+        janela.getRotuloHZ().setVisible(false);
         
-        //criar grafico
-        DefaultPieDataset dadosPizza = new DefaultPieDataset();
-        for (int i = 0; i < objeto.getXI().length; i++) {
-            dadosPizza.setValue(objeto.getXI()[i]+"", objeto.getFR()[i]);   
-        }
-        JFreeChart graficoPizza = ChartFactory.createPieChart(
-                "Titulo do grafico", dadosPizza, 
-                true, true, false);
+//        //criar grafico
+//        DefaultPieDataset dadosPizza = new DefaultPieDataset();
+//        for (int i = 0; i < objeto.getXI().length; i++) {
+//            dadosPizza.setValue(objeto.getXI()[i]+"", objeto.getFR()[i]);   
+//        }
+//        JFreeChart graficoPizza = ChartFactory.createPieChart(
+//                "Titulo do grafico", dadosPizza, 
+//                true, true, false);
+//        
+//        ChartPanel painel = new ChartPanel(graficoPizza);
+//        
+//        janelaQualitativa.getPainelGrafico().removeAll();
+//        janelaQualitativa.getPainelGrafico().add(painel);
+//        janelaQualitativa.getPainelGrafico().validate();
         
-        ChartPanel painel = new ChartPanel(graficoPizza);
-        
-        janelaQualitativa.getPainelGrafico().removeAll();
-        janelaQualitativa.getPainelGrafico().add(painel);
-        janelaQualitativa.getPainelGrafico().validate();
-        
-        janelaQualitativa.setVisible(true);
+        janela.setVisible(true);
     }
     public void janelaEstatisticaContinua(Continua objeto){
-        JFrameEstatisticas janelaQualitativa;
-        janelaQualitativa = new JFrameEstatisticas(this, true);
+        JFrameEstatisticas janela;
+        janela = new JFrameEstatisticas(this, true);
         
         //alterar cada item que for necessario no frame
-        janelaQualitativa.getCampoN().setText(objeto.getN()+"");
-        janelaQualitativa.getCampoM().setText(objeto.getM()+"");
-        janelaQualitativa.getCampoMZ().setText(objeto.getMZ()+"");
-        janelaQualitativa.getCampoMedia().setText(objeto.getMedia()+"");
-        janelaQualitativa.getCampoMediana().setText(objeto.getMediana()+"");
-        janelaQualitativa.getCampoModa().setText(objeto.getModa()+"");
-        janelaQualitativa.getCampoH().setVisible(false);
-        janelaQualitativa.getCampoHZ().setVisible(false);
-        janelaQualitativa.getRotuloH().setVisible(false);
-        janelaQualitativa.getRotuloHZ().setVisible(false);
+        janela.getCampoN().setText(objeto.getN()+"");
+        janela.getCampoM().setText(objeto.getM()+"");
+        janela.getCampoMZ().setText(objeto.getMZ()+"");
+        janela.getCampoMedia().setText(quatro.format(objeto.getMedia())+"");
+        janela.getCampoMediana().setText(objeto.getMediana()+"");
+        janela.getCampoModa().setText(objeto.getModa()+"");
+        janela.getCampoH().setVisible(false);
+        janela.getCampoHZ().setVisible(false);
+        janela.getRotuloH().setVisible(false);
+        janela.getRotuloHZ().setVisible(false);
         
-        //criar grafico
-        DefaultPieDataset dadosPizza = new DefaultPieDataset();
-        for (int i = 0; i < objeto.getXI().length; i++) {
-            dadosPizza.setValue(objeto.getXI()[i]+"", objeto.getFR()[i]);   
-        }
-        JFreeChart graficoPizza = ChartFactory.createPieChart(
-                "Titulo do grafico", dadosPizza, 
-                true, true, false);
+//        //criar grafico
+//        DefaultPieDataset dadosPizza = new DefaultPieDataset();
+//        for (int i = 0; i < objeto.getXI().length; i++) {
+//            dadosPizza.setValue(objeto.getXI()[i]+"", objeto.getFR()[i]);   
+//        }
+//        JFreeChart graficoPizza = ChartFactory.createPieChart(
+//                "Titulo do grafico", dadosPizza, 
+//                true, true, false);
+//        
+//        ChartPanel painel = new ChartPanel(graficoPizza);
+//        
+//        janelaQualitativa.getPainelGrafico().removeAll();
+//        janelaQualitativa.getPainelGrafico().add(painel);
+//        janelaQualitativa.getPainelGrafico().validate();
         
-        ChartPanel painel = new ChartPanel(graficoPizza);
-        
-        janelaQualitativa.getPainelGrafico().removeAll();
-        janelaQualitativa.getPainelGrafico().add(painel);
-        janelaQualitativa.getPainelGrafico().validate();
-        
-        janelaQualitativa.setVisible(true);
+        janela.setVisible(true);
         
     }
     
