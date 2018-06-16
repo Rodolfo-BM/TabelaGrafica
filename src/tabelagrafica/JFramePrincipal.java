@@ -2221,15 +2221,21 @@ public class JFramePrincipal extends javax.swing.JFrame {
         
         //alterar cada item que for necessario no frame
         janela.getCampoN().setText(objeto.getN()+"");
+        janela.getCampoModa().setText(objeto.getModa()+"");
         janela.getCampoM().setVisible(false);
         janela.getCampoMZ().setVisible(false);
         janela.getCampoMedia().setVisible(false);
         janela.getCampoMediana().setVisible(false);
-        janela.getCampoModa().setText(objeto.getModa()+"");
-        janela.getCampoH().setVisible(false);
-        janela.getCampoHZ().setVisible(false);
         janela.getRotuloH().setVisible(false);
+        janela.getCampoH().setVisible(false);
         janela.getRotuloHZ().setVisible(false);
+        janela.getCampoHZ().setVisible(false);
+        janela.getRotuloK().setVisible(false);
+        janela.getCampoK().setVisible(false);
+        janela.getRotuloVariancia().setVisible(false);
+        janela.getCampoVariancia().setVisible(false);
+        janela.getRotuloDesvioPadrao().setVisible(false);
+        janela.getCampoDesvioPadrao().setVisible(false);
         
 //        //criar grafico
 //        DefaultPieDataset dadosPizza = new DefaultPieDataset();
@@ -2259,10 +2265,15 @@ public class JFramePrincipal extends javax.swing.JFrame {
         janela.getCampoMedia().setText(quatro.format(objeto.getMedia())+"");
         janela.getCampoMediana().setText(objeto.getMediana()+"");
         janela.getCampoModa().setText(objeto.getModa()+"");
+        janela.getCampoVariancia().setText(quatro.format(objeto.getVariancia())+"");
+        janela.getCampoDesvioPadrao().setText(quatro.format(objeto.getDesvioPadrao())+"");
         janela.getCampoH().setVisible(false);
         janela.getCampoHZ().setVisible(false);
         janela.getRotuloH().setVisible(false);
         janela.getRotuloHZ().setVisible(false);
+        janela.getRotuloK().setVisible(false);
+        janela.getCampoK().setVisible(false);
+        
         
 //        //criar grafico
 //        DefaultPieDataset dadosPizza = new DefaultPieDataset();
@@ -2292,10 +2303,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
         janela.getCampoMedia().setText(quatro.format(objeto.getMedia())+"");
         janela.getCampoMediana().setText(objeto.getMediana()+"");
         janela.getCampoModa().setText(objeto.getModa()+"");
-        janela.getCampoH().setVisible(false);
-        janela.getCampoHZ().setVisible(false);
-        janela.getRotuloH().setVisible(false);
-        janela.getRotuloHZ().setVisible(false);
+        janela.getCampoH().setText(objeto.getH()+"");
+        janela.getCampoHZ().setText(objeto.getHZ()+"");
+        janela.getCampoK().setText(objeto.getK()+"");
+        janela.getCampoVariancia().setText(quatro.format(objeto.getVariancia())+"");
+        janela.getCampoDesvioPadrao().setText(quatro.format(objeto.getDesvioPadrao())+"");
         
 //        //criar grafico
 //        DefaultPieDataset dadosPizza = new DefaultPieDataset();

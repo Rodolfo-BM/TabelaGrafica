@@ -8,7 +8,7 @@ import java.util.List;
 public class Discreta {
     //Atributos.
     private int N;
-    private double media, moda, mediana, M, MZ;
+    private double media, moda, mediana, M, MZ, variancia, desvioPadrao;
     private int[] FI, FZI;
     private double[] XI, FR, FZR;
     private double[] XIFI;
@@ -116,7 +116,14 @@ public class Discreta {
         }
         
         mediana = XI[XI.length/2];
+        
+        sum = 0;
+        for (double d : XIXFI) {
+            sum += d;
+        }
+        variancia = sum/N-1;
 
+        desvioPadrao = Math.sqrt(variancia);
     }
     
     //Metodos acessores.
@@ -197,6 +204,18 @@ public class Discreta {
     }
     public void setMZ(double MZ) {
         this.MZ = MZ;
+    }
+    public double getVariancia() {
+        return variancia;
+    }
+    public void setVariancia(double variancia) {
+        this.variancia = variancia;
+    }
+    public double getDesvioPadrao() {
+        return desvioPadrao;
+    }
+    public void setDesvioPadrao(double desvioPadrao) {
+        this.desvioPadrao = desvioPadrao;
     }
     @Override
     public String toString() {

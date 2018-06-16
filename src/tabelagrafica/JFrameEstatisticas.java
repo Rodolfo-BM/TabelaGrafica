@@ -40,6 +40,12 @@ public class JFrameEstatisticas extends javax.swing.JDialog {
         campoMediana = new javax.swing.JTextField();
         campoH = new javax.swing.JTextField();
         campoHZ = new javax.swing.JTextField();
+        rotuloK = new javax.swing.JLabel();
+        rotuloVariancia = new javax.swing.JLabel();
+        rotuloDesvioPadrao = new javax.swing.JLabel();
+        campoK = new javax.swing.JTextField();
+        campoVariancia = new javax.swing.JTextField();
+        campoDesvioPadrao = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -57,9 +63,15 @@ public class JFrameEstatisticas extends javax.swing.JDialog {
 
         rotuloMediana.setText("Mediana:");
 
-        rotuloH.setText("H:");
+        rotuloH.setText("Amplitude da classe:");
 
-        rotuloHZ.setText("HZ:");
+        rotuloHZ.setText("Amplitude total:");
+
+        rotuloK.setText("N de classes:");
+
+        rotuloVariancia.setText("Variancia:");
+
+        rotuloDesvioPadrao.setText("Desvio padrao:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -68,24 +80,36 @@ public class JFrameEstatisticas extends javax.swing.JDialog {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rotuloN)
-                    .addComponent(rotuloM)
-                    .addComponent(rotuloMZ)
-                    .addComponent(rotuloMedia)
-                    .addComponent(rotuloModa)
-                    .addComponent(rotuloMediana)
-                    .addComponent(rotuloH)
-                    .addComponent(rotuloHZ))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(campoN)
-                    .addComponent(campoM)
-                    .addComponent(campoMZ)
-                    .addComponent(campoMedia)
-                    .addComponent(campoModa)
-                    .addComponent(campoMediana)
-                    .addComponent(campoH)
-                    .addComponent(campoHZ, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(rotuloN)
+                            .addComponent(rotuloM)
+                            .addComponent(rotuloMZ)
+                            .addComponent(rotuloMedia)
+                            .addComponent(rotuloModa)
+                            .addComponent(rotuloMediana)
+                            .addComponent(rotuloK)
+                            .addComponent(rotuloVariancia)
+                            .addComponent(rotuloDesvioPadrao))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(campoN, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
+                            .addComponent(campoM)
+                            .addComponent(campoMZ)
+                            .addComponent(campoMedia)
+                            .addComponent(campoModa)
+                            .addComponent(campoMediana)
+                            .addComponent(campoK)
+                            .addComponent(campoVariancia)
+                            .addComponent(campoDesvioPadrao)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(rotuloH)
+                            .addComponent(rotuloHZ))
+                        .addGap(28, 28, 28)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(campoHZ)
+                            .addComponent(campoH))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -115,6 +139,18 @@ public class JFrameEstatisticas extends javax.swing.JDialog {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rotuloMediana)
                     .addComponent(campoMediana, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rotuloVariancia)
+                    .addComponent(campoVariancia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rotuloDesvioPadrao)
+                    .addComponent(campoDesvioPadrao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rotuloK)
+                    .addComponent(campoK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rotuloH)
@@ -294,24 +330,67 @@ public class JFrameEstatisticas extends javax.swing.JDialog {
     public void setRotuloN(JLabel rotuloN) {
         this.rotuloN = rotuloN;
     }
+    public JTextField getCampoDesvioPadrao() {
+        return campoDesvioPadrao;
+    }
+    public void setCampoDesvioPadrao(JTextField campoDesvioPadrao) {
+        this.campoDesvioPadrao = campoDesvioPadrao;
+    }
+    public JTextField getCampoK() {
+        return campoK;
+    }
+    public void setCampoK(JTextField campoK) {
+        this.campoK = campoK;
+    }
+    public JTextField getCampoVariancia() {
+        return campoVariancia;
+    }
+    public void setCampoVariancia(JTextField campoVariancia) {
+        this.campoVariancia = campoVariancia;
+    }
+    public JLabel getRotuloDesvioPadrao() {
+        return rotuloDesvioPadrao;
+    }
+    public void setRotuloDesvioPadrao(JLabel rotuloDesvioPadrao) {
+        this.rotuloDesvioPadrao = rotuloDesvioPadrao;
+    }
+    public JLabel getRotuloK() {
+        return rotuloK;
+    }
+    public void setRotuloK(JLabel rotuloK) {
+        this.rotuloK = rotuloK;
+    }
+    public JLabel getRotuloVariancia() {
+        return rotuloVariancia;
+    }
+    public void setRotuloVariancia(JLabel rotuloVariancia) {
+        this.rotuloVariancia = rotuloVariancia;
+    }
+    
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField campoDesvioPadrao;
     private javax.swing.JTextField campoH;
     private javax.swing.JTextField campoHZ;
+    private javax.swing.JTextField campoK;
     private javax.swing.JTextField campoM;
     private javax.swing.JTextField campoMZ;
     private javax.swing.JTextField campoMedia;
     private javax.swing.JTextField campoMediana;
     private javax.swing.JTextField campoModa;
     private javax.swing.JTextField campoN;
+    private javax.swing.JTextField campoVariancia;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel rotuloDesvioPadrao;
     private javax.swing.JLabel rotuloH;
     private javax.swing.JLabel rotuloHZ;
+    private javax.swing.JLabel rotuloK;
     private javax.swing.JLabel rotuloM;
     private javax.swing.JLabel rotuloMZ;
     private javax.swing.JLabel rotuloMedia;
     private javax.swing.JLabel rotuloMediana;
     private javax.swing.JLabel rotuloModa;
     private javax.swing.JLabel rotuloN;
+    private javax.swing.JLabel rotuloVariancia;
     // End of variables declaration//GEN-END:variables
 }

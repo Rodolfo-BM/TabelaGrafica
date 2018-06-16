@@ -10,7 +10,7 @@ public class Continua {
     private int N;
     private int[] FI, FZI;
     private double[] XI, FR, FZR, XIFI, XIXFI, classe;
-    private double H, HZ, K, media, moda, mediana, M, MZ;
+    private double H, HZ, K, media, moda, mediana, M, MZ, variancia, desvioPadrao;
 
 //  Construtores.
     public Continua() {
@@ -119,6 +119,14 @@ public class Continua {
         }
         
         mediana = XI[XI.length/2];
+        
+        sum = 0;
+        for (double d : XIXFI) {
+            sum += d;
+        }
+        variancia = sum/N-1;
+
+        desvioPadrao = Math.sqrt(variancia);
         
     }
     public Continua(List roll, double[] classe){
@@ -324,6 +332,18 @@ public class Continua {
     }
     public void setMZ(double MZ) {
         this.MZ = MZ;
+    }
+    public double getVariancia() {
+        return variancia;
+    }
+    public void setVariancia(double variancia) {
+        this.variancia = variancia;
+    }
+    public double getDesvioPadrao() {
+        return desvioPadrao;
+    }
+    public void setDesvioPadrao(double desvioPadrao) {
+        this.desvioPadrao = desvioPadrao;
     }
     @Override
     public String toString() {

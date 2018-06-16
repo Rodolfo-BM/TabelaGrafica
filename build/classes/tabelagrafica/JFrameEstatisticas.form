@@ -56,25 +56,42 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="rotuloN" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="rotuloM" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="rotuloMZ" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="rotuloMedia" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="rotuloModa" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="rotuloMediana" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="rotuloH" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="rotuloHZ" alignment="0" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="campoN" max="32767" attributes="0"/>
-                      <Component id="campoM" alignment="0" max="32767" attributes="0"/>
-                      <Component id="campoMZ" alignment="0" max="32767" attributes="0"/>
-                      <Component id="campoMedia" alignment="0" max="32767" attributes="0"/>
-                      <Component id="campoModa" alignment="0" max="32767" attributes="0"/>
-                      <Component id="campoMediana" alignment="0" max="32767" attributes="0"/>
-                      <Component id="campoH" max="32767" attributes="0"/>
-                      <Component id="campoHZ" alignment="0" pref="83" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="rotuloN" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloM" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloMZ" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloMedia" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloModa" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloMediana" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloK" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloVariancia" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloDesvioPadrao" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="campoN" pref="107" max="32767" attributes="0"/>
+                              <Component id="campoM" alignment="0" max="32767" attributes="0"/>
+                              <Component id="campoMZ" alignment="0" max="32767" attributes="0"/>
+                              <Component id="campoMedia" alignment="0" max="32767" attributes="0"/>
+                              <Component id="campoModa" alignment="0" max="32767" attributes="0"/>
+                              <Component id="campoMediana" alignment="0" max="32767" attributes="0"/>
+                              <Component id="campoK" alignment="0" max="32767" attributes="0"/>
+                              <Component id="campoVariancia" max="32767" attributes="0"/>
+                              <Component id="campoDesvioPadrao" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="rotuloH" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloHZ" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="campoHZ" max="32767" attributes="0"/>
+                              <Component id="campoH" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -112,6 +129,21 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="rotuloMediana" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="campoMediana" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="rotuloVariancia" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="campoVariancia" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="rotuloDesvioPadrao" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="campoDesvioPadrao" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="rotuloK" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="campoK" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -163,12 +195,12 @@
         </Component>
         <Component class="javax.swing.JLabel" name="rotuloH">
           <Properties>
-            <Property name="text" type="java.lang.String" value="H:"/>
+            <Property name="text" type="java.lang.String" value="Amplitude da classe:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="rotuloHZ">
           <Properties>
-            <Property name="text" type="java.lang.String" value="HZ:"/>
+            <Property name="text" type="java.lang.String" value="Amplitude total:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="campoM">
@@ -184,6 +216,27 @@
         <Component class="javax.swing.JTextField" name="campoH">
         </Component>
         <Component class="javax.swing.JTextField" name="campoHZ">
+        </Component>
+        <Component class="javax.swing.JLabel" name="rotuloK">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="N de classes:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="rotuloVariancia">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Variancia:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="rotuloDesvioPadrao">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Desvio padrao:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="campoK">
+        </Component>
+        <Component class="javax.swing.JTextField" name="campoVariancia">
+        </Component>
+        <Component class="javax.swing.JTextField" name="campoDesvioPadrao">
         </Component>
       </SubComponents>
     </Container>
