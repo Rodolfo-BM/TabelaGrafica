@@ -38,15 +38,15 @@ public class Dados {
         ip = linhaDividida[0];
         data = linhaDividida[1];
         horario = linhaDividida[2];
-        localizacao = linhaDividida[3];
+        localizacao = pegarLocalizacao(linhaDividida[3]);
         cabecalho = linhaDividida[4];
         requisicao = linhaDividida[5];
         httpVersao = linhaDividida[6];
         codigoStatus = linhaDividida[7];
         tamanhoBytes = linhaDividida[8];
         caminhoURL = linhaDividida[9];
-        so = pegarSo(linhaDividida);
-        browser = pegarBrowser(linhaDividida);
+        so = pegarSo(linhaDividida[10]);
+        browser = pegarBrowser(linhaDividida[10]);
 //        System.out.println(linhaDividida.length);
     }
 
@@ -132,15 +132,24 @@ public class Dados {
                 ", so=" + so + ", browser=" + browser + '}';
     }
 
-    private String pegarSo(String[] linhaDividida) {
+    private String pegarLocalizacao(String linha){
+        String dado;
+        if(linha.contains("+02")){
+            dado = "+2 h";
+        }else{
+            dado = "-";
+        }
+        return dado;
+    }
+    private String pegarSo(String linha) {
         
-        String dado = linhaDividida[10];
+        String dado;
         
-        if(dado.contains("Windows")){
+        if(linha.contains("Windows")){
             dado = "Windows";
-        }else if(dado.contains("Linux")){
+        }else if(linha.contains("Linux")){
             dado = "Linux";
-        }else if(dado.contains("Mac OS")){
+        }else if(linha.contains("Mac OS")){
             dado = "Mac OS";
         }else{
             dado = "Bot";
@@ -148,22 +157,21 @@ public class Dados {
         
         return dado;
     }
-
-    private String pegarBrowser(String[] linhaDividida) {
+    private String pegarBrowser(String linha) {
         
-        String dado = linhaDividida[10];
+        String dado;
         
-        if(dado.contains("Firefox")){
+        if(linha.contains("Firefox")){
             dado = "Firefox";
-        }else if(dado.contains("Chrome")){
+        }else if(linha.contains("Chrome")){
             dado = "Chrome";
-        }else if(dado.contains("Safari")){
+        }else if(linha.contains("Safari")){
             dado = "Safari";
-        }else if(dado.contains("Opera")){
+        }else if(linha.contains("Opera")){
             dado = "Opera";
-        }else if(dado.contains("Netscape")){
+        }else if(linha.contains("Netscape")){
             dado = "Netscape";
-        }else if(dado.contains("Epiphany")){
+        }else if(linha.contains("Epiphany")){
             dado = "Epiphany";
         }else{
             dado = "Bot";

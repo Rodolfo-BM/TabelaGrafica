@@ -32,7 +32,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="painelComAbas" alignment="0" pref="469" max="32767" attributes="0"/>
+          <Component id="painelComAbas" alignment="0" pref="499" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -61,6 +61,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="painelBotoesArquivo" max="32767" attributes="0"/>
                           <Component id="scrollTabelaLog" alignment="1" pref="781" max="32767" attributes="0"/>
+                          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -72,7 +73,9 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesArquivo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaLog" pref="354" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaLog" pref="322" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -155,6 +158,50 @@
                 </Component>
               </SubComponents>
             </Container>
+            <Container class="javax.swing.JPanel" name="jPanel1">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="rotuloNLog" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoNLog" min="-2" pref="245" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloNLog" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoNLog" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="rotuloNLog">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="N de elementos distintos:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoNLog">
+                </Component>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="abaIP">
@@ -201,7 +248,7 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="painelDadosIP" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="scrollTabelaIP2" pref="354" max="32767" attributes="0"/>
+                          <Component id="scrollTabelaIP2" pref="384" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -351,7 +398,7 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="rotuloNIP">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Numero de elementos:"/>
+                    <Property name="text" type="java.lang.String" value="N de elementos distintos:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="campoNIP">
@@ -418,7 +465,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesData" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaData" pref="292" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaData" pref="322" max="32767" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="painelDadosData" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -542,7 +589,7 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="rotuloNData">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Numero de elementos:"/>
+                    <Property name="text" type="java.lang.String" value="N de elementos distintos:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="campoNData">
@@ -587,7 +634,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesHorario" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaHorario" pref="292" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaHorario" pref="322" max="32767" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="painelDadosHorario" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -695,7 +742,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="rotuloNHorario" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="campoNHorario" min="-2" pref="198" max="-2" attributes="0"/>
+                          <Component id="campoNHorario" min="-2" pref="249" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="rotuloModaHorario" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -722,7 +769,7 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="rotuloNHorario">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Numero de elementos:"/>
+                    <Property name="text" type="java.lang.String" value="N de elementos distintos:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="campoNHorario">
@@ -755,6 +802,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="painelBotoesLocalizacao" max="32767" attributes="0"/>
                           <Component id="scrollTabelaLocalizacao" alignment="0" pref="781" max="32767" attributes="0"/>
+                          <Component id="painelDadosLocalizacao" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -766,7 +814,9 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesLocalizacao" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaLocalizacao" pref="354" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaLocalizacao" pref="322" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="painelDadosLocalizacao" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -845,6 +895,63 @@
                 </Component>
               </SubComponents>
             </Container>
+            <Container class="javax.swing.JPanel" name="painelDadosLocalizacao">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="rotuloNLocalizacao" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoNLocalizacao" min="-2" pref="261" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="rotuloModaLocalizacao" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoModaLocalizacao" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloNLocalizacao" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoNLocalizacao" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloModaLocalizacao" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoModaLocalizacao" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="rotuloNLocalizacao">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="N de elementos distintos:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoNLocalizacao">
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloModaLocalizacao">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Moda:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoModaLocalizacao">
+                </Component>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="abaCabecalho">
@@ -864,6 +971,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="painelBotoesCabecalho" alignment="0" max="32767" attributes="0"/>
                           <Component id="scrollTabelaCabecalho" alignment="0" pref="781" max="32767" attributes="0"/>
+                          <Component id="painelDadosCabecalho" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -875,7 +983,9 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesCabecalho" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaCabecalho" pref="354" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaCabecalho" pref="322" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="painelDadosCabecalho" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -954,6 +1064,63 @@
                 </Component>
               </SubComponents>
             </Container>
+            <Container class="javax.swing.JPanel" name="painelDadosCabecalho">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="rotuloNCabecalho" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoNCabecalho" min="-2" pref="256" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="rotuloModaCabecalho" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoModaCabecalho" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloNCabecalho" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoNCabecalho" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloModaCabecalho" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoModaCabecalho" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="rotuloNCabecalho">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="N de elementos distintos:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoNCabecalho">
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloModaCabecalho">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Moda:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoModaCabecalho">
+                </Component>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="abaRequisicao">
@@ -973,6 +1140,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="painelBotoesRequisicao" max="32767" attributes="0"/>
                           <Component id="scrollTabelaRequisicao" alignment="0" pref="781" max="32767" attributes="0"/>
+                          <Component id="painelDadosRequisicao" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -984,7 +1152,9 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesRequisicao" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaRequisicao" pref="354" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaRequisicao" pref="322" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="painelDadosRequisicao" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1063,6 +1233,63 @@
                 </Component>
               </SubComponents>
             </Container>
+            <Container class="javax.swing.JPanel" name="painelDadosRequisicao">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="rotuloNRequisicao" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoNRequisicao" min="-2" pref="250" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="rotuloModaRequisicao" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoModaRequisicao" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloNRequisicao" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoNRequisicao" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloModaRequisicao" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoModaRequisicao" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="rotuloNRequisicao">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="N de elementos distintos:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoNRequisicao">
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloModaRequisicao">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Moda:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoModaRequisicao">
+                </Component>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="abaHTTP">
@@ -1082,6 +1309,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="painelBotoesHTTP" alignment="0" max="32767" attributes="0"/>
                           <Component id="scrollTabelaHTTP" alignment="0" pref="781" max="32767" attributes="0"/>
+                          <Component id="painelDadosHTTP" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -1093,7 +1321,9 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesHTTP" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaHTTP" pref="354" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaHTTP" pref="322" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="painelDadosHTTP" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1199,6 +1429,63 @@
                 </Component>
               </SubComponents>
             </Container>
+            <Container class="javax.swing.JPanel" name="painelDadosHTTP">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="rotuloNHTTP" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoNHTTP" min="-2" pref="249" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="rotunoModaHTTP" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoModaHTTP" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloNHTTP" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoNHTTP" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotunoModaHTTP" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoModaHTTP" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="rotuloNHTTP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="N de elementos distintos:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoNHTTP">
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotunoModaHTTP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Moda:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoModaHTTP">
+                </Component>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="abaCodigo">
@@ -1218,6 +1505,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="painelBotoesCodigo" alignment="0" max="32767" attributes="0"/>
                           <Component id="scrollTabelaCodigo" alignment="0" pref="781" max="32767" attributes="0"/>
+                          <Component id="painelDadosCodigo" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -1229,7 +1517,9 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesCodigo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaCodigo" pref="354" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaCodigo" pref="322" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="painelDadosCodigo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1308,6 +1598,63 @@
                 </Component>
               </SubComponents>
             </Container>
+            <Container class="javax.swing.JPanel" name="painelDadosCodigo">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="rotuloNCodigo" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoNCodigo" max="32767" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="rotuloModaCodigo" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoModaCodigo" min="-2" pref="344" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloNCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoNCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloModaCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoModaCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="rotuloNCodigo">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="N de elementos distintos:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoNCodigo">
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloModaCodigo">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Moda:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoModaCodigo">
+                </Component>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="abaTamanho">
@@ -1327,6 +1674,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="painelBotoesTamanho" alignment="0" max="32767" attributes="0"/>
                           <Component id="scrollTabelaTamanho" alignment="0" pref="781" max="32767" attributes="0"/>
+                          <Component id="painelDadosTamanho" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -1338,7 +1686,9 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesTamanho" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaTamanho" pref="354" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaTamanho" pref="322" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="painelDadosTamanho" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1417,6 +1767,63 @@
                 </Component>
               </SubComponents>
             </Container>
+            <Container class="javax.swing.JPanel" name="painelDadosTamanho">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="rotuloNTamanho" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoNTamanho" max="32767" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="rotuloModaTamanho" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoModaTamanho" min="-2" pref="345" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloNTamanho" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoNTamanho" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloModaTamanho" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoModaTamanho" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="rotuloNTamanho">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="N de elementos distintos:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoNTamanho">
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloModaTamanho">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Moda:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoModaTamanho">
+                </Component>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="abaCaminho">
@@ -1436,6 +1843,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="painelBotoesCaminho" alignment="0" max="32767" attributes="0"/>
                           <Component id="scrollTabelaCaminho" alignment="0" pref="781" max="32767" attributes="0"/>
+                          <Component id="painelDadosCaminho" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -1447,7 +1855,9 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesCaminho" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaCaminho" pref="354" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaCaminho" pref="322" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="painelDadosCaminho" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1553,6 +1963,63 @@
                 </Component>
               </SubComponents>
             </Container>
+            <Container class="javax.swing.JPanel" name="painelDadosCaminho">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="rotuloNCaminho" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoNCaminho" max="32767" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="rotuloModaCaminho" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoModaCaminho" min="-2" pref="348" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloNCaminho" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoNCaminho" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloModaCaminho" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoModaCaminho" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="rotuloNCaminho">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="N de elementos distintos:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoNCaminho">
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloModaCaminho">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Moda:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoModaCaminho">
+                </Component>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="abaSo">
@@ -1572,6 +2039,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="painelBotoesSO" alignment="0" max="32767" attributes="0"/>
                           <Component id="scrollTabelaSO" alignment="0" pref="781" max="32767" attributes="0"/>
+                          <Component id="painelDadosSO" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -1583,7 +2051,9 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesSO" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaSO" pref="354" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaSO" pref="322" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="painelDadosSO" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1694,6 +2164,63 @@
                 </Component>
               </SubComponents>
             </Container>
+            <Container class="javax.swing.JPanel" name="painelDadosSO">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="rotuloNSO" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoNSO" max="32767" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="rotuloModaSO" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoModaSO" min="-2" pref="346" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloNSO" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoNSO" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloModaSO" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoModaSO" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="rotuloNSO">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="N de elementos distintos:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoNSO">
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloModaSO">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Moda:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoModaSO">
+                </Component>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="abaBrowser">
@@ -1713,6 +2240,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="painelBotoesBrowser" alignment="0" max="32767" attributes="0"/>
                           <Component id="scrollTabelaBrowser" alignment="0" pref="781" max="32767" attributes="0"/>
+                          <Component id="painelDadosBrowser" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -1724,7 +2252,9 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="painelBotoesBrowser" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="scrollTabelaBrowser" pref="354" max="32767" attributes="0"/>
+                      <Component id="scrollTabelaBrowser" pref="322" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="painelDadosBrowser" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1800,6 +2330,63 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Estatisticas sobre dados de Browsers"/>
                   </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="painelDadosBrowser">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="rotuloNBrowser" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoNBrowser" max="32767" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="rotuloModaBrowser" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="campoModaBrowser" min="-2" pref="346" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloNBrowser" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoNBrowser" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloModaBrowser" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoModaBrowser" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="rotuloNBrowser">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="N de elementos distintos:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoNBrowser">
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloModaBrowser">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Moda:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoModaBrowser">
                 </Component>
               </SubComponents>
             </Container>
