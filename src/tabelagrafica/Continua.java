@@ -20,9 +20,7 @@ public class Continua {
         List<String> aux;
         aux = roll;
         Collections.sort(aux);
-//        for (String item : aux) {
-//            item = item.trim();
-//        }
+        
         List<Double> aux2 = new ArrayList<>();
         for (String item : aux) {
             aux2.add(Double.parseDouble(item));
@@ -113,9 +111,13 @@ public class Continua {
         }
         media = sum/aux.size();
         
-        moda = 0;
-        for (int i = 0; i < XI.length; i++) {
-            if(FI[i] > moda) moda = XI[i];
+        int j = 0;
+        moda = XI[0];
+        for (int i = 1; i < XI.length; i++) {
+            if(FI[i] > FI[j]){ 
+                moda = XI[i];
+                j = i;
+            }
         }
         
         mediana = XI[XI.length/2];
@@ -133,14 +135,21 @@ public class Continua {
         //Declaração de variaveis.
         List<String> aux;
         aux = roll;
+        Collections.sort(aux);
+        
+        String[] numerosDivididos;
+        String[] numerosReagrupados = new String[aux.size()];
+        int p = 0;
         for (String item : aux) {
-            item = item.trim();
-        }
-        List<Double> aux2 = new ArrayList<>();
-        for (String item : aux) {
-            aux2.add(Double.parseDouble(item));
+            numerosDivididos = item.split(":");
+            numerosReagrupados[p] = numerosDivididos[0] + numerosDivididos[1] + numerosDivididos[2];
+            p++;
         }
         
+        List<Double> aux2 = new ArrayList<>();
+        for (String item : numerosReagrupados) {
+            aux2.add((double)(Double.parseDouble(item)/10000));
+        }
         Collections.sort(aux2);
         
         //Valores que nao fazem parte da tabela
@@ -148,8 +157,8 @@ public class Continua {
         M = aux2.get(0);
         MZ = aux2.get(aux2.size()-1);
         HZ = MZ - M;
-        K = 1 + 3.33 * Math.log10(N);
-        H = HZ/K;
+        K = classe.length;
+        H = classe[1] - classe[0];
         
 //      Determinação do valor maximo de cada classe.
         this.classe = classe;
@@ -216,17 +225,29 @@ public class Continua {
         
 //      Outros valores.
         double sum=0;
-        for (String string : aux) {
+        for (String string : numerosReagrupados) {
             sum += Double.parseDouble(string);
         }
         media = sum/aux.size();
         
-        moda = 0;
-        for (int i = 0; i < XI.length; i++) {
-            if(FI[i] > moda) moda = XI[i];
+        int j = 0;
+        moda = XI[0];
+        for (int i = 1; i < XI.length; i++) {
+            if(FI[i] > FI[j]){ 
+                moda = XI[i];
+                j = i;
+            }
         }
         
         mediana = XI[XI.length/2];
+        
+        sum = 0;
+        for (double d : XIXFI) {
+            sum += d;
+        }
+        variancia = sum/N-1;
+
+        desvioPadrao = Math.sqrt(variancia);
         
     }
 

@@ -653,12 +653,15 @@
                 <Component class="javax.swing.JTable" name="tabelaHorario">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="5" rowCount="0">
+                      <Table columnCount="8" rowCount="0">
+                        <Column editable="true" title="Classes" type="java.lang.Object"/>
                         <Column editable="false" title="XI" type="java.lang.Object"/>
                         <Column editable="false" title="fi" type="java.lang.Object"/>
                         <Column editable="false" title="Fi" type="java.lang.Object"/>
                         <Column editable="false" title="fr" type="java.lang.Object"/>
                         <Column editable="false" title="Fr" type="java.lang.Object"/>
+                        <Column editable="true" title="Xi * fi" type="java.lang.Object"/>
+                        <Column editable="true" title="(Xi - Med)&#xb2; * fi" type="java.lang.Object"/>
                       </Table>
                     </Property>
                   </Properties>
@@ -713,7 +716,7 @@
                 </Component>
                 <Component class="javax.swing.JButton" name="botaoHorario2">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Quantitade de acessos por hora"/>
+                    <Property name="text" type="java.lang.String" value="Estatisticas sobre dados de Horario"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoHorario2ActionPerformed"/>

@@ -110,9 +110,13 @@ public class Discreta {
         }
         media = sum/aux.size();
         
-        moda = 0;
-        for (int i = 0; i < XI.length; i++) {
-            if(FI[i] > moda) moda = XI[i];
+        int j = 0;
+        moda = XI[0];
+        for (int i = 1; i < XI.length; i++) {
+            if(FI[i] > FI[j]){ 
+                moda = XI[i];
+                j = i;
+            }
         }
         
         mediana = XI[XI.length/2];

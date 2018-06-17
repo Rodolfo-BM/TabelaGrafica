@@ -26,7 +26,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
     ArrayList<Dados> lista = new ArrayList<>();
     public static Qualitativa qualitativaIP;
     public static Qualitativa qualitativaData;
-    public static Qualitativa qualitativaHorario;
+    public static Continua continuaHorario;
     public static Qualitativa qualitativaLocalizacao;
     public static Qualitativa qualitativaCabecalho;
     public static Qualitativa qualitativaRequisicao;
@@ -584,11 +584,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
             },
             new String [] {
-                "XI", "fi", "Fi", "fr", "Fr"
+                "Classes", "XI", "fi", "Fi", "fr", "Fr", "Xi * fi", "(Xi - Med)² * fi"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                true, false, false, false, false, false, true, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -606,7 +606,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
             }
         });
 
-        botaoHorario2.setText("Quantitade de acessos por hora");
+        botaoHorario2.setText("Estatisticas sobre dados de Horario");
         botaoHorario2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoHorario2ActionPerformed(evt);
@@ -1766,17 +1766,17 @@ public class JFramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_botaoData1ActionPerformed
 
     private void botaoHorario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoHorario1ActionPerformed
-        qualitativaHorario = listarHorario();
+        continuaHorario = listarHorario();
         
         
-        campoModaHorario.setText(qualitativaHorario.getModa());
-        campoNHorario.setText(qualitativaHorario.getXI().length+"");
+        campoModaHorario.setText(continuaHorario.getModa()+"");
+        campoNHorario.setText(continuaHorario.getXI().length+"");
         
-//        botaoHorario2.setVisible(true);
+        botaoHorario2.setVisible(true);
     }//GEN-LAST:event_botaoHorario1ActionPerformed
 
     private void botaoHorario2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoHorario2ActionPerformed
-        
+        janelaEstatisticaContinua(continuaHorario);
     }//GEN-LAST:event_botaoHorario2ActionPerformed
 
     private void botaoLocalizacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoLocalizacaoActionPerformed
@@ -1972,7 +1972,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
         }  
         return data;
     }
-    public Qualitativa listarHorario(){
+    public Continua listarHorario(){
         DefaultTableModel modeloTable = (DefaultTableModel) tabelaHorario.getModel();
         
 //      Verificar se a jTable tem algum registro, se tiver eu deleto
@@ -1980,18 +1980,28 @@ public class JFramePrincipal extends javax.swing.JFrame {
             modeloTable.removeRow(0);
         }
         
-//      Percorrer a lista e pegar cada IP
+//      Percorrer a lista e pegar cada Horario
         String[] horarios = new String[lista.size()];
         for (int i = 0; i < lista.size(); i++) {
             horarios[i] = lista.get(i).getHorario();
         }
-        Qualitativa horario = new Qualitativa(Roll.lerVetor(horarios));
+        
+//      criar as classes customizadas
+        double[] classe = new double[12];
+        classe[0] = 2;
+        for (int i = 1; i < classe.length; i++) {
+            classe[i] = classe[i-1] + 2;
+        }
+
+
+        Continua horario = new Continua(Roll.lerVetor(horarios), classe);
 
 //      Adicionar os atributos que eu escolher na jTable
         for (int i = 0; i < horario.getXI().length; i++) {
-            modeloTable.addRow(new Object[]{ horario.getXI()[i], horario.getFI()[i],
-                horario.getFZI()[i], quatro.format(horario.getFR()[i])+" %", 
-                quatro.format(horario.getFZR()[i])+" %"
+            modeloTable.addRow(new Object[]{ 
+                (int)(horario.getClasse()[i]-horario.getH())+" h ---| "+(int)horario.getClasse()[i]+" h",
+                (int)horario.getXI()[i]+" h", horario.getFI()[i], horario.getFZI()[i], quatro.format(horario.getFR()[i])+" %", 
+                quatro.format(horario.getFZR()[i])+" %", quatro.format(horario.getXIFI()[i]), quatro.format(horario.getXIXFI()[i])
             });
         }  
         return horario;
