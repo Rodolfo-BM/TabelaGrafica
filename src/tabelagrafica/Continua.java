@@ -23,7 +23,11 @@ public class Continua {
         
         List<Double> aux2 = new ArrayList<>();
         for (String item : aux) {
-            aux2.add(Double.parseDouble(item));
+            if(item.equals("-")){
+                aux2.add(0.0);
+            }else{
+                aux2.add(Double.parseDouble(item));
+            }
         }
         
         Collections.sort(aux2);
@@ -106,8 +110,8 @@ public class Continua {
         
 //      Outros valores.
         double sum=0;
-        for (String string : aux) {
-            sum += Double.parseDouble(string);
+        for (Double item : aux2) {
+            sum += item;
         }
         media = sum/aux.size();
         

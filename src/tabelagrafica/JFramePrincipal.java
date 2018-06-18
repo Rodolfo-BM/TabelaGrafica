@@ -32,13 +32,13 @@ public class JFramePrincipal extends javax.swing.JFrame {
     public static Qualitativa qualitativaRequisicao;
     public static Qualitativa qualitativaHTTP;
     public static Qualitativa qualitativaCodigo;
-    public static Qualitativa qualitativaTamanho;
+    public static Continua continuaTamanho;
     public static Qualitativa qualitativaCaminho;
     public static Qualitativa qualitativaSO;
     public static Qualitativa qualitativaBrowser;
     public static Discreta discretaIP;
     
-    DecimalFormat quatro = new DecimalFormat ("0.####", new DecimalFormatSymbols (new Locale ("pt", "BR")));
+    DecimalFormat quatro = new DecimalFormat ("#,##0.####", new DecimalFormatSymbols (new Locale ("pt", "BR")));
 
     public JFramePrincipal() {
         initComponents();
@@ -1248,11 +1248,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
             },
             new String [] {
-                "XI", "fi", "Fi", "fr", "Fr"
+                "Classe", "XI", "fi", "Fi", "fr", "Fr", "Xi * fi", "(Xi - Med)² * fi"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -1271,6 +1271,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
         });
 
         botaoTamanho2.setText("Estatistica sobre dados de tamanho de requisições");
+        botaoTamanho2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoTamanho2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelBotoesTamanhoLayout = new javax.swing.GroupLayout(painelBotoesTamanho);
         painelBotoesTamanho.setLayout(painelBotoesTamanhoLayout);
@@ -1825,12 +1830,12 @@ public class JFramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_botaoCodigo1ActionPerformed
 
     private void botaoTamano1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoTamano1ActionPerformed
-        qualitativaTamanho = listarTamanho();
+        continuaTamanho = listarTamanho();
         
-        campoModaTamanho.setText(qualitativaTamanho.getModa());
-        campoNTamanho.setText(qualitativaTamanho.getXI().length+"");
+        campoModaTamanho.setText(quatro.format(continuaTamanho.getModa())+"");
+        campoNTamanho.setText(continuaTamanho.getXI().length+"");
         
-//        botaoTamanho2.setVisible(true);
+        botaoTamanho2.setVisible(true);
     }//GEN-LAST:event_botaoTamano1ActionPerformed
 
     private void botaoCaminho1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCaminho1ActionPerformed
@@ -1867,6 +1872,10 @@ public class JFramePrincipal extends javax.swing.JFrame {
     private void botaoIP3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoIP3ActionPerformed
         janelaEstatisticaQualitativa(qualitativaIP);
     }//GEN-LAST:event_botaoIP3ActionPerformed
+
+    private void botaoTamanho2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoTamanho2ActionPerformed
+        janelaEstatisticaContinua(continuaTamanho);
+    }//GEN-LAST:event_botaoTamanho2ActionPerformed
 
    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -2128,7 +2137,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
         }  
         return codigo;
     }
-    public Qualitativa listarTamanho(){
+    public Continua listarTamanho(){
         DefaultTableModel modeloTable = (DefaultTableModel) tabelaTamanho.getModel();
         
 //      Verificar se a jTable tem algum registro, se tiver eu deleto
@@ -2141,13 +2150,15 @@ public class JFramePrincipal extends javax.swing.JFrame {
         for (int i = 0; i < lista.size(); i++) {
             tamanhos[i] = lista.get(i).getTamanhoBytes();
         }
-        Qualitativa tamanho = new Qualitativa(Roll.lerVetor(tamanhos));
+        
+        Continua tamanho = new Continua(Roll.lerVetor(tamanhos));
 
 //      Adicionar os atributos que eu escolher na jTable
         for (int i = 0; i < tamanho.getXI().length; i++) {
-            modeloTable.addRow(new Object[]{ tamanho.getXI()[i], tamanho.getFI()[i],
-                tamanho.getFZI()[i], quatro.format(tamanho.getFR()[i])+" %", 
-                quatro.format(tamanho.getFZR()[i])+" %"
+            modeloTable.addRow(new Object[]{ 
+                quatro.format(tamanho.getClasse()[i]-tamanho.getH())+" ---| "+quatro.format(tamanho.getClasse()[i]),
+                quatro.format(tamanho.getXI()[i]), tamanho.getFI()[i], tamanho.getFZI()[i], quatro.format(tamanho.getFR()[i])+" %", 
+                quatro.format(tamanho.getFZR()[i])+" %", quatro.format(tamanho.getXIFI()[i]), quatro.format(tamanho.getXIXFI()[i])
             });
         }  
         return tamanho;
@@ -2308,14 +2319,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
         
         //alterar cada item que for necessario no frame
         janela.getCampoN().setText(objeto.getN()+"");
-        janela.getCampoM().setText(objeto.getM()+"");
-        janela.getCampoMZ().setText(objeto.getMZ()+"");
+        janela.getCampoM().setText(quatro.format(objeto.getM())+"");
+        janela.getCampoMZ().setText(quatro.format(objeto.getMZ())+"");
         janela.getCampoMedia().setText(quatro.format(objeto.getMedia())+"");
-        janela.getCampoMediana().setText(objeto.getMediana()+"");
-        janela.getCampoModa().setText(objeto.getModa()+"");
-        janela.getCampoH().setText(objeto.getH()+"");
-        janela.getCampoHZ().setText(objeto.getHZ()+"");
-        janela.getCampoK().setText(objeto.getK()+"");
+        janela.getCampoMediana().setText(quatro.format(objeto.getMediana())+"");
+        janela.getCampoModa().setText(quatro.format(objeto.getModa())+"");
+        janela.getCampoH().setText(quatro.format(objeto.getH())+"");
+        janela.getCampoHZ().setText(quatro.format(objeto.getHZ())+"");
+        janela.getCampoK().setText(objeto.getClasse().length+"");
         janela.getCampoVariancia().setText(quatro.format(objeto.getVariancia())+"");
         janela.getCampoDesvioPadrao().setText(quatro.format(objeto.getDesvioPadrao())+"");
         

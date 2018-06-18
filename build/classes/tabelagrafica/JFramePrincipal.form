@@ -1708,12 +1708,15 @@
                 <Component class="javax.swing.JTable" name="tabelaTamanho">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="5" rowCount="0">
+                      <Table columnCount="8" rowCount="0">
+                        <Column editable="false" title="Classe" type="java.lang.Object"/>
                         <Column editable="false" title="XI" type="java.lang.Object"/>
                         <Column editable="false" title="fi" type="java.lang.Object"/>
                         <Column editable="false" title="Fi" type="java.lang.Object"/>
                         <Column editable="false" title="fr" type="java.lang.Object"/>
                         <Column editable="false" title="Fr" type="java.lang.Object"/>
+                        <Column editable="false" title="Xi * fi" type="java.lang.Object"/>
+                        <Column editable="false" title="(Xi - Med)&#xb2; * fi" type="java.lang.Object"/>
                       </Table>
                     </Property>
                   </Properties>
@@ -1767,6 +1770,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Estatistica sobre dados de tamanho de requisi&#xe7;&#xf5;es"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoTamanho2ActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
